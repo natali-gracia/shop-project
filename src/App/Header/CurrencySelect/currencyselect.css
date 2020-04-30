@@ -1,0 +1,55 @@
+.css-g1d714-ValueContainer {
+    padding: 0 !important;
+    height: 30px;
+    width: 30px;
+}
+.css-yk16xz-control, .css-1pahdxg-control  {
+    border: none !important;
+    height: 30px !important;
+    min-height: 30px !important;
+    cursor: pointer !important;
+    box-shadow: none !important;
+} 
+.css-1uccc91-singleValue {
+    color: inherit !important;
+    margin: 0 !important;
+    padding-top: 11px;
+}
+.css-1okebmr-indicatorSeparator {
+    display: none;
+}
+.css-tlfecz-indicatorContainer, .css-1gtu0rj-indicatorContainer {
+    color: inherit !important;
+    padding: 10px 90px 0 0 !important;
+}
+.css-tlfecz-indicatorContainer:hover {
+    color: #666 !important;
+}
+.css-6q0nyr-Svg {
+    height: 14px !important; 
+    width: 14px !important;  
+}
+.css-26l3qy-menu {
+    margin-top: 4px !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: 1px solid #e5e5e5;
+}
+.css-4ljt47-MenuList {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    font-family: Montserrat, sans-serif;
+} 
+.css-9gakcf-option, .css-yt9ioa-option, .css-1n7v3ny-option {
+    padding: 3px 12px !important;
+    line-height: 20px !important;
+    cursor: pointer !important;
+}
+.css-9gakcf-option {
+    color: #262626 !important;
+    background-color: rgba(196, 196, 196, 0.4) !important;
+}
+.css-1n7v3ny-option {
+    color: #262626 !important;
+    background-color: #f5f5f5 !important;
+}
