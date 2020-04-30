@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Select from 'react-select'
+import {connect} from 'react-redux'
 
 import './currencyselect.css'
 
@@ -8,29 +9,36 @@ const options = [
     { value: 'euro', label: 'EUR' },
   ];
 
-export class CurrencySelect extends Component {
-    state = {
-        selectedOption: {
-            value: 'hryvnia', label: 'UAH',
-        },
-    }
+const CurrencySelect =({
+    selectedOption = {value: 'hryvnia', label: 'UAH'},
+    handleChange
+}) => {
 
-    handleChange = selectedOption => {
-        this.setState({ selectedOption });
-        console.log(`Option selected:`, selectedOption);
-    }
+        console.log(`Option selected:`, selectedOption)
 
-    render() {
         return (
             <div style={{width: 150}}>
-            <Select
-                value={this.state.selectedOption}
-                onChange={this.handleChange}
-                options={options}
-            />
+                <Select
+                    value={selectedOption}
+                    onChange={handleChange}
+                    options={options}
+                />
             </div>
         )
-    }
 }
 
-export default CurrencySelect
+const mapStateToProps = ({value}) => ({
+    selectedOption:value,
+})
+
+const mapDispatchToProps = dispatch => ({
+    handleChange: event => dispatch({ 
+        type: "CHANGE_CURRENCY", 
+        value: event 
+    })
+})
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+) (CurrencySelect)
