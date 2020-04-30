@@ -2,7 +2,9 @@ import React from 'react'
 
 import './header.css'
 
-import CurrencySelect from "./CurrencySelect/CurrencySelect";
+import CurrencySelect from "./CurrencySelect/CurrencySelect"
+import SocialLinks from './SocialLinks/SocialLinks'
+import SearchForm from './SearchForm/SearchForm'
 
 const Header = () => {
     return (
@@ -14,26 +16,22 @@ const Header = () => {
                     </div>
                     <div className="col-lg-6">
                         <ul className="customer-links">
-                            <li><a href="">My Wishlist</a></li>
-                            <li><a href="">Checkout</a></li>
-                            <li><a href="">Sign In</a></li>
-                            <li><a href="">Create an account</a></li>
+                            <li><a href="/">My Wishlist</a></li>
+                            <li><a href="/">Checkout</a></li>
+                            <li><a href="/">Sign In</a></li>
+                            <li><a href="/">Create an account</a></li>
                         </ul>
                     </div>
                     <div className="col-lg-3">
-                        <ul className="social-links">
-                            <li><a href="" className='fb-icon'></a></li>
-                            <li><a href="" className='twitter-icon'></a></li>
-                            <li><a href="" className='insta-icon'></a></li>
-                            <li><a href="" className='youtube-icon'></a></li>
-                            <li><a href="" className='pinterest-icon'></a></li>
-                        </ul>
+                        <SocialLinks/>
                     </div>
                 </div>
                 <div className="header-inner wrap">
-                    <div className="col-lg-3">Hello world!</div>
-                    <div className="col-lg-6">Hello world!</div>
-                    <div className="col-lg-3">Hello world!</div>
+                    <div className="col-lg-4">
+                        <SearchForm/>
+                    </div>
+                    <div className="col-lg-4">Hello world!</div>
+                    <div className="col-lg-4">Hello world!</div>
                 </div>
             </div>
         </header>            

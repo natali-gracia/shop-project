@@ -31,49 +31,7 @@
 .customer-links li a:hover {
     color: #999;
 }
-.social-links {
-    text-align: right;
-}
-.social-links > li {
-    display: inline-block;
-    margin-right: 5px;
-}
-.social-links > li a {
-    display: block;
-    position: relative;
-    width: 24px;
-    height: 42.8px;
-}
-.social-links > li:last-child {
-    margin-right: 0;
-}
-.fb-icon::before, .twitter-icon::before, .insta-icon::before, .youtube-icon::before, .pinterest-icon::before {
-    background: no-repeat 0 0;
-    background-size: 100%;
-    content: '';
-    width: 14px;
-    height: 14px;
-    display: block;
-    position: absolute;
-    left: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.fb-icon::before {
-    background-image: url('/images/social-icons/fb-icon.png');
-}
-.twitter-icon::before {
-    background-image: url('/images/social-icons/twitter-icon.png');
-}
-.insta-icon::before {
-    background-image: url('/images/social-icons/insta-icon.png');
-}
-.youtube-icon::before {
-    background-image: url('/images/social-icons/youtube-icon.png');
-}
-.pinterest-icon::before {
-    background-image: url('/images/social-icons/pinterest-icon.png');
-}
-.fb-icon:hover::before, .twitter-icon:hover::before, .insta-icon:hover::before, .youtube-icon:hover::before, .pinterest-icon:hover::before {
-    background-position: 0 bottom;
+.header-inner {
+    padding: 25px 0 90px;
+    border-bottom: 1px solid #e5e5e5;
 }

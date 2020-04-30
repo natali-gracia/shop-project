@@ -24,6 +24,12 @@ body {
 .col-lg-3 {
 	width: 25%;
 }
+.col-lg-3 {
+	width: 25%;
+}
+.col-lg-4 {
+	width: 33.333%;
+}
 .col-lg-6 {
 	width: 50%;
 }
@@ -49,6 +55,19 @@ a {
     -moz-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
+}
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+	line-height: inherit;
+}
+input:focus, button:focus {
+	outline: none;
+}
+input[type="text"] {
+	padding: 5px 10px;
+    line-height: 1.35;
+    height: 36px;
 }
 @media(min-width: 768px) {
 	.container {
