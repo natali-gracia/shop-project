@@ -1,0 +1,25 @@
+.header-cart {
+    text-align: right;
+    padding-top: 50px;
+}
+.header-cart .text, .product-quantity {
+    color: #999;
+}
+.header-cart a {
+    position: relative;
+    padding-left: 35px;
+}
+.product-quantity {
+    margin-left: 10px;
+}
+.shopping-bag-icon::before {
+    background: url('/images/shopping-bag.png') no-repeat 0 0;
+    background-size: 100%;
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 0;
+    bottom: 0;
+}
+

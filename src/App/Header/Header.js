@@ -5,6 +5,8 @@ import './header.css'
 import CurrencySelect from "./CurrencySelect/CurrencySelect"
 import SocialLinks from './SocialLinks/SocialLinks'
 import SearchForm from './SearchForm/SearchForm'
+import Logo from './Logo/Logo'
+import HeaderCart from './HeaderCart/HeaderCart'
 
 const Header = () => {
     return (
@@ -30,8 +32,12 @@ const Header = () => {
                     <div className="col-lg-4">
                         <SearchForm/>
                     </div>
-                    <div className="col-lg-4">Hello world!</div>
-                    <div className="col-lg-4">Hello world!</div>
+                    <div className="col-lg-4">
+                        <Logo/>
+                    </div>
+                    <div className="col-lg-4">
+                        <HeaderCart/>
+                    </div>
                 </div>
             </div>
         </header>            

@@ -2,6 +2,7 @@
     padding: 0 !important;
     height: 30px;
     width: 30px;
+    position: initial !important;
 }
 .css-yk16xz-control, .css-1pahdxg-control  {
     border: none !important;
