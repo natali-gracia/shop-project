@@ -1,11 +1,17 @@
 .header-cart {
-    text-align: right;
-    padding-top: 50px;
+    position: relative;
+    float: right;
+    margin-top: 50px;
+    padding-bottom: 15px;
 }
-.header-cart .text, .product-quantity {
+.top-cart {
+    text-align: right;
+    box-sizing: border-box;
+}
+.top-cart .text, .product-quantity {
     color: #999;
 }
-.header-cart a {
+.top-cart a {
     position: relative;
     padding-left: 35px;
 }
@@ -21,5 +27,25 @@
     height: 35px;
     left: 0;
     bottom: 0;
+}
+.dropdown-cart {
+    background: #fff;
+    box-shadow: 0 0 2px 0 #ccc;
+    padding: 15px;
+    width: 330px;
+    position: absolute;
+    top: 25px;
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+}
+.header-cart:hover > .dropdown-cart {
+    top: 40px !important;
+    visibility: visible;
+    opacity: 1;
 }
 
