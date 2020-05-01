@@ -1,0 +1,81 @@
+.menu-row {
+    transform: translateX(50%);
+}
+.menu-top {
+    display: inline-block;
+    transform: translateX(-50%);
+}
+.menu-top > li {
+    float: left;
+    position: relative;
+}
+.menu-top > li a {
+    display: block;
+    position: relative;
+    text-transform: uppercase;
+    padding: 22px 18px 16px;
+    margin-right: 5px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    color: #999;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+.menu-top > .menu-dropdown a {
+    padding-right: 38px;
+}
+.menu-top > .menu-dropdown a::before {
+    background: url('/images/arrow-down.png') no-repeat 0 0;
+    background-size: 100%;
+    content: '';
+    width: 12px;
+    height: 12px;
+    display: block;
+    position: absolute;
+    right: 18px;
+    top: 55%;
+    transform: translateY(-50%);
+}
+.menu-top > .menu-dropdown a:hover::before {
+    background-position: 0 bottom;
+}
+.menu-top > li:last-child a {
+    margin-right: 0;
+}
+.menu-top > li a:hover {
+	color: #000;
+}
+.active > a {
+	color: #000 !important;
+}
+.label-hot, .label-new {
+    border-radius: 1px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 300;
+    left: 50%;
+    padding: 0 5px;
+    position: absolute;
+    top: -8px;
+}
+.label-hot {
+    background: #cc0000 none repeat 0 0;
+}
+.label-new {
+    background: #000 none repeat 0 0;
+}
+.label-hot::before, .label-new::before {   
+    border-style: solid;
+    border-width: 6px 4px 0 0;
+    bottom: -6px;
+    content: "";
+    left: 6px;
+    position: absolute;
+}
+.label-hot::before {
+    border-color: #cc0000 transparent #fff;
+}
+.label-new::before {
+    border-color: #000 transparent #fff;
+}
