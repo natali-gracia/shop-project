@@ -1,16 +1,15 @@
 .social-links {
-    text-align: right;
     height: 42.8px;
+    align-items: stretch;
 }
 .social-links > li {
-    display: inline-block;
     margin-right: 5px;
 }
 .social-links > li a {
     display: block;
     position: relative;
-    width: 24px;
-    height: 42.8px;
+    width: 26px;
+    height: 100%;
 }
 .social-links > li:last-child {
     margin-right: 0;

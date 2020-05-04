@@ -4,7 +4,7 @@ import './headercart.css'
 
 const HeaderCart = () => {
     return (
-        <div className="wrap">
+        <div className="wrap right">
             <div className='header-cart'>                
                 <p className='top-cart'>
                     <a href="/">

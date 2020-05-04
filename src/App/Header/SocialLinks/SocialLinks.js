@@ -5,7 +5,7 @@ import './sociallinks.css'
 const SocialLinks = () => {
     return (
         <div>
-            <ul className="social-links">
+            <ul className="social-links wrap right">
                 <li><a href="/" className='fb-icon'></a></li>
                 <li><a href="/" className='twitter-icon'></a></li>
                 <li><a href="/" className='insta-icon'></a></li>

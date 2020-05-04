@@ -17,7 +17,7 @@ const Header = () => {
                         <CurrencySelect/>
                     </div>
                     <div className="col-lg-6">
-                        <ul className="customer-links">
+                        <ul className="customer-links wrap center">
                             <li><a href="/">My Wishlist</a></li>
                             <li><a href="/">Checkout</a></li>
                             <li><a href="/">Sign In</a></li>

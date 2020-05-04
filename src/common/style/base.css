@@ -13,13 +13,11 @@ body {
     width: 1140px;
 	margin: 0 auto;
 }
-.wrap:after {
-	display: block;
-	clear: both;
-	content:"";
+.wrap {
+	display: flex;
 }
 [class*="col-"] {
-	float: left;
+	position: relative;
 }
 .col-lg-3 {
 	width: 25%;
@@ -36,8 +34,14 @@ body {
 .col-lg-9 {
 	width: 75%;
 }
-.text-center {
-	text-align: center;
+.center {
+	justify-content: center;
+}
+.left {
+	justify-content: flex-start;
+}
+.right {
+	justify-content: flex-end;
 }
 .page-title {
 	text-align: center;
