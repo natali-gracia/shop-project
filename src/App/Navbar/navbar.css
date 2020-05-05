@@ -1,4 +1,7 @@
-.menu-top > li a {
+.nav-menu {
+    position: relative;
+}
+.menu-top > li > a {
     display: block;
     position: relative;
     text-transform: uppercase;
@@ -11,10 +14,10 @@
     font-size: 14px;
     font-weight: 600;
 }
-.menu-top > .menu-dropdown a {
+.menu-top > .dropdown-menu > a {
     padding-right: 38px;
 }
-.menu-top > .menu-dropdown a::before {
+.menu-top > .dropdown-menu > a::before {
     background: url('/images/arrow-down.png') no-repeat 0 0;
     background-size: 100%;
     content: '';
@@ -26,7 +29,7 @@
     top: 55%;
     transform: translateY(-50%);
 }
-.menu-top > .menu-dropdown a:hover::before {
+.menu-top > .dropdown-menu > a:hover::before {
     background-position: 0 bottom;
 }
 .menu-top > li:last-child a {
@@ -67,4 +70,85 @@
 }
 .label-new::before {
     border-color: #000 transparent #fff;
+}
+.dropdown-menu-inner {
+    position: absolute;
+    left: 0;
+    padding: 15px 0;
+    box-shadow: 0 1px 2px 2px #eaeaea;
+}
+.menu-column {
+    padding: 0 15px;
+}
+.dropdown-menu-img img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+.dropdown-menu-inner a {
+    display: block;
+    color: #999;
+    padding: 2px 0;
+}
+.dropdown-menu-title {
+    margin-bottom: 10px;
+    border-bottom: 2px solid #eaeaea;
+    text-transform: uppercase;
+}
+.dropdown-menu-title > a {  
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 600;
+}
+.dropdown-menu-list li a {
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+.widget-dropdown-menu  {
+    background: #000;
+    position: relative;
+}
+.widget-dropdown-menu img {
+    opacity: 0.8;
+}
+.block-center {
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.widget-text-small, .widget-text-large {
+    color: #fff;
+    font-family:  Montserrat, sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.1px;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+.widget-text-small {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.widget-text-large {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.widget-menu-text .widget-menu-btn {
+    border: 1px solid #fff;
+    color: #fff;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    height: 42px;
+    line-height: 20px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    vertical-align: top;
+}
+.widget-menu-text .widget-menu-btn:hover {
+    background: #333;
+    color: #fff;
+    border-color: #333;
 }
