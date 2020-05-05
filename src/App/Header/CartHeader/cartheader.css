@@ -1,5 +1,4 @@
 .header-cart {
-    margin-top: 50px;
     padding-bottom: 15px;
     position: relative;
 }
@@ -43,8 +42,21 @@
     -o-transition: all 0.3s ease-in-out 0s;
 }
 .header-cart:hover > .dropdown-cart {
-    top: 40px !important;
+    top: 35px;
     visibility: visible;
     opacity: 1;
+}
+.product-quantity-fix {
+    position: absolute;
+    bottom: -3px;
+    right: -8px;
+    background: #cc0000;
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 20px;
+    border-radius: 50%;
 }
 

@@ -6,7 +6,7 @@ import CurrencySelect from "./CurrencySelect/CurrencySelect"
 import SocialLinks from './SocialLinks/SocialLinks'
 import SearchForm from './SearchForm/SearchForm'
 import Logo from './Logo/Logo'
-import HeaderCart from './HeaderCart/HeaderCart'
+import CartHeader from './CartHeader/CartHeader'
 
 const Header = () => {
     return (
@@ -36,7 +36,7 @@ const Header = () => {
                         <Logo/>
                     </div>
                     <div className="col-lg-4">
-                        <HeaderCart/>
+                        <CartHeader/>
                     </div>
                 </div>
             </div>
