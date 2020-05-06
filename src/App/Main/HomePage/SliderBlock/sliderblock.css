@@ -1,14 +1,11 @@
 .slider-block {
     height: 590px;
-    margin-bottom: 30px;
-}
-.main-slider {
-    padding-right: 15px;
-    height: 560px;
+    padding-bottom: 30px;
 }
 .slider-widget {
     flex-direction: column;
     padding-left: 15px;
+    height: 560px;
 }
 .widget-img-block {
     position: relative;
@@ -38,7 +35,7 @@
     color: #5b5b5d;
 }
 .widget-text-block {
-    flex: 2 0;
+    flex: 1 0 auto;
     position: relative;
     background-color: #333;
     height: 150px;
