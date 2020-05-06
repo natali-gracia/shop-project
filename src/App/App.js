@@ -6,6 +6,7 @@ import './../common/style/base.css'
 import Header from './Header/Header'
 import Navbar from './Navbar/Navbar'
 import FixedNav from './Navbar/FixedNav/FixedNav'
+import Main from './Main/Main'
 
 
 const App = () => {
@@ -14,7 +15,7 @@ const App = () => {
       <FixedNav/>
       <Header/>
       <Navbar/>
-			<main>Hello world!</main>
+			<Main/>
 			<footer>Hello world!</footer>
     </div>
   );

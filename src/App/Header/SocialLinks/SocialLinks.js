@@ -6,11 +6,11 @@ const SocialLinks = () => {
     return (
         <div>
             <ul className="social-links wrap right">
-                <li><a href="/" className='fb-icon'></a></li>
-                <li><a href="/" className='twitter-icon'></a></li>
-                <li><a href="/" className='insta-icon'></a></li>
-                <li><a href="/" className='youtube-icon'></a></li>
-                <li><a href="/" className='pinterest-icon'></a></li>
+                <li><a href="/" className='fb-icon' title='Facebook'></a></li>
+                <li><a href="/" className='twitter-icon' title='Twitter'></a></li>
+                <li><a href="/" className='insta-icon' title='Instagram'></a></li>
+                <li><a href="/" className='youtube-icon' title='Youtube'></a></li>
+                <li><a href="/" className='pinterest-icon' title='Pinterest'></a></li>
             </ul>
         </div>
     )
