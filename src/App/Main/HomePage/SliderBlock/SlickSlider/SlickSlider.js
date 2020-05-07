@@ -5,6 +5,7 @@ import Slider from "react-slick"
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import './slickslider.css'
+import './textanimation.css'
 
 const SlickSlider = ({
     settings = {
@@ -33,7 +34,7 @@ const SlickSlider = ({
                     </div>
                 </div>
                 <div className="slick-slide-item">
-                    <div className="slick-image"><img src="/images/slider/slideshow-111.jpg" alt=""/></div>
+                    <div className="slick-image"><img src="/images/slider/slideshow_2.jpg" alt=""/></div>
                     <div className="slider-content">
                         <div className="slide-item-title">leather<br/>belts</div>
                         <div className="slide-item-text">
