@@ -51,6 +51,7 @@ const MenuTop = ({
                                                 <li><a href="/">New Arrival</a></li>
                                                 <li><a href="/">Bags</a></li>
                                                 <li><a href="/">Wallets</a></li>
+                                                <li><a href="/">Cases</a></li>
                                                 <li><a href="/">Accessories</a></li>
                                             </ul>
                                         </div>

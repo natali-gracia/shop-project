@@ -1,6 +1,7 @@
 .slider-block {
     height: 590px;
     padding-bottom: 30px;
+    border-bottom: 1px solid #e5e5e5;
 }
 .slider-widget {
     flex-direction: column;
@@ -32,7 +33,7 @@
     transition: all 0.3s ease-in-out 0s;
 }
 .widget-img-content h2.title a:hover {
-    color: #5b5b5d;
+    color: #555;
 }
 .widget-text-block {
     flex: 1 0 auto;

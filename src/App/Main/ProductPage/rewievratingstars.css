@@ -1,0 +1,21 @@
+.review-rating {
+    justify-content: center;
+    align-items: center;
+    min-height: auto;
+    margin-bottom: 12px;
+}
+input[type="radio"] {
+    display: none;
+}
+.star {
+    cursor: pointer;
+    transition: color 0.25s;
+}
+.disable-star {
+    cursor: default !important;
+}
+.star img {
+    width: 17px;
+    height: 17px;
+    vertical-align: middle;
+}
