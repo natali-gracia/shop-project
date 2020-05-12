@@ -149,19 +149,12 @@
     font-size: 24px;
     margin-bottom: 20px;
 }
-.widget-menu-text .widget-menu-btn {
-    border: 1px solid #fff;
+.widget-menu-text .btn-link {
     color: #fff;
     display: inline-block;
-    font-size: 13px;
-    font-weight: bold;
-    height: 42px;
-    line-height: 20px;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    vertical-align: top;
+	padding: 6px 18px;
 }
-.widget-menu-text .widget-menu-btn:hover {
+.widget-menu-text .btn-link:hover {
     background: #333;
     color: #fff;
     border-color: #333;

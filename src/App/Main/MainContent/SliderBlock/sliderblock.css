@@ -17,7 +17,7 @@
     height: auto;
     margin: 0;
 }
-.widget-img-content h2.title {
+.widget-img-content .title {
     top: 30px;
     color: #000;
     font-family: 'Montserrat', sans-serif;
@@ -32,7 +32,7 @@
     text-transform: uppercase;
     transition: all 0.3s ease-in-out 0s;
 }
-.widget-img-content h2.title a:hover {
+.widget-img-content .title a:hover {
     color: #555;
 }
 .widget-text-block {
@@ -51,11 +51,7 @@
     width: 100%;
 }
 .widget-text-block .title {
-    color: #fff;
-    font-size: 25px;
-    font-family: Montserrat;
     margin-bottom: 15px;
-    text-transform: uppercase;
     cursor: default;
 }
 .widget-text-block .text {
@@ -66,7 +62,7 @@
     text-transform: capitalize;
     cursor: default;
 }
-.widget-text-block .btn-link:hover {
+/* .widget-text-block .btn-link:hover {
     background: #000;
     border: 1px solid #000;
 } 
@@ -83,5 +79,5 @@
     font-weight: 600;
     color: #fff;
     text-transform: uppercase;
-}
+} */
 

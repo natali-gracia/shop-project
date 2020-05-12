@@ -16,7 +16,7 @@ const RewievRatingStars = ({
                 [...Array(5)].map((star, i) => {
                     const ratingValue = i + 1
                     return (
-                        <label className='star'>
+                        <label className='star' key={ratingValue}>
                             <input 
                                 type='radio' 
                                 name='ratting' 
@@ -36,7 +36,7 @@ const RewievRatingStars = ({
                 [...Array(5)].map((star, i) => {
                     const ratingValue = i + 1
                     return (
-                        <label className='star disable-star'>
+                        <label className='star disable-star' key={ratingValue}>
                             <img 
                                 src={ratingValue <= rating ?
                                 "/images/star-black.png" : "/images/star-grey.png"}

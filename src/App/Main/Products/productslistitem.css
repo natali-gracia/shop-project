@@ -29,7 +29,7 @@
     height: auto;
     margin: 0;
 }
-.product-img .quickview-btn {
+.product-img .btn-square {
     color: #333333;
     bottom: 0;
     padding: 0;
@@ -40,33 +40,22 @@
     right: 0%;
     transition: all 0.3s ease 0s;
 }
-.products-list-item:hover .quickview-btn {
+.products-list-item:hover .btn-square {
     opacity: 1;
     transform: translateX(0%);
 }
-.quickview-btn button {
-    height: 40px;
-    width: 40px;
+.product-img .btn-square {
     background-color: #000;
     border: 1px solid #000;
+    font-size: 24px;
     color: #fff;
-    font-size: 26px;
 }
-.quickview-btn button:hover {
+.product-img .btn-square:hover {
     background-color: #333;
     border:#333;
-    cursor: pointer;
 }
 .product-title {
     padding-top: 25px;
-    text-align: center;
-}
-.product-title a {
-    color: #000;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 0;
-    text-align: center;
 }
 .product-title a:hover {
     color: #999;
@@ -80,44 +69,28 @@
     text-align: center;
     cursor: default;
 }
-.action-buttons {
-    justify-content: center;
-}
 .action-buttons button {
-    height: 43px;
-    line-height: 43px;
-    cursor: pointer;
-    background-color: #fff;
-    color: #000;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    transition: all 0.25s;
-    padding: 0 25px;
+    padding: 6px 25px;
     border: 1px solid #999;
-    text-transform: uppercase;
 }
-.action-buttons .like-btn {
+.action-buttons .btn-square {
     margin-left: 10px;
-    width: 43px;
     position: relative;
     padding: 0;
 }
 .action-buttons button:hover {
     background-color: #333;
-    color: #fff;
     border: 1px solid #fff;
 }
-.like-btn::before {
-    content: '';
-    background: url('/images/heart.png') no-repeat 0 0;
-    background-size: 100%;
+.action-buttons .btn-square::before, .product-img .btn-square::before {
     width: 16px;
     height: 16px;
-    display: block;
-    margin: 0 auto;
 }
-.like-btn:hover::before {
-    background-position: 0 bottom;
+.action-buttons .btn-square::before {
+    background-image: url('/images/heart.png');
 }
+.product-img .btn-square::before {
+    background-image: url('/images/plus-white.png');
+}
+
 

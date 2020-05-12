@@ -10,13 +10,11 @@ const ProductsListItem = () => {
             <div className="product-img">
                 <a href="/" className="grid-img">
                     <img src="/images/products-img/woman-01.jpg" alt=""/>
-                    <div className="quickview-btn">
-                        <button title='Quick View'>+</button>
-                    </div>
+                    <button className="btn-square" title='Quick View'></button>
                 </a>    
             </div>
             <div className="product-content">
-                <h4 className="product-title">
+                <h4 className="product-title narrow">
                     <a href="/">Jasmine white bag</a>
                 </h4>
                 <div className="product-price">
@@ -24,11 +22,10 @@ const ProductsListItem = () => {
                 </div>
                 <div className="review-ratting">
                 <RewievRatingStars/>
-
                 </div>
-                <div className="action-buttons wrap">
-                    <button className="add-to-cart">Add to Cart</button>
-                    <button className="like-btn" title='Add to Wishlist'></button>
+                <div className="action-buttons wrap center">
+                    <button>Add to Cart</button>
+                    <button className="btn-square" title='Add to Wishlist'></button>
                 </div>
             </div>
         </div>

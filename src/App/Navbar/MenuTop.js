@@ -85,7 +85,7 @@ const MenuTop = ({
                                     <div className="widget-menu-text block-center">
                                         <div className="widget-text-small">Exclusive Designs</div>
                                         <div className="widget-text-large">Sale up to 30% off</div>
-                                        <a href="/" className="widget-menu-btn">
+                                        <a href="/" className="btn-link btn-white">
                                             <span>Explore Now</span>
                                         </a>
                                     </div>

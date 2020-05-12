@@ -30,7 +30,9 @@ const SlickSlider = ({
                         <div className="slide-item-text">
                             Hipster style is a fashion trending for Gentleman and Lady with tattoos. You’ll become so cool and attractive.
                         </div>
-                        <div className="slide-item-btn"><a href="/" className="more"><span>View Now</span></a></div>
+                        <a href="/" className="btn-link">
+                            <span>View Now</span>
+                        </a>
                     </div>
                 </div>
                 <div className="slick-slide-item">
@@ -41,7 +43,9 @@ const SlickSlider = ({
                             Secure your style with<br/>HONCHAROVA store edit of belts.
                             <br/>Modern and classic designs, we’ve got something for everyone.
                         </div>
-                        <div className="slide-item-btn"><a href="/" className="more"><span>Shop Now</span></a></div>
+                        <a href="/" className="btn-link">
+                            <span>Shop Now</span>
+                        </a>
                     </div>
                 </div>
                 <div className="slick-slide-item">
@@ -52,7 +56,9 @@ const SlickSlider = ({
                             In anniversay 5 years of Store.
                             <br/>Sale off 30% for all. Wow ! Come here.
                         </div>
-                        <div className="slide-item-btn"><a href="/" className="more"><span>View Now</span></a></div>
+                        <a href="/" className="btn-link">
+                            <span>View Now</span>
+                        </a>
                     </div>
                 </div>
 

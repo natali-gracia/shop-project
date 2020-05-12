@@ -7,7 +7,7 @@ const RadioButtonFilter = ({
     setSelectedFilter
 }) => {
     return (
-        <h3 className='section-title'>
+        <h2 className='section-title'>
             <label className={selectedFilter === 'Best Seller' ? 'checked' : ''}>
                 <input type="radio" name="RadioButtons" value="Best Seller"  onChange={event => setSelectedFilter(event.target.value)}/>Best Seller
             </label>
@@ -19,7 +19,7 @@ const RadioButtonFilter = ({
             <label className={selectedFilter === 'Most Wanted' ? 'checked' : ''}>
 				<input type="radio" name="RadioButtons" value="Most Wanted" onChange={event => setSelectedFilter(event.target.value)}/>Most Wanted
 			</label>
-        </h3>
+        </h2>
     )
 }
 
