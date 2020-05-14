@@ -1,5 +1,5 @@
 .main-page-section {
-    padding-bottom: 55px;
+    padding-bottom: 25px;
     border-bottom: 1px solid #e5e5e5;
 }
 .section-title {
@@ -21,4 +21,7 @@
 }
 .section-title input {
     display: none;
+}
+.products-list-slider {
+    margin-top: 95px;
 }
