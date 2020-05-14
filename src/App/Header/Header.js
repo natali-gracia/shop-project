@@ -13,10 +13,10 @@ const Header = () => {
         <header>
             <div className='container'>
                 <div className="header-top wrap">
-                    <div className="col-lg-3">
+                    <div className="col-md-3">
                         <CurrencySelect/>
                     </div>
-                    <div className="col-lg-6">
+                    <div className="col-md-6">
                         <ul className="customer-links wrap center">
                             <li><a href="/">My Wishlist</a></li>
                             <li><a href="/">Checkout</a></li>
@@ -24,18 +24,18 @@ const Header = () => {
                             <li><a href="/">Create an account</a></li>
                         </ul>
                     </div>
-                    <div className="col-lg-3">
+                    <div className="col-md-3">
                         <SocialLinks/>
                     </div>
                 </div>
                 <div className="header-inner wrap">
-                    <div className="col-lg-4">
+                    <div className="col-md-4">
                         <SearchForm/>
                     </div>
-                    <div className="col-lg-4">
+                    <div className="col-md-4">
                         <Logo/>
                     </div>
-                    <div className="col-lg-4">
+                    <div className="col-md-4">
                         <CartHeader/>
                     </div>
                 </div>

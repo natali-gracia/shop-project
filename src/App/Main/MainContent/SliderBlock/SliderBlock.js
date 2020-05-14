@@ -7,10 +7,10 @@ import SlickSlider from './SlickSlider/SlickSlider'
 const SliderBlock = () => {
     return (
         <div className='wrap slider-block'>
-            <div className="col-lg-9">
+            <div className="col-md-9">
                 <SlickSlider/>
             </div>
-            <div className="col-lg-3">
+            <div className="col-md-3">
                 <div className="slider-widget wrap">
                     <div className="widget-img-block">
                         <img src="/images/slider/widget-slider.jpg" alt="Jeans style"/>

@@ -1,17 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import './productslistitem.css'
 
 import RewievRatingStars from '../ProductPage/RewievRatingStars'
+import ProductQuickview from './ProductQuickview';
 
 const ProductsListItem = () => {
+
+    const [showQuickView, setShowQuickView] = useState(false)
+
     return (
         <div className='products-list-item'>
             <div className="product-img">
                 <a href="/" className="grid-img">
                     <img src="/images/products-img/woman-01.jpg" alt=""/>
-                    <button className="btn-square" title='Quick View'></button>
-                </a>    
+                </a> 
+                <button className="btn-square" title='Quick View' onClick={() => setShowQuickView(!showQuickView)}></button>
+                <ProductQuickview 
+                    showQuickView={showQuickView}
+                    setShowQuickView={setShowQuickView}
+                />  
             </div>
             <div className="product-content">
                 <h4 className="product-title narrow">

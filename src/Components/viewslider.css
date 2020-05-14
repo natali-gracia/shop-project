@@ -1,0 +1,50 @@
+.view-slider .slick-slide .slick-slide-item {
+    width: 99px;
+    cursor: pointer;
+}
+.view-slider .slick-slide {
+    width: 99px !important;
+    margin-left: 10px;
+}
+.view-slider .slick-list {
+    margin-left: -10px;
+}
+.view-slider .slick-slide-item > img{
+    width: 100%;  
+}
+.view-slider .slick-prev, .view-slider .slick-next {
+    width: 35px;
+    height: 35px;
+    visibility: visible;
+    background: #fff;
+    border: 1px solid #ccc;
+    transform: translate(0, -50%);
+    bottom: 0;
+    transition: all 0.1s ease-in-out;
+}
+.view-slider .slick-prev:hover, .view-slider .slick-next:hover {
+    border: none !important;
+}
+.view-slider .slick-prev:focus, .view-slider .slick-next:focus {
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+.view-slider .slick-prev:before, .view-slider .slick-next:before {
+    background: url('/images/slider/arrow-down-grey.png') no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 9px;
+    width: 15px;
+    display: block;
+    margin: 0 auto;
+}
+.view-slider .slick-prev:hover:before, .view-slider .slick-next:hover:before {
+    background: url('/images/slider/arrow-down.png');
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 9px;
+    width: 15px;
+    display: block;
+    margin: 0 auto;
+}

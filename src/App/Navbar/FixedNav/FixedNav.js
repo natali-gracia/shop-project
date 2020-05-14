@@ -28,7 +28,7 @@ const FixedNav = () => {
     return (      
           <div className={showNavBar === false ? 'fixednav' : 'fixednav is-nav-open'}>
               <div className='container wrap fixednav-row'>
-                    <div className="col-lg-3 fixednav-logo">
+                    <div className="col-md-3 fixednav-logo">
                         <a href="/">
                             <img src={logoShort} alt=""/>
                         </a>

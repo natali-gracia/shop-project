@@ -5,6 +5,7 @@
 }
 .product-img {
     overflow: hidden;
+    position: relative;
 }
 .product-img a {
     position: relative;

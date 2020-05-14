@@ -15,8 +15,8 @@ const MenuTop = ({
                     </a>
                     <div className="dropdown-menu-inner">
                         <div className="container wrap">
-                            <div className="col-lg-9 wrap">
-                                <div className="col-lg-4 menu-column">
+                            <div className="col-md-9 wrap">
+                                <div className="col-md-4 menu-column">
                                     <div className="dropdown-menu-img">
                                         <a href="/">
                                             <img src="/images/nav/woman.jpg" alt="Woman"/>
@@ -36,7 +36,7 @@ const MenuTop = ({
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-4 menu-column">
+                                <div className="col-md-4 menu-column">
                                     <div className="dropdown-menu-img">
                                         <a href="/">
                                             <img src="/images/nav/man.png" alt="Man"/>
@@ -57,7 +57,7 @@ const MenuTop = ({
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-4 menu-column">
+                                <div className="col-md-4 menu-column">
                                     <div className="dropdown-menu-img">
                                         <a href="/">
                                             <img src="/images/nav/special.jpg" alt="Special Designs"/>
@@ -77,7 +77,7 @@ const MenuTop = ({
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-3 menu-column">
+                            <div className="col-md-3 menu-column">
                                 <div className="widget-dropdown-menu">
                                     <div className="dropdown-menu-img">
                                         <img src="/images/nav/widget-menu.jpg" alt=""/>

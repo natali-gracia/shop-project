@@ -1,6 +1,113 @@
+.product-quickview {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow-x: auto;
+    overflow-y: scroll;
+    z-index: 9;
+}
+.hidden {
+    display: none;
+    opacity: 0;
+    transition: all 0.5s ease-in-out 0s;
+}
+.show {
+    display: block;
+    opacity: 1;
+}
 .overlay {
-    background: #333 none repeat scroll 0 0;
     height: 100%;
-    opacity: 0.65;
     width: 100%;
+    opacity: 0.65;
+    background: #333 none repeat scroll 0 0;
+}
+.quickview-content {
+    width: 850px;
+    height: fit-content;
+    padding: 10px;
+    background: #fff;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    right: 0; bottom: 0;
+    transform: translate(-50%, -50%);
+    outline: 0 none;
+}
+.quickview-img, .quickview-shop {
+    padding: 0 15px;
+}
+.quickview-main-img img {
+	max-width: 100%;
+    height: auto;
+}
+.more-view {
+    margin: 15px 0;
+}
+.product-quickview .btn-square::before {
+    transform: rotate(45deg);
+}
+.product-quickview .btn-square {
+    background-color: #666;
+    border:#666;
+    opacity: 1;
+    transform: none;
+    top: 0;
+}
+.product-quickview .btn-square:hover {
+    background-color: #000;
+    border:#000;
+    opacity: 1;
+}
+.quickview-shop h2 {
+    padding: 0;
+    text-align: left;
+    margin-bottom: 15px;
+}
+.quickview-base-info {
+    margin-bottom: 20px;
+}
+.quickview-base-info th, td {
+    text-align: left;
+    padding-bottom: 5px;
+}
+.quickview-base-info th {
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-right: 10px;
+}
+.quickview-base-info td {
+    text-transform: lowercase;
+}
+.product-summary {
+    margin-bottom: 20px;
+}
+.quickview-product-options {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.quickview-product-options .btn-square {
+    position: inherit;
+    margin-right: 5px;
+    font-size: inherit;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.quickview-product-options .btn-square::before {
+    background: none;
+    content: none;
+}
+.size-option .btn-square {
+    background-color: transparent;
+	border: transparent;
+    color: #000;
+}
+.size-option .btn-square:hover {
+    color: #fff;
+}
+.size-option .active {
+    background-color: #000;
+	border: 1px solid #000;
+    color: #fff;
 }

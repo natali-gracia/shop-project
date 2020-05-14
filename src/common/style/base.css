@@ -27,16 +27,22 @@ body {
 [class*="col-"] {
 	position: relative;
 }
-.col-lg-3 {
+.col-md-3 {
 	width: 25%;
 }
-.col-lg-4 {
+.col-md-4 {
 	width: 33.333%;
 }
-.col-lg-6 {
+.col-md-5 {
+	width: 41.666%;
+}
+.col-md-6 {
 	width: 50%;
 }
-.col-lg-9 {
+.col-md-7 {
+	width: 58.333%;
+}
+.col-md-9 {
 	width: 75%;
 }
 h1, h2, h3, h4 {
