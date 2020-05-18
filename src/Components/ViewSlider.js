@@ -18,7 +18,7 @@ const ViewSlider = ({
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: productsArray[1].images.length <= slidesToShowCount-2 ? productsArray[1].images.length + 1 : slidesToShowCount,
+        slidesToShow: productsArray[id].images.length <= slidesToShowCount-2 ? productsArray[id].images.length + 1 : slidesToShowCount,
         slidesToScroll: 1
     },
     
