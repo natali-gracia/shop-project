@@ -1,5 +1,7 @@
 import React from 'react'
 
+import {Link} from 'react-router-dom'
+
 import './header.css'
 
 import CurrencySelect from "./CurrencySelect/CurrencySelect"
@@ -18,10 +20,10 @@ const Header = () => {
                     </div>
                     <div className="col-md-6">
                         <ul className="customer-links wrap center">
-                            <li><a href="/">My Wishlist</a></li>
-                            <li><a href="/">Checkout</a></li>
-                            <li><a href="/">Sign In</a></li>
-                            <li><a href="/">Create an account</a></li>
+                            <li><Link to="/">My Wishlist</Link></li>
+                            <li><Link to="/">Checkout</Link></li>
+                            <li><Link to="/">Sign In</Link></li>
+                            <li><Link to="/">Create an account</Link></li>
                         </ul>
                     </div>
                     <div className="col-md-3">

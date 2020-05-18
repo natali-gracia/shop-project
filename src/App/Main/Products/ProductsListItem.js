@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 
+import { Link } from 'react-router-dom'
+
 import './productslistitem.css'
 
 import RewievRatingStars from '../ProductPage/RewievRatingStars'
-import ProductQuickview from './ProductQuickview';
+import ProductQuickview from './ProductQuickview'
 
 const ProductsListItem = () => {
 
@@ -12,9 +14,9 @@ const ProductsListItem = () => {
     return (
         <div className='products-list-item'>
             <div className="product-img">
-                <a href="/" className="grid-img">
+                <Link to="/" className="grid-img">
                     <img src="/images/products-img/woman-01.jpg" alt=""/>
-                </a> 
+                </Link> 
                 <button className="btn-square" title='Quick View' onClick={() => setShowQuickView(!showQuickView)}></button>
                 <ProductQuickview 
                     showQuickView={showQuickView}
@@ -23,7 +25,7 @@ const ProductsListItem = () => {
             </div>
             <div className="product-content">
                 <h4 className="product-title narrow">
-                    <a href="/">Jasmine white bag</a>
+                    <Link to="/">Jasmine white bag</Link>
                 </h4>
                 <div className="product-price">
                    <span><em>from </em>3000 ₴</span> 

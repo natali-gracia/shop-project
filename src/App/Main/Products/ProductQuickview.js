@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 
+import { Link } from 'react-router-dom'
+
 import './productquickview.css'
 import ViewSlider from '../../../Components/ViewSlider'
 
 import  productsData, {getProductsMap} from './../Products/productsData'
 import ProductOptions from './ProductOptions'
+
 
 const productsArray = getProductsMap(productsData)
 
@@ -22,7 +25,7 @@ const ProductQuickview = ({
             <div className="quickview-content wrap">
                 <div className="quickview-img col-md-5">
                     <div className="quickview-main-img">
-                        <a href="/"><img src={quickViewImg} alt=""/></a>
+                        <Link to="/"><img src={quickViewImg} alt=""/></Link>
                     </div>
                     <div className="more-view">
                         <ViewSlider setQuickViewImg={setQuickViewImg}/>
@@ -30,7 +33,7 @@ const ProductQuickview = ({
                 </div>
                 <div className="quickview-shop col-md-7">
                     <h2 className="narrow">
-                        <a href="/">{productsArray[id].name}</a>
+                        <Link to="/">{productsArray[id].name}</Link>
                     </h2>
                     <table className="quickview-base-info">
                         <tbody>

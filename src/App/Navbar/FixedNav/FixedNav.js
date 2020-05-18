@@ -1,10 +1,13 @@
 import React, {useState, useEffect} from "react"
 
+import { Link } from 'react-router-dom'
+
 import './fixednav.css'
 
 import logoShort from './logo-short.png'
 import MenuTop from '../MenuTop'
 import CartHeader from '../../Header/CartHeader/CartHeader'
+
 
 const FixedNav = () => {
 
@@ -29,9 +32,9 @@ const FixedNav = () => {
           <div className={showNavBar === false ? 'fixednav' : 'fixednav is-nav-open'}>
               <div className='container wrap fixednav-row'>
                     <div className="col-md-3 fixednav-logo">
-                        <a href="/">
+                        <Link to="/">
                             <img src={logoShort} alt=""/>
-                        </a>
+                        </Link>
                     </div>
                     <div className="fixed-menu">
                         <MenuTop

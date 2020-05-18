@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { Link } from 'react-router-dom'
+
 import './menutop.css'
 
 const MenuTop = ({
@@ -8,70 +10,70 @@ const MenuTop = ({
     return (
         <div>
             <ul className="menu-top wrap center">
-                <li className="active"><a href="/">Home</a></li>
-                <li className="dropdown-menu"><a href="/">
+                <li className="active"><Link to="/">Home</Link></li>
+                <li className="dropdown-menu"><Link to="/">
                     Shop
                     <span className='label-hot' style={labelHotMargin}>Hot</span>
-                    </a>
+                    </Link>
                     <div className="dropdown-menu-inner">
                         <div className="container wrap">
                             <div className="col-md-9 wrap">
                                 <div className="col-md-4 menu-column">
                                     <div className="dropdown-menu-img">
-                                        <a href="/">
+                                        <Link to="/">
                                             <img src="/images/nav/woman.jpg" alt="Woman"/>
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="dropdown-menu-content">
                                         <div className="dropdown-menu-title">
-                                            <a href="/">Woman</a>
+                                            <Link to="/">Woman</Link>
                                         </div>
                                         <div className="dropdown-menu-list">
                                             <ul className="nav-links">
-                                                <li><a href="/">New Arrival</a></li>
-                                                <li><a href="/">Bags</a></li>
-                                                <li><a href="/">Wallets</a></li>
-                                                <li><a href="/">Accessories</a></li>
+                                                <li><Link to="/">New Arrival</Link></li>
+                                                <li><Link to="/">Bags</Link></li>
+                                                <li><Link to="/">Wallets</Link></li>
+                                                <li><Link to="/">Accessories</Link></li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-md-4 menu-column">
                                     <div className="dropdown-menu-img">
-                                        <a href="/">
+                                        <Link to="/">
                                             <img src="/images/nav/man.png" alt="Man"/>
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="dropdown-menu-content">
                                         <div className="dropdown-menu-title">
-                                            <a href="/">Man</a>
+                                            <Link to="/">Man</Link>
                                         </div>
                                         <div className="dropdown-menu-list">
                                             <ul className="nav-links">
-                                                <li><a href="/">New Arrival</a></li>
-                                                <li><a href="/">Bags</a></li>
-                                                <li><a href="/">Wallets</a></li>
-                                                <li><a href="/">Cases</a></li>
-                                                <li><a href="/">Accessories</a></li>
+                                                <li><Link to="/">New Arrival</Link></li>
+                                                <li><Link to="/">Bags</Link></li>
+                                                <li><Link to="/">Wallets</Link></li>
+                                                <li><Link to="/">Cases</Link></li>
+                                                <li><Link to="/">Accessories</Link></li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-md-4 menu-column">
                                     <div className="dropdown-menu-img">
-                                        <a href="/">
+                                        <Link to="/">
                                             <img src="/images/nav/special.jpg" alt="Special Designs"/>
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="dropdown-menu-content">
                                         <div className="dropdown-menu-title">
-                                            <a href="/">Special Designs</a>
+                                            <Link to="/">Special Designs</Link>
                                         </div>
                                         <div className="dropdown-menu-list">
                                             <ul className="nav-links">
-                                                <li><a href="/">Cases</a></li>
-                                                <li><a href="/">Bags</a></li>
-                                                <li><a href="/">Exclusive Order</a></li>
+                                                <li><Link to="/">Cases</Link></li>
+                                                <li><Link to="/">Bags</Link></li>
+                                                <li><Link to="/">Exclusive Order</Link></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -85,18 +87,18 @@ const MenuTop = ({
                                     <div className="widget-menu-text block-center">
                                         <div className="widget-text-small">Exclusive Designs</div>
                                         <div className="widget-text-large">Sale up to 30% off</div>
-                                        <a href="/" className="btn-link btn-white">
+                                        <Link to="/" className="btn-link btn-white">
                                             <span>Explore Now</span>
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li><a href="/">Blog<span className='label-new' style={labelHotMargin}>New</span></a></li>
-                <li><a href="/">About us</a></li>
-                <li><a href="/">Contact</a></li>
+                <li><Link to="/">Blog<span className='label-new' style={labelHotMargin}>New</span></Link></li>
+                <li><Link to="/">About us</Link></li>
+                <li><Link to="/">Contact</Link></li>
             </ul> 
         </div>
     )

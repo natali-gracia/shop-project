@@ -1,5 +1,6 @@
 import React from 'react'
 
+import {Link} from 'react-router-dom'
 import './sliderblock.css'
 
 import SlickSlider from './SlickSlider/SlickSlider'
@@ -16,7 +17,7 @@ const SliderBlock = () => {
                         <img src="/images/slider/widget-slider.jpg" alt="Jeans style"/>
                         <div className="widget-img-content">
                             <div className="title">
-                                <a href="/">Jeans -<br/>new<br/>trend</a>
+                                <Link to="/">Jeans -<br/>new<br/>trend</Link>
                             </div>
                         </div>
                     </div>
@@ -24,9 +25,9 @@ const SliderBlock = () => {
                         <div className="block-center">
                             <div className="title"><h1>Supper Sale!</h1></div>
                             <div className="text"></div>
-                            <a href="/" className="btn-link btn-white">
+                            <Link to="/" className="btn-link btn-white">
                                 <span>View Now</span>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

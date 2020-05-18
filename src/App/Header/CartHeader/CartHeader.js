@@ -1,6 +1,7 @@
 import React from 'react'
 
 import './cartheader.css'
+import {Link} from 'react-router-dom'
 
 const CartHeader = ({
     topCartComponent = true,
@@ -10,7 +11,7 @@ const CartHeader = ({
         <div className="wrap right">
             <div className='header-cart' style={headerCartMargin}>                
                 <p className='top-cart'>
-                    <a href="/">
+                    <Link to="/">
                         <span className='shopping-bag-icon'>
                         </span>
                         {topCartComponent ? (
@@ -22,7 +23,7 @@ const CartHeader = ({
                         ) : (
                             <span className='product-quantity-fix'>0</span>
                         )}
-                    </a>
+                    </Link>
                 </p>
                 <div className="dropdown-cart">
                     <div className="cart-empty">

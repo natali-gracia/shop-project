@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Slider from "react-slick"
+import {Link} from 'react-router-dom'
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -34,9 +35,9 @@ const BlogViewSlider = ({
                         <div className="slick-slide-item" key={post.id}>
                             <img src={post.image} alt={post.name}/>
                             <div className="post-title-wrap">
-                                <a href="/">
+                                <Link to="/">
                                     <h3 className='narrow'>{post.name}</h3>
-                                </a>
+                                </Link>
                                 <p className='post-date'>{post.date}</p>
                             </div>
                         </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Slider from "react-slick"
+import {Link} from 'react-router-dom'
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -30,9 +31,9 @@ const SlickSlider = ({
                         <div className="slide-item-text">
                             Hipster style is a fashion trending for Gentleman and Lady with tattoos. You’ll become so cool and attractive.
                         </div>
-                        <a href="/" className="btn-link">
+                        <Link to="/" className="btn-link">
                             <span>View Now</span>
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 <div className="slick-slide-item">
@@ -43,9 +44,9 @@ const SlickSlider = ({
                             Secure your style with<br/>HONCHAROVA store edit of belts.
                             <br/>Modern and classic designs, we’ve got something for everyone.
                         </div>
-                        <a href="/" className="btn-link">
+                        <Link to="/" className="btn-link">
                             <span>Shop Now</span>
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 <div className="slick-slide-item">
@@ -56,12 +57,11 @@ const SlickSlider = ({
                             In anniversay 5 years of Store.
                             <br/>Sale off 30% for all. Wow ! Come here.
                         </div>
-                        <a href="/" className="btn-link">
+                        <Link to="/" className="btn-link">
                             <span>View Now</span>
-                        </a>
+                        </Link>
                     </div>
                 </div>
-
             </Slider>
         </div>
 
