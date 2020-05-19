@@ -128,10 +128,9 @@ button, input, select, textarea {
 input:focus, button:focus {
 	outline: none;
 }
-input[type="text"] {
-	padding: 5px 10px;
-    line-height: 1.35;
-    height: 36px;
+.section {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e5e5e5;
 }
 @media(min-width: 768px) {
 	.container {

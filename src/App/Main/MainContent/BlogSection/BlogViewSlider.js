@@ -7,7 +7,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import './blogviewslider.css'
 
-import  blogData from '.././App/Main/BlogPage/blogData'
+import  blogData from './../../BlogPage/blogData'
 
 const BlogViewSlider = ({
     settings = {

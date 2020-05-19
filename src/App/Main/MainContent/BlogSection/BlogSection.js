@@ -1,12 +1,10 @@
 import React from 'react'
 
-import './blogsection.css'
-
-import BlogViewSlider from './../../../../Components/BlogViewSlider';
+import BlogViewSlider from './BlogViewSlider'
 
 const BlogSection = () => {
     return (
-        <section className='blog-section'>
+        <section className='section'>
             <h2 className='section-title'>FROM THE BLOG</h2>
             <BlogViewSlider/>
         </section>

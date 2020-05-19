@@ -7,7 +7,7 @@ import SlickSlider from './SlickSlider/SlickSlider'
 
 const SliderBlock = () => {
     return (
-        <div className='wrap slider-block'>
+        <div className='wrap section'>
             <div className="col-md-9">
                 <SlickSlider/>
             </div>
