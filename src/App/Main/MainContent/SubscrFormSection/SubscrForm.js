@@ -11,7 +11,7 @@ const SubscrForm = () => {
 
     const sendAddress = (e) => {
         e.preventDefault();
-        Axios.post('https://my-json-server.typicode.com/kznkv-skillup/server/orders', {
+        Axios.post('https://shop-project-skillup.firebaseio.com/subscr.json', {
             address
             })
             .then(res => res.data)
@@ -22,18 +22,18 @@ const SubscrForm = () => {
     }
 
     return (
-        <div className='subscr-form'>           
-            <form onSubmit={sendAddress} className='subscr-input'>
-                <input 
-                    type="email" 
-                    placeholder='Enter Your Email...' 
-                    className='input-field'
-                    value={address}
-                    onChange={(e) => setAddress(e.target.value)}
-                />
-                <button type='submit' className='input-btn' >Subscribe</button>
-            </form>
-            {isAddressSave !== true ? null
+        <div className='subscr-form'> 
+            {isAddressSave !== true ?        
+                <form onSubmit={sendAddress} className='subscr-input'>
+                    <input 
+                        type="email" 
+                        placeholder='Enter Your Email...' 
+                        className='input-field'
+                        value={address}
+                        onChange={(e) => setAddress(e.target.value)}
+                    />
+                    <button type='submit' className='input-btn' >Subscribe</button>
+                </form>
             :   <div className='subscr-confirm'>Please, check your inbox to confirm your subscription...</div>  
             }
         </div>
