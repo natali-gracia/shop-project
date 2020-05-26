@@ -1,0 +1,81 @@
+.footer-container {
+    border-top: 1px solid #d5d5d5;
+    padding-top: 60px;
+}
+.footer-top {
+    padding-bottom: 25px;
+}
+.footer-top .col-md-3 {
+    padding: 0 10px;
+}
+.ft-logo {
+    margin: 25px auto;
+    max-width: 210px;
+}
+.ft-logo img {
+    width: 100%;
+    margin: 0 auto;
+}
+.ft-content {
+    margin: 0 auto 50px;
+    text-align: center;
+}
+.ft-content, .footer-top ul li a {
+    letter-spacing: 0.5px;
+    font-size: 13px;
+    color: #999;
+}
+.footer-top ul li a:hover {
+    color: #666;
+}
+.footer-top .module-title {
+    padding: 25px 0 45px 0;
+    text-align: left;
+}
+.footer-top ul {
+    display: block;
+}
+.footer-top ul li {
+    list-style: square;
+    list-style-position: inside;
+}
+.footer-bottom {
+    padding: 10px 0;
+    border-top: 1px solid #d5d5d5;
+    text-align: center;
+}
+.ft-line {
+    color: #666;
+    padding-bottom: 0px;
+    padding-left: 35px;
+    text-align: left;
+    position: relative;
+}
+.ft-content .address::before, .ft-content .phone::before, .ft-content .email::before {
+    background-size: 100%;
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+}
+.ft-content .address::before {
+    background-image: url('/images/address-icon.png');
+    width: 20px;
+    height: 20px;
+    top: 8px;
+}
+.ft-content .phone::before {
+    background-image: url('/images/phone-icon.png');
+    width: 20px;
+    height: 20px;
+    top: 3px;
+}
+
+.ft-content .email::before {
+    background-image: url('/images/email-icon.png');
+    width: 16px;
+    height: 16px;
+    top: 6px;
+    left: 1px;
+}
+

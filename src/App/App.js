@@ -7,6 +7,7 @@ import Header from './Header/Header'
 import Navbar from './Navbar/Navbar'
 import FixedNav from './Navbar/FixedNav/FixedNav'
 import Main from './Main/Main'
+import Footer from './Footer/Footer'
 
 
 const App = () => {
@@ -16,7 +17,7 @@ const App = () => {
       <Header/>
       <Navbar/>
 			<Main/>
-			<footer>Hello world!</footer>
+      <Footer/>
     </div>
   );
 }
