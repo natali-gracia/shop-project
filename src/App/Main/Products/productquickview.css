@@ -7,15 +7,10 @@
     overflow-x: auto;
     overflow-y: scroll;
     z-index: 9;
+    display: block;
 }
 .hidden {
     display: none;
-    opacity: 0;
-    transition: all 0.5s ease-in-out 0s;
-}
-.show {
-    display: block;
-    opacity: 1;
 }
 .overlay {
     height: 100%;
@@ -45,8 +40,11 @@
 .more-view {
     margin: 15px 0;
 }
-.product-quickview .btn-square::before {
+.btn-close .btn-square::before {
+    background-image: url(/images/plus-white.png);
     transform: rotate(45deg);
+    width: 16px;
+    height: 16px;
 }
 .product-quickview .btn-square {
     background-color: #666;
@@ -93,10 +91,6 @@
     font-size: inherit;
     font-weight: 700;
     text-transform: uppercase;
-}
-.quickview-product-options .btn-square::before {
-    background: none;
-    content: none;
 }
 .size-option .btn-square {
     background-color: transparent;

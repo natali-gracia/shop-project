@@ -6,9 +6,12 @@ import { Provider } from "react-redux"
 import { createStore } from "redux"
 
 import App from './App/App'
-import currencySelectReducer from './store/reducers/currencySelectReducer'
+import rootReducer from './store/reducers/rootReducer'
 
-const store = createStore(currencySelectReducer)
+const store = createStore(
+  rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+)
 
 ReactDOM.render(
   <Provider store={store}>

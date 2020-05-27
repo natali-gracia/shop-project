@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import {connect} from 'react-redux'
 import { Link } from 'react-router-dom'
 
 import './productquickview.css'
@@ -20,7 +20,7 @@ const ProductQuickview = ({
     const [quickViewImg, setQuickViewImg] = useState(productsArray[id].mainimage)
 
     return (
-        <div className={showQuickView === false ? 'product-quickview hidden' : 'product-quickview show'}>
+        <div className={showQuickView === false ? 'product-quickview hidden' : 'product-quickview'}>
             <div className="overlay"></div>
             <div className="quickview-content wrap">
                 <div className="quickview-img col-md-5">
@@ -61,10 +61,27 @@ const ProductQuickview = ({
                     <p></p>
                     Hello world! 
                 </div>
-                <button className="btn-square" onClick={() => setShowQuickView(!showQuickView)}></button>
+                <div className="btn-close">
+                    <button className="btn-square" onClick={() => setShowQuickView()}></button>
+                </div>
+                
             </div>
         </div>
     )
 }
 
-export default ProductQuickview
+const mapStateToProps = state => ({
+    showQuickView:  state.quickView.showQuickView
+})
+
+const mapDispatchToProps = dispatch => ({
+    setShowQuickView: state => dispatch({ 
+        type: "SHOW_QUICKVIEW", 
+        state
+})
+})
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+) (ProductQuickview)

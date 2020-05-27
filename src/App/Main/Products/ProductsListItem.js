@@ -1,27 +1,22 @@
-import React, { useState } from 'react'
+import React from 'react'
+import {connect} from 'react-redux'
 
 import { Link } from 'react-router-dom'
 
 import './productslistitem.css'
 
 import RewievRatingStars from '../ProductPage/RewievRatingStars'
-import ProductQuickview from './ProductQuickview'
 
-const ProductsListItem = () => {
-
-    const [showQuickView, setShowQuickView] = useState(false)
-
+const ProductsListItem = ({
+    setShowQuickView
+}) => {
     return (
         <div className='products-list-item'>
             <div className="product-img">
                 <Link to="/" className="grid-img">
                     <img src="/images/products-img/woman-01.jpg" alt=""/>
                 </Link> 
-                <button className="btn-square" title='Quick View' onClick={() => setShowQuickView(!showQuickView)}></button>
-                <ProductQuickview 
-                    showQuickView={showQuickView}
-                    setShowQuickView={setShowQuickView}
-                />  
+                <button className="btn-square" title='Quick View' onClick={() => setShowQuickView()}></button>
             </div>
             <div className="product-content">
                 <h4 className="product-title narrow">
@@ -42,4 +37,18 @@ const ProductsListItem = () => {
     )
 }
 
-export default ProductsListItem
+const mapStateToProps = state => ({
+    showQuickView:  state.quickView.showQuickView
+})
+
+const mapDispatchToProps = dispatch => ({
+    setShowQuickView: state => dispatch({ 
+        type: "SHOW_QUICKVIEW", 
+        state
+})
+})
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+) (ProductsListItem)

@@ -10,16 +10,16 @@ const options = [
   ];
 
 const CurrencySelect =({
-    selectedOption = {value: 'hryvnia', label: 'UAH'},
-    handleChange
+    selectedCurrency = {value: 'hryvnia', label: 'UAH'},
+    handleChange,
 }) => {
 
-        console.log(`Option selected:`, selectedOption)
+        console.log(`Option selected:`, selectedCurrency)
 
         return (
             <div style={{width: 150}}>
                 <Select
-                    value={selectedOption}
+                    value={selectedCurrency}
                     onChange={handleChange}
                     options={options}
                 />
@@ -27,14 +27,14 @@ const CurrencySelect =({
         )
 }
 
-const mapStateToProps = ({value}) => ({
-    selectedOption:value,
+const mapStateToProps = state => ({
+    selectedCurrency:  state.selectedCurrency.value
 })
 
 const mapDispatchToProps = dispatch => ({
     handleChange: event => dispatch({ 
         type: "CHANGE_CURRENCY", 
-        value: event 
+        value: event
     })
 })
 
