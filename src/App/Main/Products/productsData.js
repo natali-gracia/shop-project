@@ -10,13 +10,14 @@ const productsData = [
         images: ["/images/products-img/woman-01-1.jpg"],
         price: 3000,
         discount_price: 2500,
+        // options: [],
         options: [{
             name: 'size',
             value: ['s', 'm'],
         },
         {
             name: 'color',
-            value: ['#cc0000', 'white'],
+            value: ['#cc0000', '#f5f3ea'],
         }],
         in_stock: 3,
         rewievrating: 1,

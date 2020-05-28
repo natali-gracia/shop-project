@@ -93,5 +93,45 @@
 .product-img .btn-square::before {
     background-image: url('/images/plus-white.png');
 }
-
-
+.product-content .compare-price {
+    color: #999;
+}
+.product-content .compare-price em {
+    padding-right: 5px;
+}
+.product-content .product-price {
+    margin: 5px 0 8px 0;
+}
+.product-img .product-label {
+    padding: 0 10px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 13px;
+    color: #ff0000;
+    font-weight: 600;
+    background: #fff;
+    z-index: 9;
+    text-transform: uppercase;
+    right: 15px;
+    top: 15px;
+    position: absolute;
+}
+.product-img .color-swatch-item {
+    background: #fff;
+    bottom: 0;
+    margin-bottom: 0;
+    padding: 7px 5px;
+    position: absolute;
+    z-index: 9;
+    color: #000;
+}
+.product-img .color-swatch-item li {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-bottom: 0;
+    margin-right: 3px;
+}
+.product-img .color-swatch-item li:last-child {
+    margin-right: 0;
+}

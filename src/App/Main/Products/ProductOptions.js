@@ -13,7 +13,9 @@ const ProductOptions = () => {
                     <div className="wrap">
                         {option.name === 'color' ?
                             option.value.map(value => (
-                            <label key={value} className='product-options-color' style={{backgroundColor: value}}>
+                            <label key={value} className='product-options-color' style={value === 'white' ? 
+                            {backgroundColor: value, borderStyle: 'solid', borderWidth: '0.4px', borderColor: '#999'} 
+                            : {backgroundColor: value}}>
                                 <input 
                                     type='radio'
                                     value={value}

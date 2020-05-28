@@ -59,7 +59,7 @@ const ProductQuickview = ({
                     <ProductOptions/>
                     <div className="product-price">
                         <span>Price:</span>
-                        {productsArray[id].discount_price === null ?
+                        {productsArray[id].discount_price === 0 ?
                             <span className="price-value">₴{productsArray[id].price}</span>
                         :
                             <span>
