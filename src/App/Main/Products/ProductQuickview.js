@@ -7,6 +7,7 @@ import ViewSlider from '../../../Components/ViewSlider'
 
 import  productsData, {getProductsMap} from './../Products/productsData'
 import ProductOptions from './ProductOptions'
+import Quantity from '../../../Components/quantity/Quantity'
 
 
 const productsArray = getProductsMap(productsData)
@@ -18,6 +19,15 @@ const ProductQuickview = ({
 }) => {
 
     const [quickViewImg, setQuickViewImg] = useState(productsArray[id].mainimage)
+    const [productCount, setProductCount] = useState(1)
+
+    const onIncrementClick = () => {
+        setProductCount(productCount + 1)
+    }
+    
+    const onDecrementClick = () => {
+        setProductCount(productCount - 1)
+    }
 
     return (
         <div className={showQuickView === false ? 'product-quickview hidden' : 'product-quickview'}>
@@ -37,30 +47,42 @@ const ProductQuickview = ({
                     </h2>
                     <table className="quickview-base-info">
                         <tbody>
-                            <tr><th>Availability</th><td>{productsArray[id].quantity >= 1 ? 'in stock' : 'on order'}</td></tr>
+                            <tr><th>Availability</th><td>{productsArray[id].in_stock > 1 ? 
+                                productsArray[id].in_stock + ' in stock' 
+                                : <span className="product-one-left">Only 1 left!</span>
+                                }</td></tr>
                             <tr><th>Product Type</th><td>{productsArray[id].type}</td></tr>
                             <tr><th>Material</th><td>{productsArray[id].material}</td></tr>
                         </tbody>
                     </table>
                     <p className='product-summary'>{productsArray[id].summary}</p>
-                    <div className="quickview-product-options">
-                        <div className="size-option">
-                            <p>Size</p>
-                            <button type='radio' className="btn-square active"><label>S</label></button>
-                            <button type='radio' className="btn-square">M</button>
-                        </div>
-                        <ProductOptions/>
-                        
-                        {/* {
-                            productsArray[1].options.map((option) => (
-                                option
-                            ))
-                        } */}
-
+                    <ProductOptions/>
+                    <div className="product-price">
+                        <span>Price:</span>
+                        {productsArray[id].discount_price === null ?
+                            <span className="price-value">₴{productsArray[id].price}</span>
+                        :
+                            <span>
+                                <span className='compare-price'><em>₴{productsArray[id].price}</em></span>
+                                <span className="price-value">₴{productsArray[id].discount_price}</span>
+                            </span>
+                        }
                     </div>
-                    <p></p>
-                    Hello world! 
+                    <div className="product-quantity wrap">
+                        <span>Quantity:</span>
+                        <Quantity
+                            productCount={productCount}
+                            onIncrementClick={onIncrementClick}
+                            onDecrementClick={onDecrementClick}
+                            minCount={1}
+                            maxCount={productsArray[id].in_stock}
+                        />                       
+                    </div>
+                    <div className="action-buttons">
+                        <button>Add to Cart</button>
+                    </div>
                 </div>
+
                 <div className="btn-close">
                     <button className="btn-square" onClick={() => setShowQuickView()}></button>
                 </div>

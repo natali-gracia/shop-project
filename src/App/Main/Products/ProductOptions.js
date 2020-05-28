@@ -6,16 +6,32 @@ const productsArray = getProductsMap(productsData)
 
 const ProductOptions = () => {
     return (
-        <div >
+        <div className="product-options">
             {productsArray[1].options.map(option => (
-                <label htmlFor={option.name} key={option.name}>
-                    {option.name}
-                    <select name="" id={option.name}>
-                        {option.value.map(value => (
-                            <option key={value.value} value={value.value}>{value.value}</option>
+                <div key={option.name}>
+                    <div className="product-options-name">{option.name}</div>
+                    <div className="wrap">
+                        {option.name === 'color' ?
+                            option.value.map(value => (
+                            <label key={value} className='product-options-color' style={{backgroundColor: value}}>
+                                <input 
+                                    type='radio'
+                                    value={value}
+                                    name="RadioButtons"
+                                />
+                            </label>
+                        )) : option.value.map(value => (
+                            <label key={value} className='product-options-item checked'>
+                                {value}
+                                <input 
+                                    type='radio'
+                                    value={value}
+                                    name="RadioButtons"
+                                />
+                            </label>
                         ))}
-                    </select>
-                </label>
+                    </div>
+                </div>
             ))}
         </div>
     )

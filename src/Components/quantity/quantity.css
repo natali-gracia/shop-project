@@ -1,0 +1,30 @@
+.product-quantity-value {
+    text-align: center;
+}
+.product-quantity-value .plus::before, .product-quantity-value .minus::before {
+    width: 14px;
+    height: 14px;
+    content: '';
+    display: block;
+	margin: 0 auto;	
+    background-size: 100%;
+}
+.product-quantity-value .plus::before {
+    background-image: url(/images/plus-white.png);
+}
+.product-quantity-value .minus::before {
+    background-image: url(/images/minus-white.png);
+}
+.product-quantity-value input {
+    height: 32px;
+    width: 84px;
+    text-align: center;
+    vertical-align: middle;
+}
+.product-quantity-value .btn-square {
+    height: 32px;
+    width: 32px;
+}
+.product-quantity-value .btn-square:disabled {
+    background-color: #ccc;
+}

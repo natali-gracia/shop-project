@@ -38,7 +38,7 @@
     height: auto;
 }
 .more-view {
-    margin: 15px 0;
+    margin-top: 15px;
 }
 .btn-close .btn-square::before {
     background-image: url(/images/plus-white.png);
@@ -81,27 +81,73 @@
 .product-summary {
     margin-bottom: 20px;
 }
-.quickview-product-options {
+.product-options {
     font-weight: 700;
     text-transform: uppercase;
 }
-.quickview-product-options .btn-square {
-    position: inherit;
-    margin-right: 5px;
-    font-size: inherit;
-    font-weight: 700;
-    text-transform: uppercase;
+.product-options-name {
+    padding-bottom: 5px;
 }
-.size-option .btn-square {
-    background-color: transparent;
-	border: transparent;
-    color: #000;
-}
-.size-option .btn-square:hover {
-    color: #fff;
-}
-.size-option .active {
+.product-options .checked, .product-options-item:hover {
     background-color: #000;
 	border: 1px solid #000;
     color: #fff;
+    cursor: pointer;
 }
+.product-options-item, .product-options-color {
+    display: block;
+    width: 32px;
+	height: 32px;
+    margin: 0 10px 15px 0;
+    letter-spacing: 0;
+}
+.product-options-item {
+    background-color: transparent;
+	border: transparent;
+    color: #000;
+    text-align: center;
+    line-height: 32px;
+}
+.product-options-color {    
+    border: 1px solid #999;
+}
+.product-options .checked-color, .product-options-color:hover {
+    border: none;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+.quickview-shop .product-price, .quickview-shop .product-quantity {
+    color: #666;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-align: left;
+    margin: 15px 0 10px 0;
+}
+.product-price .price-value {
+    color: #000;
+    font-size: 24px;
+    padding-left: 2px;
+}
+.product-price .compare-price {
+    text-decoration: line-through;
+    padding: 0 2px;
+}
+.product-price .compare-price em {
+    font-size: 16px;
+    font-weight: 400;
+    color: #999;
+}
+.quickview-shop .product-quantity {
+    margin-bottom: 25px;
+}
+.product-quantity span {
+    line-height: normal;
+    padding-top: 15px;
+    margin-right: 10px;
+}
+.product-one-left {
+    color: #cc0000;
+    font-weight: 400;
+}
+
