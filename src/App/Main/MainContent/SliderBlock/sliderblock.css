@@ -57,4 +57,7 @@
     text-transform: capitalize;
     cursor: default;
 }
+.widget-section {
+    padding-bottom: 25px;
+}
 

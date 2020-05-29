@@ -1,0 +1,38 @@
+.breadcrumb-wrap {
+    background: url('/images/bg-breadcrumb.jpg') scroll center center no-repeat;
+    height: 390px;
+    position: relative;
+}
+.breadcrumbs {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.breadcrumbs-link, .breadcrumbs-link a {
+    color: #ccc;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+}
+.breadcrumbs-link:last-child a {
+    color: #fff;
+    cursor: text;
+}
+.breadcrumbs-link:last-child a:hover {
+    color: #fff;
+}
+.breadcrumbs-link>span {
+    padding: 0 5px;
+}
+.breadcrumbs-link a:hover {
+    color: #ca504d;
+}
+.breadcrumbs-row {
+   position: relative;
+}
+.breadcrumbs-line {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);  
+}

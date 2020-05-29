@@ -130,7 +130,7 @@ input:focus, button:focus {
 }
 .section {
     padding-bottom: 25px;
-    border-bottom: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
 }
 @media(min-width: 768px) {
 	.container {
