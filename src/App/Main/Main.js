@@ -8,7 +8,7 @@ import AccountPage from './AccountPage/AccountPage'
 const Main = () => {
     return (
         <main>
-            <BreadcrumbRow/>
+            <Route path='/:path' component={BreadcrumbRow}/>
             <div className='container'>    
                 <Route exact path='/' component={HomePage}/>
                 <Route path='/account/:authOption' component={AccountPage}/>
