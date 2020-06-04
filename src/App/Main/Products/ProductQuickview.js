@@ -8,6 +8,7 @@ import ViewSlider from '../../../Components/ViewSlider'
 import  productsData, {getProductsMap} from './../Products/productsData'
 import ProductOptions from './ProductOptions'
 import Quantity from '../../../Components/quantity/Quantity'
+import ProductPrice from './../../../Components/productprice/ProductPrice'
 
 
 const productsArray = getProductsMap(productsData)
@@ -57,16 +58,21 @@ const ProductQuickview = ({
                     </table>
                     <p className='product-summary'>{productsArray[id].summary}</p>
                     <ProductOptions/>
-                    <div className="product-price">
-                        <span>Price:</span>
-                        {productsArray[id].discount_price === 0 ?
+                    <div className="product-price wrap">
+                        <span className='product-price-title'>Price:</span>
+                        <ProductPrice
+                            discount_price = {productsArray[id].discount_price}
+                            price = {productsArray[id].price}
+                            price_value={'price-value'}
+                        />
+                        {/* {productsArray[id].discount_price === 0 ?
                             <span className="price-value">₴{productsArray[id].price}</span>
                         :
                             <span>
                                 <span className='compare-price'><em>₴{productsArray[id].price}</em></span>
                                 <span className="price-value">₴{productsArray[id].discount_price}</span>
                             </span>
-                        }
+                        } */}
                     </div>
                     <div className="product-quantity wrap">
                         <span>Quantity:</span>

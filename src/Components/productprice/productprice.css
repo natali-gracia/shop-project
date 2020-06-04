@@ -1,0 +1,14 @@
+.product-price .price-value {
+    color: #000;
+    font-size: 24px;
+    padding-left: 4px;
+}
+.product-price .compare-price {
+    text-decoration: line-through;
+    padding-left: 4px;
+}
+.product-price .compare-price em {
+    font-size: 16px;
+    font-weight: 400;
+    color: #999;
+}

@@ -121,19 +121,8 @@
     text-align: left;
     margin: 15px 0 10px 0;
 }
-.product-price .price-value {
-    color: #000;
-    font-size: 24px;
-    padding-left: 4px;
-}
-.product-price .compare-price {
-    text-decoration: line-through;
-    padding-left: 4px;
-}
-.product-price .compare-price em {
-    font-size: 16px;
-    font-weight: 400;
-    color: #999;
+.product-price-title {
+    padding-top: 10px;
 }
 .quickview-shop .product-quantity {
     margin-bottom: 25px;

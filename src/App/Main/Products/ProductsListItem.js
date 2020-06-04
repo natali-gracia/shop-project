@@ -7,6 +7,7 @@ import './productslistitem.css'
 
 import RewievRatingStars from '../ProductPage/RewievRatingStars'
 import  productsData, {getProductsMap} from './productsData'
+import ProductPrice from './../../../Components/productprice/ProductPrice'
 
 const productsArray = getProductsMap(productsData)
 
@@ -38,14 +39,18 @@ const ProductsListItem = ({
                     <Link to="/">{productsArray[id].name}</Link>
                 </h4>
                 <div className="product-price">
-                    {productsArray[id].discount_price === 0 ?
+                    <ProductPrice
+                        discount_price = {productsArray[id].discount_price}
+                        price = {productsArray[id].price}
+                    />
+                    {/* {productsArray[id].discount_price === 0 ?
                         <span>₴{productsArray[id].price}</span>
                     :
                         <span>
                             <span className='compare-price'><em>₴{productsArray[id].price}</em></span>
                             <span>₴{productsArray[id].discount_price}</span>
                         </span>
-                    }
+                    } */}
                 </div>
                 <div className="review-ratting">
                 <RewievRatingStars/>
