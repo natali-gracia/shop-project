@@ -14,8 +14,6 @@ const CurrencySelect =({
     handleChange,
 }) => {
 
-        console.log(`Option selected:`, selectedCurrency)
-
         return (
             <div style={{width: 150}}>
                 <Select

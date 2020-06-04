@@ -2,7 +2,17 @@ import React from "react"
 import { Link } from "react-router-dom"
 import withBreadcrumbs from "react-router-breadcrumbs-hoc"
 
-const PureBreadcrumbs = ({ breadcrumbs }) => (
+import productsData, {getProductsMap} from './../Products/productsData'
+
+const productsArray = getProductsMap(productsData)
+
+const DynamicUserBreadcrumb = ({ match }) => (
+  <span>{productsArray[match.params.productId].name}</span>
+);
+
+const routes = [{ path: "/shop/:category/:type/:productId", breadcrumb: DynamicUserBreadcrumb }];
+
+const Breadcrumbs = ({ breadcrumbs }) => (
   <div className="wrap breadcrumbs-line">
     {breadcrumbs.map(({ breadcrumb, match }, index) => (
       <div className="breadcrumbs-link" key={match.url}>
@@ -13,4 +23,4 @@ const PureBreadcrumbs = ({ breadcrumbs }) => (
   </div>
 )
 
-export default withBreadcrumbs()(PureBreadcrumbs)
+export default withBreadcrumbs(routes)(Breadcrumbs)

@@ -6,16 +6,18 @@ import './breadcrumbrow.css'
 import Breadcrumbs from './Breadcrumbs'
 import BreadcrumbRouteConfig from './BreadcrumbRouteConfig'
 
-const BreadcrumbRow = () => {
+const BreadcrumbRow = ({match}) => {
     return (
         <div className='breadcrumb-wrap'>
                 <div className="breadcrumbs">
-                    <Switch><h1>{BreadcrumbRouteConfig.map((route) => (
-                        <Route key={route} {...route} />
-                        ))}
-                    </h1></Switch>
+                    <Switch>
+                        <React.Fragment>
+                            <h1>{BreadcrumbRouteConfig.map((route) => (<Route key={route.path} {...route} />))}</h1>
+                        </React.Fragment>
+                    </Switch>
                     <div className="breadcrumbs-row">
-                        <Breadcrumbs/>
+                        <Breadcrumbs
+                        match={match}/>
                     </div>
                 </div>
         </div>

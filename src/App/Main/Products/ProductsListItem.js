@@ -18,13 +18,13 @@ const ProductsListItem = ({
     return (
         <div className='products-list-item'>
             <div className="product-img">
-                <Link to="/" className="grid-img">
+                <Link to={`/shop/${productsArray[id].category}/${productsArray[id].type}/${productsArray[id].id}`} className="grid-img">
                     <img src={productsArray[id].mainimage} alt=""/>
                 </Link>
                 {productsArray[id].options.map(option => (option.name === 'color' ? 
                     <ul className="color-swatch-item wrap" key={option.name}>
                         {option.value.map(value => (
-                        <li style={{}} style={value === 'white' ? 
+                        <li style={value === 'white' ? 
                             {backgroundColor: value, borderStyle: 'solid', borderWidth: '0.4px', borderColor: '#999'} 
                             : {backgroundColor: value}} key={value}>
                         </li>))}

@@ -1,8 +1,8 @@
 const productsData = [
     {
         id:1,
-        name:"JASMINE WHITE BAG",
-        type:"hand bag",
+        name: 'Jasmine white bag',
+        type:"bag",
         style:"street",
         category:"woman",
         material:"100% leather",

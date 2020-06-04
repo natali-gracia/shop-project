@@ -9,11 +9,15 @@
     top: 50%;
     transform: translate(-50%, -50%);
 }
+.breadcrumb-wrap .breadcrumbs h1 {
+    padding-bottom: 10px;
+}
 .breadcrumbs-link, .breadcrumbs-link a {
     color: #ccc;
     font-weight: 600;
     letter-spacing: 0.5px;
     text-transform: capitalize;
+    white-space: nowrap;
 }
 .breadcrumbs-link:last-child a {
     color: #fff;
