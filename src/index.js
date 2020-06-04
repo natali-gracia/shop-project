@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom'
 import {BrowserRouter} from 'react-router-dom'
 import { Provider } from "react-redux"
 import { createStore } from "redux"
+import ScrollToTop from './Components/ScrollToTop'
 
 import App from './App/App'
 import rootReducer from './store/reducers/rootReducer'
@@ -16,7 +17,9 @@ const store = createStore(
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
-    <App/>
+      <ScrollToTop>
+        <App/>
+      </ScrollToTop>
     </BrowserRouter>
   </Provider>, document.getElementById('root')
 );
