@@ -1,0 +1,11 @@
+.zoom-img-container {
+    background-repeat: no-repeat;
+}
+.zoom-img-container:hover img {
+    opacity: 0;
+}
+.zoom-img-container img {
+    display: block;
+    width: 100%;
+    pointer-events: none;
+}
