@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 
 import './productpage.css'
 
 import ViewSlider from '../../../Components/ViewSlider'
 
+import ZoomImage from './ZoomImage/ZoomImage'
+import ProductImageView from './ProductImageView/ProductImageView'
 import ProductOptions from './../Products/ProductOptions'
 import Quantity from './../../../Components/quantity/Quantity'
 import ProductPrice from './../../../Components/productprice/ProductPrice'
 
 import productsData, {getProductsMap} from './../Products/productsData'
-import ZoomImage from './ZoomImage/ZoomImage'
+
 
 const productsArray = getProductsMap(productsData)
 
@@ -19,8 +21,9 @@ const ProductPage = ({
 
     const id = match.params.productId
 
-    const [quickViewImg, setQuickViewImg] = useState(productsArray[id].mainimage)
+    const [productViewImg, setProductViewImg] = useState(productsArray[id].mainimage)
     const [productCount, setProductCount] = useState(1)
+    const [imageView, setImageView] = useState(false)
 
     const onIncrementClick = () => {
         setProductCount(productCount + 1)
@@ -35,12 +38,19 @@ const ProductPage = ({
             <section className="wrap">
                 <div className="quickview-img col-md-4">
                     <ZoomImage
-                        quickViewImg = {quickViewImg}
-                   />
+                        imageView = {imageView}
+                        setImageView = {setImageView}
+                        productViewImg = {productViewImg}
+                    />
+                    <ProductImageView
+                        imageView = {imageView}
+                        setImageView = {setImageView}
+                        productViewImg = {productViewImg}
+                    />
                     <div className="more-view">
                         <ViewSlider 
                             id={id}
-                            setQuickViewImg={setQuickViewImg}
+                            setProductViewImg={setProductViewImg}
                             slickViewStyle = 'slick-view'
                         />
                     </div>

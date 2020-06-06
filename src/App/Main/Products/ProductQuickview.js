@@ -35,18 +35,28 @@ const ProductQuickview = ({
             <div className="quickview-content wrap">
                 <div className="quickview-img col-md-5">
                     <div className="quickview-main-img">
-                        <Link to="/"><img src={quickViewImg === '' ? productsArray[id].mainimage : quickViewImg} alt=""/></Link>
+                        <Link 
+                            to={`/shop/${productsArray[id].category}/${productsArray[id].type}/${productsArray[id].id}`}
+                            onClick={() => setShowQuickView()}
+                        >
+                            <img src={quickViewImg === '' ? productsArray[id].mainimage : quickViewImg} alt=""/>
+                        </Link>
                     </div>
                     <div className="more-view">
                         <ViewSlider
                             id={id} 
-                            setQuickViewImg={setQuickViewImg}
+                            setProductViewImg={setQuickViewImg}
                         />
                     </div>
                 </div>
                 <div className="quickview-shop col-md-7">
                     <h2 className="narrow">
-                        <Link to="/">{productsArray[id].name}</Link>
+                        <Link 
+                            to={`/shop/${productsArray[id].category}/${productsArray[id].type}/${productsArray[id].id}`}
+                            onClick={() => setShowQuickView()}
+                        >
+                            {productsArray[id].name}
+                        </Link>
                     </h2>
                     <table className="quickview-base-info">
                         <tbody>

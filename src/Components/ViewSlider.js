@@ -13,7 +13,7 @@ const productsArray = getProductsMap(productsData)
 const ViewSlider = ({
     id = 1,
     slidesToShowCount = 3,
-    setQuickViewImg,
+    setProductViewImg,
     settings = {
         dots: false,
         infinite: true,
@@ -29,11 +29,11 @@ const ViewSlider = ({
             <div className='view-slider'>
                 <Slider {...settings}>
                     <div className="slick-slide-item">
-                        <img src={productsArray[id].mainimage} alt={productsArray[id].name} onClick={()=>setQuickViewImg(productsArray[id].mainimage)}/>   
+                        <img src={productsArray[id].mainimage} alt={productsArray[id].name} onClick={()=>setProductViewImg(productsArray[id].mainimage)}/>   
                     </div>
                     {productsArray[id].images.map((img)=>(
                         <div className="slick-slide-item" key={img}>
-                            <img src={img} alt={productsArray[id].name} onClick={()=>setQuickViewImg(img)}/>   
+                            <img src={img} alt={productsArray[id].name} onClick={()=>setProductViewImg(img)}/>   
                         </div>
                     ))}
                 </Slider>            

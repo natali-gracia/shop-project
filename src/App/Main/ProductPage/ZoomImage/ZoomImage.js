@@ -5,7 +5,7 @@ import './zoomimage.css'
 class ZoomImage extends Component {
     
     state = {
-        backgroundImage: `url(${this.props.quickViewImg})`,
+        backgroundImage: `url(${this.props.productViewImg})`,
         backgroundPosition: '0% 0%',
     }
 
@@ -16,22 +16,27 @@ class ZoomImage extends Component {
         this.setState({ backgroundPosition: `${x}% ${y}%`})
     }
 
-    handleMouseOver = (quickViewImg) => {
+    handleMouseOver = (productViewImg) => {
         this.setState({
-            backgroundImage: `url(${quickViewImg})`
+            backgroundImage: `url(${productViewImg})`
         })
     }
-
+    
     render () {
-        const { quickViewImg }  = this.props;
+        const { 
+            productViewImg,
+            imageView,
+            setImageView,
+        }  = this.props;
         return (
             <figure  
                 style={this.state}
                 onMouseMove={this.handleMouseMove}
-                onMouseOver={()=>this.handleMouseOver(quickViewImg)} 
+                onMouseOver={()=>this.handleMouseOver(productViewImg)} 
                 className='zoom-img-container'
+                onClick={() => setImageView(!imageView)}
             >
-                <img src={quickViewImg}/>
+                <img src={productViewImg} alt=''/>
             </figure>   
 )}}
 

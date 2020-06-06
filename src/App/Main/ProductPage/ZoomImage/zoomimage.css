@@ -1,6 +1,9 @@
 .zoom-img-container {
     background-repeat: no-repeat;
 }
+.zoom-img-container:hover {
+    cursor: pointer;
+}
 .zoom-img-container:hover img {
     opacity: 0;
 }
