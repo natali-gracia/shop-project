@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import './productpage.css'
 
@@ -41,6 +41,7 @@ const ProductPage = ({
                         <ViewSlider 
                             id={id}
                             setQuickViewImg={setQuickViewImg}
+                            slickViewStyle = 'slick-view'
                         />
                     </div>
                 </div>

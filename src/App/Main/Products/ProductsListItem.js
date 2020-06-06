@@ -32,7 +32,7 @@ const ProductsListItem = ({
                     : null
                 ))} 
                 {productsArray[id].discount_price !== 0 ? <div className="product-label">Sale</div> : null}
-                <button className="btn-square" title='Quick View' onClick={() => setShowQuickView()}></button>
+                <button className="btn-square" title='Quick View' onClick={() => setShowQuickView(id)}></button>
             </div>
             <div className="product-content">
                 <h4 className="product-title narrow">
@@ -43,14 +43,6 @@ const ProductsListItem = ({
                         discount_price = {productsArray[id].discount_price}
                         price = {productsArray[id].price}
                     />
-                    {/* {productsArray[id].discount_price === 0 ?
-                        <span>₴{productsArray[id].price}</span>
-                    :
-                        <span>
-                            <span className='compare-price'><em>₴{productsArray[id].price}</em></span>
-                            <span>₴{productsArray[id].discount_price}</span>
-                        </span>
-                    } */}
                 </div>
                 <div className="review-ratting">
                 <RewievRatingStars/>
@@ -67,17 +59,17 @@ const ProductsListItem = ({
 }
 
 const mapStateToProps = state => ({
-    showQuickView:  state.quickView.showQuickView
+    showQuickView:  state.quickView.showQuickView,
 })
 
-const mapDispatchToProps = dispatch => ({
-    setShowQuickView: state => dispatch({ 
+const mapDispatchToProps = (dispatch) => ({
+    setShowQuickView: (id) => dispatch({ 
         type: "SHOW_QUICKVIEW", 
-        state
-})
+        id
+    })
 })
 
 export default connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 ) (ProductsListItem)

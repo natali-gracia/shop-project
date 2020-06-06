@@ -3,17 +3,10 @@ import React, { Component } from 'react'
 import './zoomimage.css'
 
 class ZoomImage extends Component {
-    constructor (props) {
-        super(props)
-
-        const {
-            quickViewImg
-        } = props
-
-        this.state = {
-            backgroundImage: `url(${quickViewImg})`,
-            backgroundPosition: '0% 0%',
-        }
+    
+    state = {
+        backgroundImage: `url(${this.props.quickViewImg})`,
+        backgroundPosition: '0% 0%',
     }
 
     handleMouseMove = e => {
@@ -30,16 +23,15 @@ class ZoomImage extends Component {
     }
 
     render () {
-        const {
-            quickViewImg
-        } = this.props;
+        const { quickViewImg }  = this.props;
         return (
             <figure  
                 style={this.state}
                 onMouseMove={this.handleMouseMove}
                 onMouseOver={()=>this.handleMouseOver(quickViewImg)} 
-                className='zoom-img-container'>
-                    <img src={quickViewImg} />
+                className='zoom-img-container'
+            >
+                <img src={quickViewImg}/>
             </figure>   
 )}}
 

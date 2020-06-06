@@ -10,16 +10,15 @@ import ProductOptions from './ProductOptions'
 import Quantity from '../../../Components/quantity/Quantity'
 import ProductPrice from './../../../Components/productprice/ProductPrice'
 
-
 const productsArray = getProductsMap(productsData)
 
 const ProductQuickview = ({
-    id=1,
+    id = 1,
     showQuickView,
     setShowQuickView,
 }) => {
 
-    const [quickViewImg, setQuickViewImg] = useState(productsArray[id].mainimage)
+    const [quickViewImg, setQuickViewImg] = useState('')
     const [productCount, setProductCount] = useState(1)
 
     const onIncrementClick = () => {
@@ -36,10 +35,13 @@ const ProductQuickview = ({
             <div className="quickview-content wrap">
                 <div className="quickview-img col-md-5">
                     <div className="quickview-main-img">
-                        <Link to="/"><img src={quickViewImg} alt=""/></Link>
+                        <Link to="/"><img src={quickViewImg === '' ? productsArray[id].mainimage : quickViewImg} alt=""/></Link>
                     </div>
                     <div className="more-view">
-                        <ViewSlider setQuickViewImg={setQuickViewImg}/>
+                        <ViewSlider
+                            id={id} 
+                            setQuickViewImg={setQuickViewImg}
+                        />
                     </div>
                 </div>
                 <div className="quickview-shop col-md-7">
@@ -65,14 +67,6 @@ const ProductQuickview = ({
                             price = {productsArray[id].price}
                             price_value={'price-value'}
                         />
-                        {/* {productsArray[id].discount_price === 0 ?
-                            <span className="price-value">₴{productsArray[id].price}</span>
-                        :
-                            <span>
-                                <span className='compare-price'><em>₴{productsArray[id].price}</em></span>
-                                <span className="price-value">₴{productsArray[id].discount_price}</span>
-                            </span>
-                        } */}
                     </div>
                     <div className="product-quantity wrap">
                         <span>Quantity:</span>
@@ -99,13 +93,15 @@ const ProductQuickview = ({
 }
 
 const mapStateToProps = state => ({
-    showQuickView:  state.quickView.showQuickView
+    showQuickView:  state.quickView.showQuickView,
+    id:  state.quickView.productId,
 })
 
 const mapDispatchToProps = dispatch => ({
-    setShowQuickView: state => dispatch({ 
+    setShowQuickView: (state, id) => dispatch({ 
         type: "SHOW_QUICKVIEW", 
-        state
+        state,
+        id
 })
 })
 

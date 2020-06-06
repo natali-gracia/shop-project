@@ -2,6 +2,9 @@
     width: 99px;
     cursor: pointer;
 }
+.slick-view .view-slider .slick-slide {
+    width: 110px !important;
+}
 .view-slider .slick-slide {
     width: 99px !important;
     margin-left: 10px;
@@ -29,7 +32,6 @@
     background: #fff;
     border: 1px solid #ccc;
 }
-
 .view-slider .slick-prev:before, .view-slider .slick-next:before {
     background: url('/images/slider/arrow-down-grey.png') no-repeat;
     -webkit-background-size: cover;

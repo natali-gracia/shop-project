@@ -21,21 +21,23 @@ const ViewSlider = ({
         slidesToShow: productsArray[id].images.length <= slidesToShowCount-2 ? productsArray[id].images.length + 1 : slidesToShowCount,
         slidesToScroll: 1
     },
-    
+    slickViewStyle = ''
 }) => {
 
     return (
-        <div className='view-slider'>
-            <Slider {...settings}>
-                <div className="slick-slide-item">
-                    <img src={productsArray[id].mainimage} alt={productsArray[id].name} onClick={()=>setQuickViewImg(productsArray[id].mainimage)}/>   
-                </div>
-                {productsArray[id].images.map((img)=>(
-                    <div className="slick-slide-item" key={img}>
-                        <img src={img} alt={productsArray[id].name} onClick={()=>setQuickViewImg(img)}/>   
+        <div className={slickViewStyle}>
+            <div className='view-slider'>
+                <Slider {...settings}>
+                    <div className="slick-slide-item">
+                        <img src={productsArray[id].mainimage} alt={productsArray[id].name} onClick={()=>setQuickViewImg(productsArray[id].mainimage)}/>   
                     </div>
-                ))}
-            </Slider>            
+                    {productsArray[id].images.map((img)=>(
+                        <div className="slick-slide-item" key={img}>
+                            <img src={img} alt={productsArray[id].name} onClick={()=>setQuickViewImg(img)}/>   
+                        </div>
+                    ))}
+                </Slider>            
+            </div>
         </div>
     )
 }
