@@ -1,0 +1,33 @@
+.product-tabs-btn {
+    border-bottom: 1px solid #d0d0d0;
+    margin-bottom: 25px;
+}
+.product-tabs-btn label {
+    line-height: 28px;
+    border-image: none;
+    border-width: 0 0 0px;
+    transition: all 0.2s ease 0s;
+    margin-right: 30px;
+}
+.product-tabs-btn label em::before {
+    background: #333 none repeat scroll 0 0;
+    bottom: -1px;
+    content: "";
+    height: 1px;
+    left: 0;
+    transition: all 0.2s ease 0s;
+    position: absolute;
+    width: 0;
+}
+.product-tabs-btn label em {
+    position: relative;
+    line-height: 28px;
+    display: inline-block;
+    padding: 0 5px;
+}
+.product-tabs-btn label:hover em::before, .product-tabs-btn label.checked em::before {
+    width: 100%;
+}
+.section-title label:hover em, .section-title label.checked em {
+    color: #000;
+}

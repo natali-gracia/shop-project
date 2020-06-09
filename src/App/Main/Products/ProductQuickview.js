@@ -33,7 +33,7 @@ const ProductQuickview = ({
         <div className={showQuickView === false ? 'product-quickview hidden' : 'product-quickview'}>
             <div className="overlay"></div>
             <div className="quickview-content wrap">
-                <div className="quickview-img col-md-5">
+                <div className="product-view-img col-md-5">
                     <div className="quickview-main-img">
                         <Link 
                             to={`/shop/${productsArray[id].category}/${productsArray[id].type}/${productsArray[id].id}`}
@@ -58,7 +58,7 @@ const ProductQuickview = ({
                             {productsArray[id].name}
                         </Link>
                     </h2>
-                    <table className="quickview-base-info">
+                    <table className="product-base-info">
                         <tbody>
                             <tr><th>Availability</th><td>{productsArray[id].in_stock > 1 ? 
                                 productsArray[id].in_stock + ' in stock' 

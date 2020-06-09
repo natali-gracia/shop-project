@@ -30,7 +30,7 @@
     transform: translate(-50%, -50%);
     outline: 0 none;
 }
-.quickview-img, .quickview-shop {
+.product-view-img, .quickview-shop {
     padding: 0 15px;
 }
 .quickview-main-img img {
@@ -63,19 +63,19 @@
     text-align: left;
     margin-bottom: 15px;
 }
-.quickview-base-info {
+.product-base-info {
     margin-bottom: 20px;
 }
-.quickview-base-info th, td {
+.product-base-info th, td {
     text-align: left;
     padding-bottom: 5px;
 }
-.quickview-base-info th {
+.product-base-info th {
     font-weight: 700;
     text-transform: uppercase;
     padding-right: 10px;
 }
-.quickview-base-info td {
+.product-base-info td {
     text-transform: lowercase;
 }
 .product-summary {
