@@ -3,7 +3,7 @@
     margin-bottom: 10px;
 }
 .product-tabs {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 .product-page .product-view-img {
     padding: 0;
@@ -63,7 +63,13 @@
 .tab-content .tab-pane {
     letter-spacing: 0.5px;
     color: #666;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
 }
 .related-products-slider {
     margin: 45px 0;
+}
+.tab-content .tab-pane button {
+    letter-spacing: 1.5px;
 }

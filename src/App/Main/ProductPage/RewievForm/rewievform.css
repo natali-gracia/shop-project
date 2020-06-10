@@ -1,0 +1,17 @@
+.rewiev-form .section-title {
+    padding-top: 30px;
+    border-top: 1px dotted #d0d0d0;
+}
+.form label.rating-point {
+    display: flex;
+    padding-top: 15px;
+}
+.form label.rating-point span {
+    padding: 5px 10px 0 0;
+}
+.product-page .form label.rating-point .review-rating {
+    margin-bottom: 0;
+}
+.product-page .form label.rating-point .review-rating {
+    justify-content: initial;
+}

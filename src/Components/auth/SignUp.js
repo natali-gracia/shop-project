@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom'
 const SignUp = () => {
     return (
         <div>
-            <form className='auth-form'>
-                <h2 className='section-title narrow' style={{textAlign: "left"}}>Create an account</h2>
+            <form className='form'>
+                <h2 className='section-title' style={{textAlign: "left"}}>Create an account</h2>
                 <label>
                     <span>First Name</span>
                     <input type="text"/>

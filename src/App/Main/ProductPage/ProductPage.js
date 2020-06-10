@@ -10,6 +10,7 @@ import ProductOptions from './../Products/ProductOptions'
 import ProductPrice from './../../../Components/productprice/ProductPrice'
 import ProductTabsRadioButtons from './ProductTabsRadioButtons/ProductTabsRadioButtons'
 import ProductsSlider from './../../../Components/ProductsSlider'
+import RewievForm from './RewievForm/RewievForm'
 
 import productsData, {getProductsMap} from './../Products/productsData'
 
@@ -25,6 +26,7 @@ const ProductPage = ({
     const [imageView, setImageView] = useState(false)
     const [productCount, setProductCount] = useState(1)
     const [selectedDescTab, setSelectedDescTab] = useState('Product Description')
+    const [showRewievForm, setShowRewievForm] = useState(false)
 
     const onCountChange = (e) => {
         if (e.target.value > productsArray[id].in_stock) 
@@ -102,8 +104,12 @@ const ProductPage = ({
                         <div className="tab-pane">
                             <p>{productsArray[id].description}</p>
                         </div> :
-                        <div className="tab-pane">
-                            <span>No reviews yet</span>
+                        <div>
+                            <div className="tab-pane">
+                                <span>No reviews yet</span>
+                                <button onClick={() => setShowRewievForm(!showRewievForm)}>Write a review</button>
+                            </div>
+                            {showRewievForm === true ? <RewievForm/> : null}
                         </div>
                         }
                 </div>

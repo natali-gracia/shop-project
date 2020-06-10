@@ -8,8 +8,8 @@ import './authform.css'
 const SignIn = () => {
     return (
         <div>
-            <form className='auth-form'>
-                <h2 className='section-title narrow' style={{textAlign: "left"}}>Log in</h2>
+            <form className='form'>
+                <h2 className='section-title' style={{textAlign: "left"}}>Log in</h2>
                 <label>
                     <span>Email Address<em>*</em></span>
                     <input type="email"/>
@@ -27,8 +27,8 @@ const SignIn = () => {
                     </p>
                 </div>
             </form>
-            <form className='auth-form reset-pass-form'>
-                <h2 className='section-title narrow' style={{textAlign: "left"}}>Reset your password</h2>
+            <form className='form reset-pass-form'>
+                <h2 className='section-title' style={{textAlign: "left"}}>Reset your password</h2>
                 <p>We will send you an email to reset your password.</p>
                 <label>
                     <span>Email Address</span>
