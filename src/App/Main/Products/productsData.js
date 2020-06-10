@@ -7,7 +7,7 @@ const productsData = [
         category:"woman",
         material:"100% leather",
         mainimage:"/images/products-img/woman-01.jpg",
-        images: ["/images/products-img/woman-01-1.jpg"],
+        images: ["/images/products-img/woman-01-1.jpg", "/images/products-img/woman-01-1.jpg", "/images/products-img/woman-01-1.jpg", "/images/products-img/woman-01-1.jpg", "/images/products-img/woman-01-1.jpg"],
         price: 3000,
         discount_price: 2500,
         // options: [],

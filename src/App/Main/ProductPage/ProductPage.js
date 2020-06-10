@@ -9,10 +9,9 @@ import ProductImageView from './ProductImageView/ProductImageView'
 import ProductOptions from './../Products/ProductOptions'
 import ProductPrice from './../../../Components/productprice/ProductPrice'
 import ProductTabsRadioButtons from './ProductTabsRadioButtons/ProductTabsRadioButtons'
+import ProductsSlider from './../../../Components/ProductsSlider'
 
 import productsData, {getProductsMap} from './../Products/productsData'
-import productQuickViewReducer from './../../../store/reducers/productQuickViewReducer';
-
 
 const productsArray = getProductsMap(productsData)
 
@@ -107,6 +106,14 @@ const ProductPage = ({
                             <span>No reviews yet</span>
                         </div>
                         }
+                </div>
+            </section>
+            <section className="related-products">
+                <h2 className='section-title'>Related Products</h2>
+                <div className="related-products-slider">
+                    <ProductsSlider
+                        dottedLine = {false}
+                    />
                 </div>
             </section>
         </div>

@@ -1,4 +1,4 @@
-.products-slider {
+.products-slider, .related-products-slider {
     position: relative;
 }
 .products-slider .slick-slide {
@@ -17,11 +17,29 @@
     top: -45px;
     transition: all 0.1s ease-in-out;
 }
+.related-products-slider .products-slider .slick-prev, .related-products-slider .products-slider .slick-next {
+    width: 42px;
+    height: 42px;
+    visibility: visible;
+    background: none;
+    border: 1px solid #000;
+    transition: all 0.1s ease-in-out;
+}
 .products-slider .slick-prev {
     left: 45%;
 }
+.related-products-slider .products-slider .slick-prev {
+    left: -36px;
+    top: 40%;
+    transform: translateY(-50%);
+}
 .products-slider .slick-next {
     right: 45%;
+}
+.related-products-slider .products-slider .slick-next {
+    right: -35px;
+    top: 40%;
+    transform: translateY(-50%);
 }
 .products-slider .slick-prev:hover, .products-slider .slick-next:hover {
     border: none !important;
@@ -30,7 +48,10 @@
     background: #fff;
     border: 1px solid #ccc;
 }
-
+.related-products-slider .products-slider .slick-prev:focus, .related-products-slider .products-slider .slick-next:focus {
+    background: none;
+    border: 1px solid #000;
+}
 .products-slider .slick-prev:before, .products-slider .slick-next:before {
     background: url('/images/slider/arrow-down-grey.png') no-repeat;
     -webkit-background-size: cover;
@@ -39,6 +60,13 @@
     width: 15px;
     display: block;
     margin: 0 auto;
+}
+.related-products-slider .products-slider .slick-prev:before, .related-products-slider .products-slider .slick-next:before {
+    background: url('/images/slider/arrow-down-black.png') no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;   
+    height: 8px;
+    width: 14px;
 }
 .products-slider .slick-prev:hover:before, .products-slider .slick-next:hover:before {
     background: url('/images/slider/arrow-down.png');
@@ -49,6 +77,10 @@
     display: block;
     margin: 0 auto;
 }
+.related-products-slider .slick-prev:hover:before, .related-products-slider .products-slider .slick-next:hover:before {
+    height: 8px;
+    width: 14px;
+}
 .dotted-line {
     border-top: 1px dashed #d5d5d5;
     height: 1px;
@@ -57,4 +89,7 @@
     z-index: -1;
     margin-top: -50px;
     position: absolute;
+}
+.hidden {
+    visibility: hidden;
 }

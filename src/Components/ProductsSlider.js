@@ -24,11 +24,12 @@ const ProductsSlider = ({
                 infinite: true
             }
         }]},
+    dottedLine = true,
     // selectedFilter,
 }) => {
     return (
         <div className='products-slider'>
-            <div className="dotted-line"></div> 
+            <div className={dottedLine === true ? "dotted-line" : 'hidden'}></div> 
             <Slider {...settings}>
                 <div className="slick-slide-item"><ProductsListItem/></div>
                 <div className="slick-slide-item"><ProductsListItem/></div>

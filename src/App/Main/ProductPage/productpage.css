@@ -2,6 +2,9 @@
     padding-top: 60px;
     margin-bottom: 10px;
 }
+.product-tabs {
+    margin-bottom: 50px;
+}
 .product-page .product-view-img {
     padding: 0;
 }
@@ -60,4 +63,7 @@
 .tab-content .tab-pane {
     letter-spacing: 0.5px;
     color: #666;
+}
+.related-products-slider {
+    margin: 45px 0;
 }
