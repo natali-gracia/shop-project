@@ -4,6 +4,7 @@ import './rewievratingstars.css'
 
 const RewievRatingStars = ({
     ratingAnable = true,
+    ratingSum,
 }) => {
 
     const [rating, setRating] = useState(null)
@@ -38,7 +39,7 @@ const RewievRatingStars = ({
                     return (
                         <label className='star disable-star' key={ratingValue}>
                             <img 
-                                src={ratingValue <= rating ?
+                                src={ratingValue <= ratingSum ?
                                 "/images/star-black.png" : "/images/star-grey.png"}
                                 alt="star" 
                             /> 

@@ -15,6 +15,12 @@ const ProductsListItem = ({
     id=1,
     setShowQuickView
 }) => {
+
+    const ratingSum = Math.round((productsArray[id].rewievs.reduce(
+        (total, currentValue) => total + currentValue.rating,
+        0
+    ))/productsArray[id].rewievs.length)
+
     return (
         <div className='products-list-item'>
             <div className="product-img">
@@ -45,7 +51,10 @@ const ProductsListItem = ({
                     />
                 </div>
                 <div className="review-ratting">
-                <RewievRatingStars/>
+                <RewievRatingStars
+                    ratingAnable = {false}
+                    ratingSum = {ratingSum}
+                />
                 </div>
                 <div className="action-buttons wrap center">
                     <button>

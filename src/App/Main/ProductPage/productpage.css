@@ -16,10 +16,14 @@
     margin-bottom: 5px;
 }
 .reviews-count {
-    padding: 3px 0 0 5px;
+    padding: 3px 0 0 7px;
 }
 .product-page .review-rating {
     margin-bottom: 10px;
+}
+.product-page .rating-stars .review-rating {
+    margin: 0;
+    margin-bottom: 6px;
 }
 .product-page .product-base-info {
     margin-top: 12px;
@@ -72,4 +76,8 @@
 }
 .tab-content .tab-pane button {
     letter-spacing: 1.5px;
+}
+.rating-stars span{
+    margin-left: 20px;
+    line-height: 42px;
 }

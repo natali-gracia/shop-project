@@ -29,7 +29,7 @@ const RewievForm = () => {
             <div className="col-md-7">
                 <label>
                     <span>Body of Review (1500)</span>
-                    <textarea className='textarea-form' maxlength='1500' name="text"></textarea>
+                    <textarea className='textarea-form' maxLength='1500' name="text"></textarea>
                 </label>
                 <button type='submit'>Submit review</button>
             </div>

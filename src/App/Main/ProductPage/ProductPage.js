@@ -11,6 +11,7 @@ import ProductPrice from './../../../Components/productprice/ProductPrice'
 import ProductTabsRadioButtons from './ProductTabsRadioButtons/ProductTabsRadioButtons'
 import ProductsSlider from './../../../Components/ProductsSlider'
 import RewievForm from './RewievForm/RewievForm'
+import RewievsList from './RewievsList/RewievsList'
 
 import productsData, {getProductsMap} from './../Products/productsData'
 
@@ -35,10 +36,15 @@ const ProductPage = ({
         else setProductCount(e.target.value)
     }
 
+    const ratingSum = Math.round((productsArray[id].rewievs.reduce(
+        (total, currentValue) => total + currentValue.rating,
+        0
+    ))/productsArray[id].rewievs.length)
+
     return (
         <div className='product-page'>
             <section className="product-description wrap">
-                <div className="product-view-img col-md-5">
+                <div className="product-view-img col-md-4">
                     <ZoomImage
                         imageView = {imageView}
                         setImageView = {setImageView}
@@ -60,8 +66,19 @@ const ProductPage = ({
                 <div className="product-shop-info col-md-8">
                     <h2>{productsArray[id].name}</h2>
                     <div className="wrap">
-                        <RewievRatingStars/>
-                        <span className='reviews-count'>No reviews</span>
+                        <RewievRatingStars
+                            ratingAnable = {false}
+                            ratingSum = {ratingSum}
+                        />
+                        <span className='reviews-count'>
+                            {productsArray[id].rewievs.length > 0 ? 
+                                <React.Fragment>
+                                    {productsArray[id].rewievs.length} 
+                                    {productsArray[id].rewievs.length === 1 ? ' review' : ' reviews'}
+                                </React.Fragment>
+                                : ' No reviews'
+                            }
+                        </span>
                     </div>
                     <div className="product-price wrap">
                         <ProductPrice
@@ -106,10 +123,26 @@ const ProductPage = ({
                         </div> :
                         <div>
                             <div className="tab-pane">
-                                <span>No reviews yet</span>
+                                {productsArray[id].rewievs.length > 0 ? 
+                                    <div className='wrap rating-stars'>
+                                        <RewievRatingStars
+                                            ratingAnable = {false}
+                                            ratingSum = {ratingSum}
+                                        />
+                                        <span>
+                                            Based on {productsArray[id].rewievs.length} 
+                                            {productsArray[id].rewievs.length === 1 ? ' review' : ' reviews'}
+                                        </span>
+                                    </div>
+                                    : <span>No reviews yet</span>
+                                }
                                 <button onClick={() => setShowRewievForm(!showRewievForm)}>Write a review</button>
                             </div>
                             {showRewievForm === true ? <RewievForm/> : null}
+                            {productsArray[id].rewievs.length > 0 ? 
+                                <RewievsList 
+                                    rewievsArray={productsArray[id].rewievs}
+                                /> : null}
                         </div>
                         }
                 </div>

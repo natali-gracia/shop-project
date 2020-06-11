@@ -1,0 +1,15 @@
+.product-rewiev {
+    padding-top: 25px;
+    border-top: 1px dotted #d0d0d0;
+    margin-bottom: 30px;
+}
+.product-rewiev h4 {
+    text-transform: initial;
+    text-align: left;
+}
+.product-rewiev .review-rating {
+    justify-content: initial;
+}
+.rewiev-author {
+    font-size: 12px;
+}

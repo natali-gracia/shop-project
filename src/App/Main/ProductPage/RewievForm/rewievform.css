@@ -15,3 +15,6 @@
 .product-page .form label.rating-point .review-rating {
     justify-content: initial;
 }
+.rewiev-form {
+    margin-bottom: 30px;
+}
