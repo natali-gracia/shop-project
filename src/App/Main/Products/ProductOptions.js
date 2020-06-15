@@ -13,7 +13,7 @@ const ProductOptions = () => {
                     <div className="wrap">
                         {option.name === 'color' ?
                             option.value.map(value => (
-                            <label key={value} className='product-options-color' style={value === 'white' ? 
+                            <label key={value} className='product-options-color' style={value === '#fff' ? 
                             {backgroundColor: value, borderStyle: 'solid', borderWidth: '0.4px', borderColor: '#999'} 
                             : {backgroundColor: value}}>
                                 <input 

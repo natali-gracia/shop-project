@@ -11,7 +11,7 @@ const MenuTop = ({
         <div>
             <ul className="menu-top wrap center">
                 <li className="active"><Link to="/">Home</Link></li>
-                <li className="dropdown-menu"><Link to="/">
+                <li className="dropdown-menu"><Link to="/shop">
                     Shop
                     <span className='label-hot' style={labelHotMargin}>Hot</span>
                     </Link>

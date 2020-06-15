@@ -1,0 +1,100 @@
+.sidebar {
+    padding-right: 15px;
+    margin-bottom: 20px;
+}
+.block-title {
+    padding: 10px 0 15px;
+    border-bottom: 1px solid #eaeaea;
+}
+.sidebar .first-title {
+padding-top: 0;
+}
+.block-title h2 {
+    text-align: left;
+}
+.widget-content {
+    padding: 0 0 20px 15px;
+}
+.widget-content > ul > li {
+    padding: 10px 0;
+    border-top: 1px solid #eaeaea;
+}
+.widget-content > ul > li:first-child {
+    border: none;
+}
+.widget-content > ul > li a {
+    position: relative;
+    padding-left: 15px;
+}
+.widget-content > ul > li a:hover {
+    color: #999;
+}
+.widget-content > ul > li a::before {
+    background-color: #999;
+    content: "";
+    height: 5px;
+    width: 5px;
+    position: absolute;
+    left: 0;
+    top: 6px;
+}
+.sidebar-filter-block {
+    margin: 20px 0;
+    padding-left: 15px;
+}
+.sidebar-filter-block input[type="checkbox"] {
+    display: none;
+}
+.sidebar-filter-block ul {
+    margin: 20px 0;
+}
+.checkbox-filter-color li, .checkbox-filter-size li {
+    margin-right: 10px;
+}
+.checkbox-filter-color li label {
+    display: block;
+    width: 32px;
+    height: 32px;
+    padding: 2px;
+}
+.checkbox-filter-color li label em {
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin: 0 auto;
+}
+.checkbox-filter-size li label {
+    display: block;
+    width: 32px;
+	height: 32px;
+    color: #333;
+    background-color: #efefef;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 32px;
+    letter-spacing: 0;
+}
+.checkbox-filter-size li .checked, .checkbox-filter-size li label:hover {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+.checkbox-filter-color li .checked, .checkbox-filter-color li label:hover {
+    border: 1px solid #333;
+    cursor: pointer;
+}
+.checkbox-filter-material li {
+    margin-bottom: 0.25em;
+    list-style: square;
+    list-style-position: inside;
+}
+.checkbox-filter-material li label {
+    color: #333;
+    transition: all 0.3s ease 0s;
+    position: relative;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+.checkbox-filter-material li label:hover {
+    color: #999;
+}
