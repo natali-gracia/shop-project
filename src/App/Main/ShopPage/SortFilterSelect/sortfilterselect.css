@@ -1,0 +1,24 @@
+.sort-filters-title {
+    text-transform: uppercase;
+    line-height: 36px;
+    padding-right: 10px;
+}
+.sort-filters .css-tlfecz-indicatorContainer, .sort-filters .css-1gtu0rj-indicatorContainer {
+    color: inherit !important;
+    padding: 0 5px 0 0 !important;
+}
+.sort-filters .css-yk16xz-control, .sort-filters .css-1pahdxg-control  {
+    border: 1px solid #cbcbcb !important;
+    border-radius: 0 !important;
+    height: 36px !important;
+    min-height: 36px !important;
+} 
+.sort-filters .css-g1d714-ValueContainer {
+    padding: 0 12px !important;
+    line-height: 36px !important;
+    position: initial !important;
+}
+.sort-filters .css-1uccc91-singleValue {
+    padding-top: 0;
+    color: #333 !important;
+}

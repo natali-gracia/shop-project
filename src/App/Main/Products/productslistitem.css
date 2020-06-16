@@ -1,7 +1,7 @@
 .products-list-item {
     position: relative;
     width: 265px;
-    margin-bottom: 30px;
+    padding-bottom: 30px;
 }
 .product-img {
     overflow: hidden;

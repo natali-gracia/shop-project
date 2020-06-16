@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import './productslistitem.css'
 
 import RewievRatingStars from '../ProductPage/RewievRatingStars'
-import  productsData, {getProductsMap} from './productsData'
+import productsData, {getProductsMap} from './productsData'
 import ProductPrice from './../../../Components/productprice/ProductPrice'
 
 const productsArray = getProductsMap(productsData)
@@ -27,10 +27,10 @@ const ProductsListItem = ({
                 <Link to={`/shop/${productsArray[id].category}/${productsArray[id].type}/${productsArray[id].id}`} className="grid-img">
                     <img src={productsArray[id].mainimage} alt=""/>
                 </Link>
-                {productsArray[id].options.map(option => (option.name === 'color' ? 
+                {productsArray[id].options.filter(option => option.name === 'color').map(option => (option.value.length > 1 ? 
                     <ul className="color-swatch-item wrap" key={option.name}>
                         {option.value.map(value => (
-                        <li style={value === 'white' ? 
+                        <li style={value === '#fff' ? 
                             {backgroundColor: value, borderStyle: 'solid', borderWidth: '0.4px', borderColor: '#999'} 
                             : {backgroundColor: value}} key={value}>
                         </li>))}
@@ -58,7 +58,7 @@ const ProductsListItem = ({
                 </div>
                 <div className="action-buttons wrap center">
                     <button>
-                        {productsArray[id].options.length === 0 ? 'Add to Cart' : 'Select options'}
+                        {productsArray[id].options.map(option => option.value).some(item => item.length > 1) === true ? 'Select options' : 'Add to Cart'}
                     </button>
                     <button className="btn-square" title='Add to Wishlist'></button>
                 </div>

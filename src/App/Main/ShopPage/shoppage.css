@@ -1,3 +1,19 @@
 .main-contant {
     padding-top: 50px;
 }
+.contant-list {
+    padding-left: 15px;
+}
+.toolbar {
+    margin-bottom: 30px;
+}
+.products-grid {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.products-grid .products-list-item {
+    margin-bottom: 25px;
+}
+.page-total, .browse-sort-filters {
+    font-family: Montserrat, sans-serif;
+}
