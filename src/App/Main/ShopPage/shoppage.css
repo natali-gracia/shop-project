@@ -1,5 +1,5 @@
 .main-contant {
-    padding-top: 50px;
+    padding: 50px 0;
 }
 .contant-list {
     padding-left: 15px;
@@ -8,7 +8,6 @@
     margin-bottom: 30px;
 }
 .products-grid {
-    justify-content: space-between;
     flex-wrap: wrap;
 }
 .products-grid .products-list-item {
@@ -17,3 +16,7 @@
 .page-total, .browse-sort-filters {
     font-family: Montserrat, sans-serif;
 }
+.products-item-grid {
+    padding-right: 22.5px;
+}
+
