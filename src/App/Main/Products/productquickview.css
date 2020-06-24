@@ -33,9 +33,8 @@
 .product-view-img, .quickview-shop {
     padding: 0 15px;
 }
-.quickview-main-img img {
-	max-width: 100%;
-    height: auto;
+.quickview-main-img a img {
+	width: 315px;
 }
 .more-view {
     margin-top: 15px;

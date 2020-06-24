@@ -46,10 +46,13 @@ padding-top: 0;
     display: none;
 }
 .sidebar-filter-block ul {
-    margin: 20px 0;
+    margin: 20px 0 10px 0;
+}
+.checkbox-filter-color {
+    flex-wrap: wrap;
 }
 .checkbox-filter-color li, .checkbox-filter-size li {
-    margin-right: 10px;
+    margin: 0 10px 10px 0;
 }
 .checkbox-filter-color li label {
     display: block;

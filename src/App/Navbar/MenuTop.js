@@ -21,12 +21,12 @@ const MenuTop = ({
                                 <div className="col-md-4 menu-column">
                                     <div className="dropdown-menu-img">
                                         <Link to="/">
-                                            <img src="/images/nav/woman.jpg" alt="Woman"/>
+                                            <img src="/images/nav/woman.jpg" alt="women"/>
                                         </Link>
                                     </div>
                                     <div className="dropdown-menu-content">
                                         <div className="dropdown-menu-title">
-                                            <Link to="/">Woman</Link>
+                                            <Link to="/">women</Link>
                                         </div>
                                         <div className="dropdown-menu-list">
                                             <ul className="nav-links">
@@ -41,12 +41,12 @@ const MenuTop = ({
                                 <div className="col-md-4 menu-column">
                                     <div className="dropdown-menu-img">
                                         <Link to="/">
-                                            <img src="/images/nav/man.png" alt="Man"/>
+                                            <img src="/images/nav/man.png" alt="Men"/>
                                         </Link>
                                     </div>
                                     <div className="dropdown-menu-content">
                                         <div className="dropdown-menu-title">
-                                            <Link to="/">Man</Link>
+                                            <Link to="/">Men</Link>
                                         </div>
                                         <div className="dropdown-menu-list">
                                             <ul className="nav-links">

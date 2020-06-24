@@ -35,7 +35,7 @@ const ShopPage = () => {
                     {pageOfItems.map((product, index) => (
                         <div className={Number.isInteger((index+1)/3) ? null : 'products-item-grid'} key={product.id}>
                         <ProductsListItem
-                            id={product.id}
+                            product={product}
                         />
                         </div>
                     ))}

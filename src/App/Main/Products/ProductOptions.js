@@ -1,14 +1,17 @@
 import React from 'react'
 
-import  productsData, {getProductsMap} from './../Products/productsData'
+import productsData, {getProductsMap} from './../Products/productsData'
 
 const productsArray = getProductsMap(productsData)
 
-const ProductOptions = () => {
+const ProductOptions = ({
+    id = 1
+}) => {
     return (
         <div className="product-options">
-            {productsArray[1].options.map(option => (
-                <div key={option.name}>
+            {productsArray[id].options.map(option => (
+                option.value.length > 1 ?
+                <div key={option.name}> 
                     <div className="product-options-name">{option.name}</div>
                     <div className="wrap">
                         {option.name === 'color' ?
@@ -33,7 +36,7 @@ const ProductOptions = () => {
                             </label>
                         ))}
                     </div>
-                </div>
+                </div> : null
             ))}
         </div>
     )

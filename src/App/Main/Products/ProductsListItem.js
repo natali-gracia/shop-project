@@ -6,28 +6,26 @@ import { Link } from 'react-router-dom'
 import './productslistitem.css'
 
 import RewievRatingStars from '../ProductPage/RewievRatingStars'
-import productsData, {getProductsMap} from './productsData'
 import ProductPrice from './../../../Components/productprice/ProductPrice'
 
-const productsArray = getProductsMap(productsData)
 
 const ProductsListItem = ({
-    id=1,
+    product,
     setShowQuickView
 }) => {
 
-    const ratingSum = Math.round((productsArray[id].rewievs.reduce(
+    const ratingSum = Math.round((product.rewievs.reduce(
         (total, currentValue) => total + currentValue.rating,
         0
-    ))/productsArray[id].rewievs.length)
+    ))/product.rewievs.length)
 
     return (
         <div className='products-list-item'>
             <div className="product-img">
-                <Link to={`/shop/${productsArray[id].category}/${productsArray[id].type}/${productsArray[id].id}`} className="grid-img">
-                    <img src={productsArray[id].mainimage} alt=""/>
+                <Link to={`/shop/${product.category}/${product.type}/${product.id}`} className="grid-img">
+                    <img src={product.mainimage} alt=""/>
                 </Link>
-                {productsArray[id].options.filter(option => option.name === 'color').map(option => (option.value.length > 1 ? 
+                {product.options.filter(option => option.name === 'color').map(option => (option.value.length > 1 ? 
                     <ul className="color-swatch-item wrap" key={option.name}>
                         {option.value.map(value => (
                         <li style={value === '#fff' ? 
@@ -37,17 +35,17 @@ const ProductsListItem = ({
                     </ul>     
                     : null
                 ))} 
-                {productsArray[id].discount_price !== 0 ? <div className="product-label">Sale</div> : null}
-                <button className="btn-square" title='Quick View' onClick={() => setShowQuickView(id)}></button>
+                {product.discount_price !== 0 ? <div className="product-label">Sale</div> : null}
+                <button className="btn-square" title='Quick View' onClick={() => setShowQuickView(product.id)}></button>
             </div>
             <div className="product-content">
                 <h4 className="product-title narrow">
-                    <Link to="/">{productsArray[id].name}</Link>
+                    <Link to="/">{product.name}</Link>
                 </h4>
                 <div className="product-price">
                     <ProductPrice
-                        discount_price = {productsArray[id].discount_price}
-                        price = {productsArray[id].price}
+                        discount_price = {product.discount_price}
+                        price = {product.price}
                     />
                 </div>
                 <div className="review-ratting">
@@ -58,7 +56,7 @@ const ProductsListItem = ({
                 </div>
                 <div className="action-buttons wrap center">
                     <button>
-                        {productsArray[id].options.map(option => option.value).some(item => item.length > 1) === true ? 'Select options' : 'Add to Cart'}
+                        {product.options.map(option => option.value).some(item => item.length > 1) === true ? 'Select options' : 'Add to Cart'}
                     </button>
                     <button className="btn-square" title='Add to Wishlist'></button>
                 </div>
@@ -74,7 +72,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = (dispatch) => ({
     setShowQuickView: (id) => dispatch({ 
         type: "SHOW_QUICKVIEW", 
-        id
+        id: id
     })
 })
 

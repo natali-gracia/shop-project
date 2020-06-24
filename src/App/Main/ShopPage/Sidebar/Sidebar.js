@@ -11,8 +11,8 @@ const Sidebar = () => {
             <div className="block-title first-title"><h2>Categories</h2></div>
             <div className="widget-content">
                 <ul>
-                    <li><Link to="/shop/man">Man</Link></li>
-                    <li><Link to="/shop/woman">Woman</Link></li>
+                    <li><Link to="/shop/men">Men</Link></li>
+                    <li><Link to="/shop/women">women</Link></li>
                     <li><Link to="/shop/special-designs">Special Designs</Link></li>
                     <li><Link to="/shop/exclusive-order">Exclusive Order</Link></li>
                 </ul>

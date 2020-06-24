@@ -1,16 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {connect} from 'react-redux'
 import { Link } from 'react-router-dom'
 
 import './productquickview.css'
 import ViewSlider from '../../../Components/ViewSlider'
 
-import  productsData, {getProductsMap} from './../Products/productsData'
+import productsData from './../Products/productsData'
 import ProductOptions from './ProductOptions'
 import Quantity from '../../../Components/quantity/Quantity'
 import ProductPrice from './../../../Components/productprice/ProductPrice'
-
-const productsArray = getProductsMap(productsData)
 
 const ProductQuickview = ({
     id = 1,
@@ -18,8 +16,16 @@ const ProductQuickview = ({
     setShowQuickView,
 }) => {
 
+    const product = productsData.filter(product => product.id === id)[0]
+
     const [quickViewImg, setQuickViewImg] = useState('')
     const [productCount, setProductCount] = useState(1)
+
+    useEffect(() => {
+        if(showQuickView === false) {
+            setQuickViewImg('')
+          }
+    }, [showQuickView]);
 
     const onIncrementClick = () => {
         setProductCount(productCount + 1)
@@ -36,15 +42,15 @@ const ProductQuickview = ({
                 <div className="product-view-img col-md-5">
                     <div className="quickview-main-img">
                         <Link 
-                            to={`/shop/${productsArray[id].category}/${productsArray[id].type}/${productsArray[id].id}`}
+                            to={`/shop/${product.category}/${product.type}/${product.id}`}
                             onClick={() => setShowQuickView()}
                         >
-                            <img src={quickViewImg === '' ? productsArray[id].mainimage : quickViewImg} alt=""/>
+                            <img src={quickViewImg === '' ? product.mainimage : quickViewImg} alt=""/>
                         </Link>
                     </div>
                     <div className="more-view">
                         <ViewSlider
-                            id={id} 
+                            id={product.id}
                             setProductViewImg={setQuickViewImg}
                         />
                     </div>
@@ -52,29 +58,31 @@ const ProductQuickview = ({
                 <div className="quickview-shop col-md-7">
                     <h2 className="narrow">
                         <Link 
-                            to={`/shop/${productsArray[id].category}/${productsArray[id].type}/${productsArray[id].id}`}
+                            to={`/shop/${product.category}/${product.type}/${product.id}`}
                             onClick={() => setShowQuickView()}
                         >
-                            {productsArray[id].name}
+                            {product.name}
                         </Link>
                     </h2>
                     <table className="product-base-info">
                         <tbody>
-                            <tr><th>Availability</th><td>{productsArray[id].in_stock > 1 ? 
-                                productsArray[id].in_stock + ' in stock' 
+                            <tr><th>Availability</th><td>{product.in_stock > 1 ? 
+                                'in stock' 
                                 : <span className="product-one-left">Only 1 left!</span>
                                 }</td></tr>
-                            <tr><th>Product Type</th><td>{productsArray[id].type}</td></tr>
-                            <tr><th>Material</th><td>{productsArray[id].material}</td></tr>
+                            <tr><th>Product Type</th><td>{product.type}</td></tr>
+                            <tr><th>Material</th><td>{product.material}</td></tr>
                         </tbody>
                     </table>
-                    <p className='product-summary'>{productsArray[id].summary}</p>
-                    <ProductOptions/>
+                    <p className='product-summary'>{product.summary}</p>
+                    <ProductOptions
+                        id={product.id}
+                    />
                     <div className="product-price wrap">
                         <span className='product-price-title'>Price:</span>
                         <ProductPrice
-                            discount_price = {productsArray[id].discount_price}
-                            price = {productsArray[id].price}
+                            discount_price = {product.discount_price}
+                            price = {product.price}
                             price_value={'price-value'}
                         />
                     </div>
@@ -85,14 +93,13 @@ const ProductQuickview = ({
                             onIncrementClick={onIncrementClick}
                             onDecrementClick={onDecrementClick}
                             minCount={1}
-                            maxCount={productsArray[id].in_stock}
+                            maxCount={product.in_stock}
                         />                       
                     </div>
                     <div className="action-buttons">
                         <button>Add to Cart</button>
                     </div>
                 </div>
-
                 <div className="btn-close">
                     <button className="btn-square" onClick={() => setShowQuickView()}></button>
                 </div>
@@ -108,10 +115,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    setShowQuickView: (state, id) => dispatch({ 
-        type: "SHOW_QUICKVIEW", 
-        state,
-        id
+    setShowQuickView: () => dispatch({ 
+        type: "SHOW_QUICKVIEW"
 })
 })
 

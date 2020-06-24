@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import './productpage.css'
 
@@ -31,7 +31,7 @@ const ProductPage = ({
 
     const onCountChange = (e) => {
         if (e.target.value > productsArray[id].in_stock) 
-            return alert('Opps! You can not buy more items, then are in stock.')
+            return alert(`Sorry! We have only ${productsArray[id].in_stock} items in stock.`)
         else if (e.target.value === '0') return alert('You should select at least 1 item of product!')
         else setProductCount(e.target.value)
     }
@@ -40,6 +40,10 @@ const ProductPage = ({
         (total, currentValue) => total + currentValue.rating,
         0
     ))/productsArray[id].rewievs.length)
+
+    useEffect(() => {
+        setProductViewImg(productsArray[id].mainimage)
+    }, [match]);
 
     return (
         <div className='product-page'>
@@ -90,7 +94,7 @@ const ProductPage = ({
                     <table className="product-base-info">
                         <tbody>
                             <tr><th>Availability</th><td>{productsArray[id].in_stock > 1 ? 
-                                productsArray[id].in_stock + ' in stock' 
+                                'in stock' 
                                 : <span className="product-one-left">Only 1 left!</span>
                                 }</td></tr>
                             <tr><th>Product Type</th><td>{productsArray[id].type}</td></tr>
@@ -98,7 +102,9 @@ const ProductPage = ({
                         </tbody>
                     </table>
                     <p className='product-summary'>{productsArray[id].summary}</p>
-                    <ProductOptions/>
+                    <ProductOptions
+                        id={productsArray[id].id}
+                    />
                     <div className="wrap">
                         <span className='product-quantity-title'>Qty:</span>
                         <div className="product-quantity-value">
