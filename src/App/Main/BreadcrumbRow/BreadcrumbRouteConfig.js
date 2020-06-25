@@ -1,7 +1,11 @@
 const BreadcrumbRouteConfig = [
     {
+      path: "/bespoke",
+      component: () => "Exclusive Order",
+    },
+    {
       path: "/account/",
-      component: () => "Your account",
+      component: () => "Account",
     },
     {
       path: "/shop/",

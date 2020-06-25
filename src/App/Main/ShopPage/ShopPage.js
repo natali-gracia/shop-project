@@ -17,7 +17,7 @@ const ShopPage = () => {
     }
 
     return (
-        <div className='main-contant wrap'>  
+        <div className='main-contant wrap'>
             <Sidebar/>
             <div className="col-md-9 contant-list">
                 <div className="toolbar wrap">
@@ -41,7 +41,7 @@ const ShopPage = () => {
                     ))}
                 </div>
                 <Pagination
-                    items={productsData}
+                    items={productsData.sort((a,b)=> b.id - a.id)}
                     onChangePage={onChangePage}
                 />
             </div>

@@ -20,60 +20,60 @@ const MenuTop = ({
                             <div className="col-md-9 wrap">
                                 <div className="col-md-4 menu-column">
                                     <div className="dropdown-menu-img">
-                                        <Link to="/">
+                                        <Link to="/shop/women">
                                             <img src="/images/nav/woman.jpg" alt="women"/>
                                         </Link>
                                     </div>
                                     <div className="dropdown-menu-content">
                                         <div className="dropdown-menu-title">
-                                            <Link to="/">women</Link>
+                                            <Link to="/shop/women">women</Link>
                                         </div>
                                         <div className="dropdown-menu-list">
                                             <ul className="nav-links">
-                                                <li><Link to="/">New Arrival</Link></li>
-                                                <li><Link to="/">Bags</Link></li>
-                                                <li><Link to="/">Wallets</Link></li>
-                                                <li><Link to="/">Accessories</Link></li>
+                                                <li><Link to="/shop/women">New Arrival</Link></li>
+                                                <li><Link to="/shop/women/bags">Bags</Link></li>
+                                                <li><Link to="/shop/women/wallets">Wallets</Link></li>
+                                                <li><Link to="/shop/women/accessories">Accessories</Link></li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-md-4 menu-column">
                                     <div className="dropdown-menu-img">
-                                        <Link to="/">
+                                        <Link to="/shop/men">
                                             <img src="/images/nav/man.png" alt="Men"/>
                                         </Link>
                                     </div>
                                     <div className="dropdown-menu-content">
                                         <div className="dropdown-menu-title">
-                                            <Link to="/">Men</Link>
+                                            <Link to="/shop/men">Men</Link>
                                         </div>
                                         <div className="dropdown-menu-list">
                                             <ul className="nav-links">
-                                                <li><Link to="/">New Arrival</Link></li>
-                                                <li><Link to="/">Bags</Link></li>
-                                                <li><Link to="/">Wallets</Link></li>
-                                                <li><Link to="/">Cases</Link></li>
-                                                <li><Link to="/">Accessories</Link></li>
+                                                <li><Link to="/shop/men">New Arrival</Link></li>
+                                                <li><Link to="/shop/men/bags">Bags</Link></li>
+                                                <li><Link to="/shop/men/wallets">Wallets</Link></li>
+                                                <li><Link to="/shop/men/cases">Cases</Link></li>
+                                                <li><Link to="/shop/men/accessories">Accessories</Link></li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-md-4 menu-column">
                                     <div className="dropdown-menu-img">
-                                        <Link to="/">
+                                        <Link to="/shop/special-designs">
                                             <img src="/images/nav/special.jpg" alt="Special Designs"/>
                                         </Link>
                                     </div>
                                     <div className="dropdown-menu-content">
                                         <div className="dropdown-menu-title">
-                                            <Link to="/">Special Designs</Link>
+                                            <Link to="/shop/special-designs">Special Designs</Link>
                                         </div>
                                         <div className="dropdown-menu-list">
                                             <ul className="nav-links">
-                                                <li><Link to="/">Cases</Link></li>
-                                                <li><Link to="/">Bags</Link></li>
-                                                <li><Link to="/">Exclusive Order</Link></li>
+                                                <li><Link to="/shop/special-designs/cases">Cases</Link></li>
+                                                <li><Link to="/shop/special-designs/bags">Bags</Link></li>
+                                                <li><Link to="/bespoke">Exclusive Order</Link></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -85,9 +85,9 @@ const MenuTop = ({
                                         <img src="/images/nav/widget-menu.jpg" alt=""/>
                                     </div>
                                     <div className="widget-menu-text block-center">
-                                        <div className="widget-text-small">Exclusive Designs</div>
-                                        <div className="widget-text-large">Sale up to 30% off</div>
-                                        <Link to="/" className="btn-link btn-white">
+                                        <div className="widget-text-small">Exclusive Design</div>
+                                        <div className="widget-text-large">Bespoke</div>
+                                        <Link to="/bespoke" className="btn-link btn-white">
                                             <span>Explore Now</span>
                                         </Link>
                                     </div>

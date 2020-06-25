@@ -21,7 +21,8 @@
 .quickview-content {
     width: 850px;
     height: fit-content;
-    padding: 10px;
+    padding: 20px;
+    padding-bottom: 12px;
     background: #fff;
     position: fixed;
     left: 50%;
@@ -30,7 +31,10 @@
     transform: translate(-50%, -50%);
     outline: 0 none;
 }
-.product-view-img, .quickview-shop {
+.product-view-img {
+    padding-right: 15px;
+}
+.quickview-shop {
     padding: 0 15px;
 }
 .quickview-main-img a img {
@@ -50,7 +54,6 @@
     border:#666;
     opacity: 1;
     transform: none;
-    top: 0;
 }
 .product-quickview .btn-square:hover {
     background-color: #000;
