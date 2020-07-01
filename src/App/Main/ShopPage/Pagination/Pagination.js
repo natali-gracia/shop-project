@@ -17,11 +17,11 @@ class Pagination extends Component {
         }
     }
 
-    componentDidUpdate = (prevProps) => {
-        if (this.props.items !== prevProps.items) { return (
-          () => this.setPage(1))
-        }
-    }
+    // componentDidUpdate = (prevProps) => {
+    //     if (this.props.items !== prevProps.items) { return (
+    //       () => this.setPage(1))
+    //     }
+    // }
 
     async setPage(page) {
         const { items, pageSize } = this.props
@@ -34,6 +34,8 @@ class Pagination extends Component {
 
         const { items, pager } = this.props
 
+        console.log(items)
+
         if (!pager.pages || pager.pages.length <= 1) {
             return (
                 <div className="page-total">
@@ -41,6 +43,8 @@ class Pagination extends Component {
                 </div>
             )
         }
+
+
 
         return (
             <React.Fragment>

@@ -4,6 +4,8 @@ import {connect} from 'react-redux'
 
 import './sortfilterselect.css'
 
+import { sortProducts } from './../../../../store/actions/filterSelectAction'
+
 const options = [
     { value: 'created-descending', label: 'Newest' },
     { value: 'best-selling', label: 'Best selling'},
@@ -12,8 +14,9 @@ const options = [
   ];
 
 const SortFilterSelect = ({
-    selectedFilter = { value: 'created-descending', label: 'Newest' },
-    handleChange,
+    items,
+    selectedFilter,
+    sortProducts,
 }) => {
     return (
         <label className='sort-filters wrap'>
@@ -21,7 +24,7 @@ const SortFilterSelect = ({
             <div style={{width: 200}}>
                 <Select
                     value={selectedFilter}
-                    onChange={handleChange}
+                    onChange={(event)=> sortProducts(items, event)}
                     options={options}
                 />
             </div> 
@@ -30,17 +33,10 @@ const SortFilterSelect = ({
 }
 
 const mapStateToProps = state => ({
-    selectedFilter:  state.selectedFilter.value
+    selectedFilter:  state.selectedFilter.sort,
 })
 
-const mapDispatchToProps = dispatch => ({
-    handleChange: event => dispatch({ 
-        type: "CHANGE_SORT_FILTER", 
-        value: event
-    })
-})
-
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
+export default connect (
+    mapStateToProps, 
+    { sortProducts }
 ) (SortFilterSelect)

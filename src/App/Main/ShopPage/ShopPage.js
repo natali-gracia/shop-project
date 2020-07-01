@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+// import {connect} from 'react-redux'
 
 import './shoppage.css'
 
@@ -10,7 +11,10 @@ import Pagination from './Pagination/Pagination'
 
 const productsArray = productsData.sort((a,b)=> b.id - a.id)
 
-const ShopPage = ({match}) => {
+const ShopPage = ({
+    match,
+    // selectedFilter
+}) => {
 
     const [pageOfItems, setPageOfItems] = useState([])
 
@@ -20,14 +24,18 @@ const ShopPage = ({match}) => {
         match.params.type === undefined ? productsArray.filter(product=>product.category === `${match.params.category}`) : 
         productsArray.filter(product=>product.category === `${match.params.category}`).filter(product=>product.type === `${match.params.type}`)
 
+    // const filterItems = selectedFilter !== "created-descending" ? items.sort((a, b) => (selectedFilter === "price-descending" ? b.price - a.price  
+    //         : selectedFilter === "price-ascending" ? a.price - b.price 
+    //         : a.sellerrank > b.sellerrank)) 
+    //     : items
+
+    // console.log(filterItems)
     console.log(pageOfItems)
 
     return (
         <div className='main-contant wrap'>
             <Sidebar
                 productsData={productsData}
-                items={items}
-                onChangePage={setPageOfItems}
             />
             <div className="col-md-9 contant-list">
                 <div className="toolbar wrap">
@@ -35,7 +43,9 @@ const ShopPage = ({match}) => {
                     </div>
                     <div className="col-md-8 wrap right">
                         <div className="browse-sort-filters">
-                            <SortFilterSelect/>
+                            <SortFilterSelect
+                                items={items}
+                            />
                         </div>    
                     </div>
                 </div>
@@ -49,8 +59,8 @@ const ShopPage = ({match}) => {
                     ))}
                 </div>
                 <Pagination
-                        items={items}
-                        onChangePage={setPageOfItems}
+                    items={items}
+                    onChangePage={setPageOfItems}
                 />
             </div>
         </div>
