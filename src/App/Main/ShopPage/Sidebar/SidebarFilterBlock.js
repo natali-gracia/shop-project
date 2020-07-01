@@ -1,18 +1,16 @@
 import React from 'react'
 
-import productsData from './../../Products/productsData'
-
 import './sidebar.css'
 
-const colorOptionArray = productsData.map(product=>product.options).flat().filter(option=>option.name === 'color')
-const colorValueArray = [...new Set([...colorOptionArray.map((color)=>color.value).flat()])]
-const sizeOptionArray = productsData.map(product=>product.options).flat().filter(option=>option.name === 'size')
-const sizeValueArray = [...new Set([...sizeOptionArray.map((size)=>size.value).flat()])]
-const materialValueArray = [...new Set([...productsData.map((product)=>product.material).flat()])]
-
-
-export const SidebarFilterBlock = () => {
-
+const SidebarFilterBlock = ({
+    pageOfItems
+}) => {
+    
+    const colorOptionArray = pageOfItems.map(product=>product.options).flat().filter(option=>option.name === 'color')
+    const colorValueArray = [...new Set([...colorOptionArray.map((color)=>color.value).flat()])]
+    const sizeOptionArray = pageOfItems.map(product=>product.options).flat().filter(option=>option.name === 'size')
+    const sizeValueArray = [...new Set([...sizeOptionArray.map((size)=>size.value).flat()])]
+    const materialValueArray = [...new Set([...pageOfItems.map((product)=>product.material).flat()])]
     
     return (
         <div className="sidebar-filter-block">
@@ -35,18 +33,33 @@ export const SidebarFilterBlock = () => {
             </ul>
             <div className="filter-title"><h2>Size</h2></div>
             <ul className="checkbox-filter-size wrap">
-                {sizeValueArray.map(value => (
-                    <li key={value}>
-                        <label className=''>
-                            {value}
-                            <input 
-                                type='checkbox'
-                                value={value}
-                                name="CheckboxFilter"
-                            />
-                        </label>
-                    </li>
-                ))}
+                {sizeValueArray.includes('s') ? 
+                    <li><label className=''>
+                        s
+                        <input 
+                            type='checkbox'
+                            value={'s'}
+                            name="CheckboxFilter"
+                        />
+                    </label></li> : null}
+                {sizeValueArray.includes('m') ? 
+                    <li><label className=''>
+                        m
+                        <input 
+                            type='checkbox'
+                            value={'m'}
+                            name="CheckboxFilter"
+                        />
+                    </label></li> : null}
+                {sizeValueArray.includes('l') ? 
+                    <li><label className=''>
+                        l
+                        <input 
+                            type='checkbox'
+                            value={'l'}
+                            name="CheckboxFilter"
+                        />
+                    </label></li> : null}
             </ul>
             <div className="filter-title"><h2>Material</h2></div>
             <ul className="checkbox-filter-material">

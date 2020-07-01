@@ -11,6 +11,7 @@ import { getPager } from './../../../../store/actions/paginationAction'
 
 const Sidebar = ({
     productsData,
+    pageOfItems,
 }) => {
 
     const checkProductsCategory = (type) => productsData.filter(product=>product.type === type).map(product=>product.category)
@@ -92,7 +93,9 @@ const Sidebar = ({
                 </React.Fragment> 
             }/>
             <div className="block-title"><h2>Filter Selection</h2></div>
-            <SidebarFilterBlock/>
+            <SidebarFilterBlock
+                pageOfItems={pageOfItems}
+            />
         </aside>
     )
 }
