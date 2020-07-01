@@ -16,7 +16,7 @@ export const SidebarFilterBlock = () => {
     
     return (
         <div className="sidebar-filter-block">
-            <div className="block-title"><h2>Color</h2></div>
+            <div className="filter-title"><h2>Color</h2></div>
             <ul className="checkbox-filter-color wrap">
                 {colorValueArray.map(value => (
                     <li key={value}>
@@ -33,7 +33,7 @@ export const SidebarFilterBlock = () => {
                     </li>
                 ))}
             </ul>
-            <div className="block-title"><h2>Size</h2></div>
+            <div className="filter-title"><h2>Size</h2></div>
             <ul className="checkbox-filter-size wrap">
                 {sizeValueArray.map(value => (
                     <li key={value}>
@@ -48,7 +48,7 @@ export const SidebarFilterBlock = () => {
                     </li>
                 ))}
             </ul>
-            <div className="block-title"><h2>Material</h2></div>
+            <div className="filter-title"><h2>Material</h2></div>
             <ul className="checkbox-filter-material">
                 {materialValueArray.map(value => (
                     <li key={value}>

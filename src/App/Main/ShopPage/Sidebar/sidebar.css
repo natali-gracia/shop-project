@@ -2,18 +2,18 @@
     padding-right: 15px;
     margin-bottom: 20px;
 }
-.block-title {
-    padding: 10px 0 15px;
+.block-title, .filter-title {
+    padding-bottom: 15px;
     border-bottom: 1px solid #eaeaea;
 }
-.sidebar .first-title {
-padding-top: 0;
+.filter-title {
+    padding-top: 10px;
 }
-.block-title h2 {
+.block-title h2, .filter-title h2 {
     text-align: left;
 }
 .widget-content {
-    padding: 0 0 20px 15px;
+    padding: 0 0 35px 15px;
 }
 .widget-content > ul > li {
     padding: 10px 0;

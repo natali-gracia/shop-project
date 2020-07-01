@@ -42,7 +42,7 @@ const ProductPage = ({
     ))/productsArray[id].rewievs.length)
 
     useEffect(() => {
-        setProductViewImg(productsArray[id].mainimage)
+        setProductViewImg(productsArray[match.params.productId].mainimage)
     }, [match]);
 
     return (

@@ -8,27 +8,35 @@ import SortFilterSelect from './SortFilterSelect/SortFilterSelect'
 import ProductsListItem from './../Products/ProductsListItem'
 import Pagination from './Pagination/Pagination'
 
-const ShopPage = () => {
+const productsArray = productsData.sort((a,b)=> b.id - a.id)
+
+const ShopPage = ({match}) => {
 
     const [pageOfItems, setPageOfItems] = useState([])
 
-    const onChangePage = pageOfItems => {
-        setPageOfItems(pageOfItems)
-    }
+    const items = 
+        match.params.type === undefined && match.params.category === undefined ? productsArray :
+        match.params.category === undefined ? productsArray.filter(product=>product.type === `${match.params.type}`) :
+        match.params.type === undefined ? productsArray.filter(product=>product.category === `${match.params.category}`) : 
+        productsArray.filter(product=>product.category === `${match.params.category}`).filter(product=>product.type === `${match.params.type}`)
+
+    console.log(pageOfItems)
 
     return (
         <div className='main-contant wrap'>
-            <Sidebar/>
+            <Sidebar
+                productsData={productsData}
+                items={items}
+                onChangePage={setPageOfItems}
+            />
             <div className="col-md-9 contant-list">
                 <div className="toolbar wrap">
                     <div className="col-md-4">
-                        {/* Page-total placeholder */}
                     </div>
                     <div className="col-md-8 wrap right">
                         <div className="browse-sort-filters">
                             <SortFilterSelect/>
-                        </div> 
-                        
+                        </div>    
                     </div>
                 </div>
                 <div className="products-grid wrap">
@@ -41,8 +49,8 @@ const ShopPage = () => {
                     ))}
                 </div>
                 <Pagination
-                    items={productsData.sort((a,b)=> b.id - a.id)}
-                    onChangePage={onChangePage}
+                        items={items}
+                        onChangePage={setPageOfItems}
                 />
             </div>
         </div>

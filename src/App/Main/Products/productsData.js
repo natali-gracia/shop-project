@@ -47,7 +47,7 @@ const productsData = [
     {
         id:2,
         name: 'Alli black wallet',
-        type:"wallet",
+        type:"wallets",
         style:"street",
         category:"women",
         material:"100% leather",
@@ -72,7 +72,7 @@ const productsData = [
     {
         id:3,
         name: 'Street style backpack',
-        type:"bag",
+        type:"bags",
         style:"street",
         category:"men",
         material:"textile/leather",
@@ -126,7 +126,7 @@ const productsData = [
     {
         id:4,
         name: 'Vintage Biker Card Wallet',
-        type:"bag",
+        type:"bags",
         style:"street",
         category:"special-designs",
         material:"100% leather",
@@ -151,7 +151,7 @@ const productsData = [
     {
         id:5,
         name: 'Mark brown wallet',
-        type:"wallet",
+        type:"wallets",
         style:"business",
         category:"men",
         material:"100% leather",
@@ -254,7 +254,7 @@ const productsData = [
     {
         id:8,
         name: 'Nadin style bag',
-        type:"bag",
+        type:"bags",
         style:"business",
         category:"women",
         material:"100% leather",
@@ -335,7 +335,7 @@ const productsData = [
     {
         id:9,
         name: 'Morgan leather bag',
-        type:"bag",
+        type:"bags",
         style:"street",
         category:"men",
         material:"100% leather",
@@ -370,7 +370,7 @@ const productsData = [
     {
         id:10,
         name: 'Perla premium bag',
-        type:"bag",
+        type:"bags",
         style:"premium",
         category:"women",
         material:"100% leather",
@@ -414,7 +414,7 @@ const productsData = [
     },
     {
         id:11,
-        name: 'Sienna Phone Cases',
+        name: 'Sienna Phone Case',
         type:"cases",
         style:"business",
         category:"men",
@@ -440,7 +440,7 @@ const productsData = [
     {
         id:12,
         name: 'Dominic brown bag',
-        type:"bag",
+        type:"bags",
         style:"business",
         category:"men",
         material:"100% leather",
@@ -465,7 +465,7 @@ const productsData = [
     {
         id:13,
         name: 'Eva women bag',
-        type:"bag",
+        type:"bags",
         style:"business",
         category:"women",
         material:"100% leather",
@@ -534,7 +534,7 @@ const productsData = [
     {
         id:15,
         name: 'JEANS blue bag',
-        type:"bag",
+        type:"bags",
         style:"street",
         category:"women",
         material:"textile",
@@ -569,7 +569,7 @@ const productsData = [
     {
         id:16,
         name: 'Morgan bag',
-        type:"bag",
+        type:"bags",
         style:"street",
         category:"men",
         material:"textile/leather",
@@ -594,7 +594,7 @@ const productsData = [
     {
         id:17,
         name: 'Ginger backpack',
-        type:"bag",
+        type:"bags",
         style:"street",
         category:"women",
         material:"100% leather",
@@ -619,7 +619,7 @@ const productsData = [
     {
         id:18,
         name: 'JEANS blue wallet',
-        type:"wallet",
+        type:"wallets",
         style:"street",
         category:"women",
         material:"textile",
@@ -673,7 +673,7 @@ const productsData = [
     {
         id:19,
         name: 'Max brown bag',
-        type:"bag",
+        type:"bags",
         style:"street",
         category:"men",
         material:"100% leather",
@@ -708,7 +708,7 @@ const productsData = [
     {
         id:20,
         name: 'Jasmine white bag',
-        type:"bag",
+        type:"bags",
         style:"street",
         category:"women",
         material:"100% leather",

@@ -11,11 +11,13 @@ const Pagination2 = ({
     onChangePage
 }) => {
 
+    console.log(items)
+
     const [pager, setPager] = useState()
 
     useEffect(() => {
         setPage(initialPage)
-      }, []);
+      });
     
 
     const setPage = (page) => {
@@ -76,20 +78,20 @@ const Pagination2 = ({
                 <div className="toolbar-bottoms wrap">
                     <Link to='#'><button 
                         className={pager.currentPage === 1 ? 'hidden btn-square arrow-prev' : 'btn-square arrow-prev'} 
-                        onClick={() => this.setPage(pager.currentPage - 1)}
+                        onClick={() => setPage(pager.currentPage - 1)}
                         >
                     </button></Link>
                     {pager.pages.map((page, index) =>
                         <Link to='#' key={index}><button 
                             className={pager.currentPage === page ? 'active btn-square' : 'btn-square'} 
-                            onClick={() => this.setPage(page)}
+                            onClick={() => setPage(page)}
                         >
                             {page}                       
                         </button></Link>
                     )}
                     <Link to='#'><button 
                         className={pager.currentPage === pager.totalPages ? 'hidden btn-square arrow-next' : 'btn-square arrow-next'}
-                        onClick={() => this.setPage(pager.currentPage + 1)}
+                        onClick={() => setPage(pager.currentPage + 1)}
                     ></button></Link>
                 </div>}
         </React.Fragment>

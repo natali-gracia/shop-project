@@ -15,7 +15,7 @@ const Main = () => {
             <div className='container'>    
                 <Route exact path='/' component={HomePage}/>
                 <Route path='/bespoke' component={BespokePage}/>
-                <Route exact path={['/shop', '/shop/:category', '/shop/:type', '/shop/:category/:type','/shop/:type/:category']}
+                <Route exact path={['/shop', '/shop/:category', '/shop/all-categories/:type', '/shop/:category/:type']}
                     component={ShopPage}/>
                 <Route exact path='/shop/:category/:type/:productId' component={ProductPage}/>
                 <Route path='/account/:authOption' component={AccountPage}/>
