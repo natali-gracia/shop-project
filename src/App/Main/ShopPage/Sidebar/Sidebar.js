@@ -11,7 +11,8 @@ import { getPager } from './../../../../store/actions/paginationAction'
 
 const Sidebar = ({
     productsData,
-    pageOfItems,
+    items,
+    match
 }) => {
 
     const checkProductsCategory = (type) => productsData.filter(product=>product.type === type).map(product=>product.category)
@@ -27,7 +28,7 @@ const Sidebar = ({
                             <li><Link to="/shop/men">Men</Link></li>
                             <li><Link to="/shop/women">Women</Link></li>
                             <li><Link to="/shop/special-designs">Special Designs</Link></li>
-                            <li><Link to="/bespoke">Exclusive Order</Link></li>
+                            <li><Link to="/bespoke">Exclusive Order</Link></li> 
                         </ul>
                     </div>
                 </React.Fragment> 
@@ -94,7 +95,8 @@ const Sidebar = ({
             }/>
             <div className="block-title"><h2>Filter Selection</h2></div>
             <SidebarFilterBlock
-                pageOfItems={pageOfItems}
+                match={match}
+                items={items}
             />
         </aside>
     )

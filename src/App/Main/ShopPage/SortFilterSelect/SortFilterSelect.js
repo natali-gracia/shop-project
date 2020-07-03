@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Select from 'react-select'
 import {connect} from 'react-redux'
 
 import './sortfilterselect.css'
 
-import { sortProducts } from './../../../../store/actions/filterSelectAction'
+import { sortProducts } from './../../../../store/actions/filterProductsAction'
 
 const options = [
     { value: 'created-descending', label: 'Newest' },
@@ -18,13 +18,14 @@ const SortFilterSelect = ({
     selectedFilter,
     sortProducts,
 }) => {
+
     return (
         <label className='sort-filters wrap'>
             <div className='sort-filters-title'><span>Sort&nbsp;by:</span></div>
             <div style={{width: 200}}>
                 <Select
                     value={selectedFilter}
-                    onChange={(event)=> sortProducts(items, event)}
+                    onChange={value=> sortProducts(items, value)}
                     options={options}
                 />
             </div> 
@@ -33,7 +34,7 @@ const SortFilterSelect = ({
 }
 
 const mapStateToProps = state => ({
-    selectedFilter:  state.selectedFilter.sort,
+    selectedFilter:  state.filterProducts.sort,
 })
 
 export default connect (

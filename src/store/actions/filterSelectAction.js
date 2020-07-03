@@ -1,6 +1,8 @@
+import { SORT_FILTER } from "./types"
+
 export const sortProducts = (items, sort) => (dispatch) => {
     dispatch({
-      type: 'CHANGE_SORT_FILTER',
+      type: SORT_FILTER,
       payload: {
         sort: sort,
         items: sort.value === "created-descending" ? items.sort((a, b) => b.id - a.id) :

@@ -42,7 +42,7 @@
     margin: 20px 0;
     padding-left: 15px;
 }
-.sidebar-filter-block input[type="checkbox"] {
+.sidebar-filter-block input[type="radio"] {
     display: none;
 }
 .sidebar-filter-block ul {

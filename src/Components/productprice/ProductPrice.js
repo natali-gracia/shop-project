@@ -15,13 +15,15 @@ const ProductPrice = ({
     const [exchangeRates, setЕxchangeRates] = useState();
     
     useEffect(() => {
+        let isCurrent = true
         axios.get('https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json')
             .then(res => {
-                setЕxchangeRates(res.data.filter(rate => rate.r030 === 978)[0].rate)
-            })
+                if (isCurrent) {setЕxchangeRates(res.data.filter(rate => rate.r030 === 978)[0].rate)
+            }})
             .catch(err => {
                 console.log("Opps", err.message)
             })
+            return () => isCurrent = false            
     }, [])
 
     const price_euro = () => (((price/exchangeRates)*1.05).toFixed())
