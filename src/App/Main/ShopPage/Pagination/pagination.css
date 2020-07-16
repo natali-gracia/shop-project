@@ -6,10 +6,23 @@
     height: 36px;
     width: 36px;
     margin-right: 15px;
+    position: relative;
+}
+.toolbar-bottoms .btn-square a {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);  
 }
 .toolbar-bottoms a {
     position: relative;
 }
+ 
+.arrow-next::before, .arrow-next:hover::before, .arrow-prev::before, .arrow-prev:hover::before {
+    margin-top: 13px;
+}
+
+
 .arrow-prev::before, 
 .arrow-next::before, 
 .arrow-first::before, 
@@ -22,23 +35,22 @@
     height: 7px;
     width: 12px;
     display: block;
-    margin: 0 auto;
 }
 .arrow-first::before, .arrow-first::after {
     position: absolute;
-    left: 9px;
-    top: 15px;
+    left: 8px;
+    top: 14px;
 }
 .arrow-first::after {
-    left: 15px;
+    left: 14px;
 }
 .arrow-last::before, .arrow-last::after {
     position: absolute;
-    right: 29px;
-    top: 15px;
+    right: 13px;
+    top: 14px;
 }
 .arrow-last::after {
-    right: 23px;
+    right: 7px;
 }
 .arrow-prev:hover::before, 
 .arrow-next:hover::before, 
@@ -52,7 +64,6 @@
     height: 7px;
     width: 12px;
     display: block;
-    margin: 0 auto;
 }
 .arrow-prev::before, .arrow-first::before, .arrow-first::after {
     transform: rotate(90deg);
@@ -63,11 +74,11 @@
 .toolbar-bottoms .active {
 	background-color: #000;
 	border: 1px solid #000;
-    color: #fff;
 }
-.toolbar-bottoms .hidden {
-    display: none;
+.toolbar-bottoms .active a, .toolbar-bottoms .btn-link:hover a {
+    color: #fff !important;
 }
+
 .page-total {
     position: absolute;
     top: 0;

@@ -9,7 +9,7 @@ import './pagination.css'
 
 import { getPager } from '../../../../store/actions/paginationAction'
 
-class Pagination extends Component {
+class Pagination1 extends Component {
 
     componentDidMount = () => {
         if (this.props.items && this.props.items.length) {
@@ -17,11 +17,11 @@ class Pagination extends Component {
         }
     }
 
-    // componentDidUpdate = (prevProps) => {
-    //     if (this.props.items !== prevProps.items) { return (
-    //       () => this.setPage(1))
-    //     }
-    // }
+    componentDidUpdate = (prevProps) => {
+        if (this.props.items !== prevProps.items) {
+        this.setPage(1)
+        }
+    }
 
     async setPage(page) {
         const { items, pageSize } = this.props
@@ -43,8 +43,6 @@ class Pagination extends Component {
                 </div>
             )
         }
-
-
 
         return (
             <React.Fragment>
@@ -85,14 +83,14 @@ class Pagination extends Component {
 }
 
 
-Pagination.propTypes = {
+Pagination1.propTypes = {
     items: PropTypes.array.isRequired,
     onChangePage: PropTypes.func.isRequired,
     pageSize: PropTypes.number
 }
 
-Pagination.defaultProps = {
-    pageSize: 9
+Pagination1.defaultProps = {
+    pageSize: 5
 }
 
 const mapStateToProps = (state) => ({
@@ -102,4 +100,4 @@ const mapStateToProps = (state) => ({
 export default connect(
     mapStateToProps,
     { getPager }
-) (Pagination)
+) (Pagination1)

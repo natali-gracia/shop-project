@@ -3,7 +3,7 @@ import {
     FILTER_PRODUCTS_BY_SIZE,
     FILTER_PRODUCTS_BY_COLOR,
     FILTER_PRODUCTS_BY_MATERIAL,
-    SORT_FILTER
+    SORT_FILTER,
 } from "../actions/types"
 
 const initState = { filteredItems: [], size: '', color: '', material: '', sort: { value: 'created-descending', label: 'Newest' }}

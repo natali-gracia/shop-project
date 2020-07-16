@@ -6,6 +6,7 @@ import './sortfilterselect.css'
 
 import { sortProducts } from './../../../../store/actions/filterProductsAction'
 
+
 const options = [
     { value: 'created-descending', label: 'Newest' },
     { value: 'best-selling', label: 'Best selling'},
@@ -18,6 +19,7 @@ const SortFilterSelect = ({
     selectedFilter,
     sortProducts,
 }) => {
+
 
     return (
         <label className='sort-filters wrap'>
