@@ -7,7 +7,6 @@ import './sidebar.css'
 import { Link } from 'react-router-dom'
 import SidebarFilterBlock from './SidebarFilterBlock'
 
-import { getPager } from './../../../../store/actions/paginationAction'
 
 const Sidebar = ({
     productsData,
@@ -102,11 +101,4 @@ const Sidebar = ({
     )
 }
 
-const mapStateToProps = (state) => ({
-    pager:state.pager.pager,
-})
-
-export default connect(
-    mapStateToProps,
-    { getPager }
-) (Sidebar)
+export default Sidebar
