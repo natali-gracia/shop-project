@@ -40,7 +40,7 @@ const ProductsListItem = ({
             </div>
             <div className="product-content">
                 <h4 className="product-title narrow">
-                    <Link to="/">{product.name}</Link>
+                    <Link to={`/shop/${product.category}/${product.type}/${product.id}`}>{product.name}</Link>
                 </h4>
                 <div className="product-price">
                     <ProductPrice

@@ -4,10 +4,11 @@
 }
 .slick-view .view-slider .slick-slide {
     width: 120px !important;
+    margin-left: 10px;
 }
 .view-slider .slick-slide {
-    width: 99px !important;
-    margin-left: 10px;
+    width: 100px !important;
+    margin-left: 11px;
 }
 .view-slider .slick-list {
     margin-left: -10px;
