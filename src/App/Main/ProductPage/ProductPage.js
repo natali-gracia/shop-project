@@ -157,6 +157,9 @@ const ProductPage = ({
                 <h2 className='section-title'>Related Products</h2>
                 <div className="related-products-slider">
                     <ProductsSlider
+                        selectedFilter = {'Related Products'}
+                        filterCategory = {productsArray[id].category}
+                        filterId = {Number(id)}
                         dottedLine = {false}
                     />
                 </div>

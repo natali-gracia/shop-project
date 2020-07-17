@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import Slider from "react-slick"
 
@@ -26,47 +27,50 @@ const ProductsSlider = ({
             }
         }]},
     dottedLine = true,
-    // selectedFilter,
+    selectedFilter,
+    filterCategory,
+    filterId
 }) => {
+
     return (
         <div className='products-slider'>
             <div className={dottedLine === true ? "dotted-line" : 'hidden'}></div> 
             <Slider {...settings}>
-                {productsData.sort((a,b)=> b.id - a.id).slice(0,6).map((product)=>(
-                    <div className="slick-slide-item" key={product.id}>
-                        <ProductsListItem
-                            product={product} 
-                        />
-                        </div>
-                ))}
-                {/* <div className="slick-slide-item"><ProductsListItem/></div>
-                <div className="slick-slide-item"><ProductsListItem/></div>
-                <div className="slick-slide-item"><ProductsListItem/></div>
-                <div className="slick-slide-item"><ProductsListItem/></div>
-                <div className="slick-slide-item"><ProductsListItem/></div>
-                <div className="slick-slide-item"><ProductsListItem/></div> */}
-                
-                {/* { selectedFilter === 'Best Seller' 
-                    ? productsData.sort((a,b)=> b.id - a.id).slice(0,9).map((product)=>(
-                        <ProductsListItem
-                            id={product.id}
-                            key={product.id}
-                        />)) 
+                {   selectedFilter === 'Best Seller' 
+                    ? productsData.sort((a,b)=> b.sellerrank - a.sellerrank).slice(0,10).map((product)=>(
+                        <div className="slick-slide-item" key={product.id}>
+                            <ProductsListItem
+                                product={product} 
+                            />
+                        </div>)) 
                     : selectedFilter === 'New Arrival'
-                    ? productsData.sort((a,b)=> b.id - a.id).slice(0,9).map((product)=>(
-                        <ProductsListItem
-                            id={product.id}
-                            key={product.id}
-                        />)) 
-                    : productsData.sort((a,b)=> b.id - a.id).slice(0,9).map((product)=>(
-                        <ProductsListItem
-                            id={product.id}
-                            key={product.id}
-                        />)) 
-                } */}
+                    ? productsData.sort((a,b)=> b.id - a.id).slice(0,10).map((product)=>(
+                        <div className="slick-slide-item" key={product.id}>
+                            <ProductsListItem
+                                product={product} 
+                            />
+                        </div>)) 
+                    : selectedFilter === 'Most Wanted'
+                    ? productsData.sort((a,b)=> b.likes - a.likes).slice(0,10).map((product)=>(
+                        <div className="slick-slide-item" key={product.id}>
+                            <ProductsListItem
+                                product={product} 
+                            />
+                        </div>)) 
+                    : productsData.filter(product=>product.category === filterCategory).filter(product=>product.id !== filterId).slice(0,10).map((product)=>(
+                        <div className="slick-slide-item" key={product.id}>
+                            <ProductsListItem
+                                product={product} 
+                            />
+                        </div>))
+                }
             </Slider>            
         </div>
     )
+}
+
+ProductsSlider.propTypes = {
+    filterId: PropTypes.number
 }
 
 export default ProductsSlider

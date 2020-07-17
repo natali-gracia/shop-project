@@ -16,7 +16,9 @@ const ProductsSection = () => {
                 setSelectedFilter={setSelectedFilter}
             />
             <div className="products-list-slider">
-                <ProductsSlider/>
+                <ProductsSlider
+                    selectedFilter={selectedFilter}
+                />
             </div>
         </section>
     )
