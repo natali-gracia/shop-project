@@ -44,7 +44,7 @@ const SlickSlider = ({
                             Secure your style with<br/>HONCHAROVA store edit of belts.
                             <br/>Modern and classic designs, we’ve got something for everyone.
                         </div>
-                        <Link to="/" className="btn-link">
+                        <Link to="/shop/all-categories/accessories" className="btn-link">
                             <span>Shop Now</span>
                         </Link>
                     </div>
@@ -52,12 +52,12 @@ const SlickSlider = ({
                 <div className="slick-slide-item">
                     <div className="slick-image"><img src="/images/slider/slideshow_3.jpg" alt=""/></div>
                     <div className="slider-content">
-                        <div className="slide-item-title">SALE OFF <br/>30% FOR ALL</div>
+                        <div className="slide-item-title">SALE UP TO <br/>30% IN THE SHOP</div>
                         <div className="slide-item-text">
-                            In anniversay 5 years of Store.
-                            <br/>Sale off 30% for all. Wow ! Come here.
+                            In anniversay 5 years.
+                            <br/>Sale up to 30%. Wow ! Come here.
                         </div>
-                        <Link to="/" className="btn-link">
+                        <Link to="/shop" className="btn-link">
                             <span>View Now</span>
                         </Link>
                     </div>

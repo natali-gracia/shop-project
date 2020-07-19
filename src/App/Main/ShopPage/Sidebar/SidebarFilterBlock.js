@@ -1,9 +1,15 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect } from 'react'
 import {connect} from 'react-redux'
 
 import './sidebar.css'
 
-import { fetchFilterProducts, filterProductsBySize, filterProductsByColor, filterProductsByMaterial } from "../../../../store/actions/filterProductsAction"
+import { 
+    fetchFilterProducts, 
+    filterProductsBySize, 
+    filterProductsByColor, 
+    filterProductsByMaterial, 
+    filterProductsByDiscount 
+} from "../../../../store/actions/filterProductsAction"
 
 
 const SidebarFilterBlock = ({
@@ -13,9 +19,9 @@ const SidebarFilterBlock = ({
     filterProductsBySize, 
     filterProductsByColor, 
     filterProductsByMaterial,
+    filterProductsByDiscount,
     selectedSize,
     selectedColor,
-    selectedMaterial,
     filteredItems
 }) => {
 
@@ -27,9 +33,6 @@ const SidebarFilterBlock = ({
         if (selectedSize !== '') {
             filterProductsBySize(items, '')
         }
-        if (selectedMaterial !== '') {
-            filterProductsByMaterial(items, '')
-        }
     }, [match])
 
     const colorOptionArray = filteredItems.map(product=>product.options).flat().filter(option=>option.name === 'color')
@@ -37,7 +40,7 @@ const SidebarFilterBlock = ({
     const sizeOptionArray = filteredItems.map(product=>product.options).flat().filter(option=>option.name === 'size')
     const sizeValueArray = [...new Set([...sizeOptionArray.map((size)=>size.value).flat()])]
     const materialValueArray = [...new Set([...filteredItems.map((product)=>product.material).flat()])]
-
+    const discountValueArray = [...new Set([...filteredItems.map((product)=>product.discount_price).flat()])]
     
     return (
         <div className="sidebar-filter-block">
@@ -96,10 +99,10 @@ const SidebarFilterBlock = ({
             <ul className="checkbox-filter-material">
                 {materialValueArray.map(value => (
                     <li key={value}>
-                        <label className=''>
+                        <label>
                             {value}
                             <input 
-                                type='radio'
+                                type='checkbox'
                                 value={value}
                                 name="RadioFilter"
                                 onChange={()=> filterProductsByMaterial(filteredItems, value)}
@@ -107,6 +110,29 @@ const SidebarFilterBlock = ({
                         </label>
                     </li>
                 ))}
+            </ul>
+            <div className="filter-title"><h2>Price</h2></div>
+            <ul className="checkbox-filter-material">
+                {discountValueArray.includes(0) ? 
+                    <li><label>
+                        Full price
+                        <input 
+                            type='checkbox'
+                            value={'Full price'}
+                            name="RadioFilter"
+                            onChange={()=> filterProductsByDiscount(filteredItems, 'Full price')}
+                        />
+                    </label></li> : null}
+                {discountValueArray.some(value => value > 0) ? 
+                    <li><label>
+                        Discounted price
+                        <input 
+                            type='checkbox'
+                            value={'Discounted price'}
+                            name="RadioFilter"
+                            onChange={()=> filterProductsByDiscount(filteredItems, 'Discounted price')}
+                        />
+                    </label></li> : null}
             </ul>
         </div>
     )
@@ -116,27 +142,11 @@ const SidebarFilterBlock = ({
 const mapStateToProps = state => ({
     selectedSize:  state.filterProducts.size,
     selectedColor:  state.filterProducts.color,
-    selectedMaterial:  state.filterProducts.material,
     filteredItems: state.filterProducts.filteredItems,
 })
 
 export default connect (
     mapStateToProps, 
-    { fetchFilterProducts, filterProductsBySize, filterProductsByColor, filterProductsByMaterial }
+    { fetchFilterProducts, filterProductsBySize, filterProductsByColor, filterProductsByMaterial, filterProductsByDiscount }
 ) (SidebarFilterBlock)
 
-
-
-    // const prevItems = useRef(items).current 
-    // useEffect(() => {
-    //     let isCurrent = true
-    //     if (isCurrent && items && items.length) {
-    //         fetchFilterProducts(items)
-    //     }
-    //     if (isCurrent && prevItems.items !== items) { 
-    //         filteredItems = items 
-    //     }
-    //     return () => {
-    //       isCurrent = false
-    //     }
-    //   }, [items])

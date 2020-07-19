@@ -57,6 +57,9 @@
     text-transform: capitalize;
     cursor: default;
 }
+.widget-img-block .title {
+    cursor: default;
+}
 .widget-section {
     padding-bottom: 25px;
 }

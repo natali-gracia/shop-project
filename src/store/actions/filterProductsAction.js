@@ -3,6 +3,7 @@ import {
     FILTER_PRODUCTS_BY_SIZE,
     FILTER_PRODUCTS_BY_COLOR,
     FILTER_PRODUCTS_BY_MATERIAL,
+    FILTER_PRODUCTS_BY_DISCOUNT,
     SORT_FILTER,
   } from "./types"
 
@@ -57,6 +58,21 @@ import {
     })
   }
 
+  export const filterProductsByDiscount = (items, discount) => (dispatch) => {
+    dispatch({
+      type: FILTER_PRODUCTS_BY_DISCOUNT,
+      payload: {
+        discount: discount,
+        items:
+          discount === 'Full price'
+            ? items.filter(product=>product.discount_price === 0)
+            : discount === 'Discounted price'
+            ? items.filter(product=>product.discount_price !== 0)
+            : items
+      }
+    })
+  }
+
   export const sortProducts = (items, sort) => (dispatch) => {
     dispatch({
       type: SORT_FILTER,
@@ -71,12 +87,3 @@ import {
       }
     })
   }
-
-  // export const defaultSortValue = (sort) => (dispatch) => {
-  //   dispatch({
-  //     type: DEFAULT_SORT_VALUE,
-  //     payload: {
-  //       sort: sort,
-  //     }
-  //   })
-  // }

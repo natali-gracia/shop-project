@@ -35,18 +35,13 @@ const ShopPage = ({
 
     useEffect(() => { 
         fetchFilterProducts(filteredItems)
-    }, [selectedFilter])
-
-    useEffect(() => { 
         setActivePage(1)
-    }, [filteredItems])
+    }, [selectedFilter, filteredItems])
 
     const handlePageChange = (pageNumber) => {
         setActivePage(pageNumber)
         window.scrollTo(0, 0)
     }
-
-
 
     return (
         <div className='main-contant wrap'>

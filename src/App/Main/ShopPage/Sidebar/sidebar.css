@@ -45,6 +45,9 @@
 .sidebar-filter-block input[type="radio"] {
     display: none;
 }
+.sidebar-filter-block input[type="checkbox"] {
+    display: none;
+}
 .sidebar-filter-block ul {
     margin: 20px 0 10px 0;
 }

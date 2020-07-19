@@ -3,10 +3,17 @@ import {
     FILTER_PRODUCTS_BY_SIZE,
     FILTER_PRODUCTS_BY_COLOR,
     FILTER_PRODUCTS_BY_MATERIAL,
+    FILTER_PRODUCTS_BY_DISCOUNT,
     SORT_FILTER,
 } from "../actions/types"
 
-const initState = { filteredItems: [], size: '', color: '', material: '', sort: { value: 'created-descending', label: 'Newest' }}
+const initState = { 
+    filteredItems: [], 
+    size: '', 
+    color: '', 
+    material: '', 
+    discount: '', 
+    sort: { value: 'created-descending', label: 'Newest' }}
 
 const filterProductsReducer = (state = initState, action) => {
     switch(action.type) {
@@ -32,6 +39,12 @@ const filterProductsReducer = (state = initState, action) => {
                 ...state,
                 filteredItems: action.payload.items,
                 material: action.payload.material,
+            }
+        case FILTER_PRODUCTS_BY_DISCOUNT:
+            return {
+                ...state,
+                filteredItems: action.payload.items,
+                discount: action.payload.discount,
             }
         case SORT_FILTER:
             return {
