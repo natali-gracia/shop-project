@@ -35,7 +35,7 @@ const BlogViewSlider = ({
                         <div className="slick-slide-item" key={post.id}>
                             <img src={post.image} alt={post.name}/>
                             <div className="post-title-wrap">
-                                <Link to="/">
+                                <Link to={`/blog/${post.id}`}>
                                     <h3 className='narrow'>{post.name}</h3>
                                 </Link>
                                 <p className='post-date'>{post.date}</p>
