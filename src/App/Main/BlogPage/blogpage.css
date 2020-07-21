@@ -1,0 +1,32 @@
+.post-title {
+    text-align: justify;
+}
+.post-list {
+    padding-left: 15px;
+}
+.post-content {
+    text-align: justify;
+}
+.post-nav {
+    padding-top: 10px;
+}
+.blog-section {
+    margin-bottom: 20px;
+}
+.blog-section p, .post-content, .post-nav {
+    margin: 0 0 10px;
+}
+.blog-section h2 {
+    margin-bottom: 1.25em;
+    text-transform: inherit;
+    text-align: inherit;
+}
+.blog-section > h1 {
+    margin-bottom: 1.25em;
+    text-align: inherit;
+    color: #000;
+}
+.post-image img {
+    width: 100%;
+    height: auto;
+}
