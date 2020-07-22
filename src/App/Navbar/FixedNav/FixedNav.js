@@ -48,6 +48,9 @@ const FixedNav = () => {
                         />
                     </div>
               </div>
+              <div className="back-to-top">
+                    <button className="btn-square" onClick={()=>window.scrollTo(0, 0)} title='Scroll to top'></button>
+              </div>
           </div>
     )
 }

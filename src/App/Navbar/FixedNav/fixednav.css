@@ -15,6 +15,42 @@
 .fixednav-row {
     position: relative;
 }
+.back-to-top {
+    position: fixed;
+    right: 40px;
+    bottom: 50px;
+    visibility: hidden;
+    z-index: 9;
+    transition: visibility 0.1s ease-in;   
+}
+.back-to-top button {
+    transition: all 0.1s ease-in;  
+}
+.back-to-top .btn-square {
+	width: 45px;
+    height: 45px;
+}
+.is-nav-open .back-to-top {
+    visibility: visible;
+}
+.back-to-top > .btn-square::before, .back-to-top > .btn-square:hover::before {
+    content: '';
+    transform: rotate(-180deg);  
+    height: 8px;
+    width: 14px;
+    display: block;
+    margin: 0 auto;
+}
+.back-to-top > .btn-square::before {
+    background: url('/images/slider/arrow-down-black.png') no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.back-to-top > .btn-square:hover::before {
+    background: url('/images/slider/arrow-down.png') no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
 .fixed-menu {
     width: auto;
     padding: 0 15px;
