@@ -97,8 +97,8 @@ const MenuTop = ({
                     </div>
                 </li>
                 <li><Link to="/blog">Blog<span className='label-new' style={labelHotMargin}>New</span></Link></li>
-                <li><Link to="/">About us</Link></li>
-                <li><Link to="/">Contact</Link></li>
+                <li><Link to="/about">About us</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
             </ul> 
         </div>
     )

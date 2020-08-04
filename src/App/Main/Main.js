@@ -4,6 +4,8 @@ import { Route } from "react-router-dom"
 import BreadcrumbRow from './BreadcrumbRow/BreadcrumbRow'
 import HomePage from './MainContent/HomePage'
 import BespokePage from './BespokePage/BespokePage'
+import AboutPage from './AboutPage/AboutPage'
+import ContactPage from './ContactPage/ContactPage'
 import ShopPage from './ShopPage/ShopPage'
 import ProductPage from './ProductPage/ProductPage'
 import BlogPage from './BlogPage/BlogPage'
@@ -20,6 +22,8 @@ const Main = () => {
                     component={ShopPage}/>
                 <Route exact path='/shop/:category/:type/:productId' component={ProductPage}/>
                 <Route path={['/blog', '/blog/:postId']} component={BlogPage}/>
+                <Route path='/about' component={AboutPage}/>
+                <Route path='/contact' component={ContactPage}/>
                 <Route path='/account/:authOption' component={AccountPage}/>
             </div>
         </main>

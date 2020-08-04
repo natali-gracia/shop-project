@@ -15,6 +15,14 @@ const BreadcrumbRouteConfig = [
       path: "/blog/",
       component: () => "Blog",
     },
+    {
+      path: "/about",
+      component: () => "welcome to the store",
+    },
+    {
+      path: "/contact",
+      component: () => "Our contact",
+    },
   ]
   
   export default BreadcrumbRouteConfig

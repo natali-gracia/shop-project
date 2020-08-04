@@ -1,0 +1,44 @@
+.contact-page-content {
+    padding-top: 45px;
+}
+.contact-info-col {
+    border-right: 1px solid #eaeaea;
+    padding: 40px 15px 30px;
+    text-align: center;
+}
+.contact-form-col {
+    padding-bottom: 50px;
+}
+.contact-info-col .section-title {
+    padding: 10px 0;
+    font-weight: 400;
+}
+.contact-info-col img {
+    height: 40px;
+    margin: 0 auto;
+}
+.contact-form-col .section-title {
+    font-weight: 400;
+}
+.contact-page-content .col-md-6 {
+    margin: 0 auto;
+}
+.contact-form input {
+    margin-bottom: 30px;
+}
+.contact-form .section-title {
+    margin-bottom: 35px;
+}
+.feedback-confirm {
+    text-align: center;
+    margin-top: 50px;
+    color: #000;
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+    animation: fadein 1.5s ease-in alternate;
+}
+.feedback-confirm img {
+    margin: auto;
+    height: 20px;
+}

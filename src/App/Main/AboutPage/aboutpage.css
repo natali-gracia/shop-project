@@ -1,0 +1,15 @@
+.page-text-content, .about-page-images {
+    text-align: center;
+    padding-bottom: 60px;
+}
+.page-text-content .bold-text-section {
+    font-weight: 700;
+    color: #333;
+}
+.page-text-content .email-row {
+    text-decoration: underline;
+}
+.about-page-images img {
+    max-width: 360px;
+    height: auto;
+}
