@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import {connect} from 'react-redux'
 
 import './productpage.css'
 
@@ -12,6 +13,7 @@ import ProductTabsRadioButtons from './ProductTabsRadioButtons/ProductTabsRadioB
 import ProductsSlider from './../../../Components/ProductsSlider'
 import RewievForm from './RewievForm/RewievForm'
 import RewievsList from './RewievsList/RewievsList'
+import { addToCart } from './../../../store/actions/cartActions'
 
 import productsData, {getProductsMap} from './../Products/productsData'
 
@@ -19,6 +21,8 @@ const productsArray = getProductsMap(productsData)
 
 const ProductPage = ({
     match,
+    cartItems,
+    addToCart
 }) => {
 
     const id = match.params.productId
@@ -43,6 +47,7 @@ const ProductPage = ({
 
     useEffect(() => {
         setProductViewImg(productsArray[match.params.productId].mainimage)
+        setProductCount(1)
     }, [match]);
 
     return (
@@ -111,7 +116,12 @@ const ProductPage = ({
                             <input type="text" value={productCount} onChange={onCountChange}/>
                         </div>
                         <div className="action-buttons">
-                            <button>Add to Cart</button>
+                            <button
+                                title='Add to Cart'
+                                onClick={() => addToCart(cartItems,productsArray[id].id,Number(productCount))}
+                            >
+                                Add to Cart
+                            </button>
                             <button className="btn-square" title='Add to Wishlist'></button>
                         </div>                       
                     </div>    
@@ -168,4 +178,10 @@ const ProductPage = ({
     )
 }
 
-export default ProductPage
+const mapStateToProps = state => ({
+    cartItems: state.cart.items,
+})
+
+export default connect(
+    mapStateToProps, { addToCart }
+) (ProductPage)

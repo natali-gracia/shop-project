@@ -9,11 +9,14 @@ import productsData from './../Products/productsData'
 import ProductOptions from './ProductOptions'
 import Quantity from '../../../Components/quantity/Quantity'
 import ProductPrice from './../../../Components/productprice/ProductPrice'
+import { addToCart } from './../../../store/actions/cartActions'
 
 const ProductQuickview = ({
     id = 1,
     showQuickView,
     setShowQuickView,
+    cartItems,
+    addToCart
 }) => {
 
     const product = productsData.filter(product => product.id === id)[0]
@@ -24,6 +27,7 @@ const ProductQuickview = ({
     useEffect(() => {
         if(showQuickView === false) {
             setQuickViewImg('')
+            setProductCount(1)
           }
     }, [showQuickView]);
 
@@ -97,7 +101,12 @@ const ProductQuickview = ({
                         />                       
                     </div>
                     <div className="action-buttons">
-                        <button>Add to Cart</button>
+                        <button
+                            title='Add to Cart'
+                            onClick={() => addToCart(cartItems,product.id,productCount)}
+                        >
+                            Add to Cart
+                        </button>
                     </div>
                 </div>
                 <div className="btn-close">
@@ -112,12 +121,14 @@ const ProductQuickview = ({
 const mapStateToProps = state => ({
     showQuickView:  state.quickView.showQuickView,
     id:  state.quickView.productId,
+    cartItems: state.cart.items,
 })
 
 const mapDispatchToProps = dispatch => ({
     setShowQuickView: () => dispatch({ 
         type: "SHOW_QUICKVIEW"
-})
+    }),
+    addToCart: (items, id, quantity) => dispatch (addToCart(items, id, quantity))
 })
 
 export default connect(

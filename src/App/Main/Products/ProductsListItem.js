@@ -17,8 +17,6 @@ const ProductsListItem = ({
     addToCart
 }) => {
 
-    console.log(cartItems)
-
     const ratingSum = Math.round((product.rewievs.reduce(
         (total, currentValue) => total + currentValue.rating,
         0
