@@ -7,12 +7,17 @@ import './productslistitem.css'
 
 import RewievRatingStars from '../ProductPage/RewievRatingStars'
 import ProductPrice from './../../../Components/productprice/ProductPrice'
+import { addToCart } from './../../../store/actions/cartActions'
 
 
 const ProductsListItem = ({
     product,
-    setShowQuickView
+    setShowQuickView,
+    cartItems,
+    addToCart
 }) => {
+
+    console.log(cartItems)
 
     const ratingSum = Math.round((product.rewievs.reduce(
         (total, currentValue) => total + currentValue.rating,
@@ -55,9 +60,17 @@ const ProductsListItem = ({
                 />
                 </div>
                 <div className="action-buttons wrap center">
-                    <button>
-                        {product.options.map(option => option.value).some(item => item.length > 1) === true ? 'Select options' : 'Add to Cart'}
-                    </button>
+                    {product.options.map(option => option.value).some(item => item.length > 1) === true ?
+                        <Link to={`/shop/${product.category}/${product.type}/${product.id}`}>
+                             <button title='Select options'>Select options</button>
+                        </Link> 
+                        : <button
+                            title='Add to Cart'
+                            onClick={() => addToCart(cartItems,product.id,1)}
+                        >
+                            Add to Cart
+                        </button>
+                    }
                     <button className="btn-square" title='Add to Wishlist'></button>
                 </div>
             </div>
@@ -67,16 +80,18 @@ const ProductsListItem = ({
 
 const mapStateToProps = state => ({
     showQuickView:  state.quickView.showQuickView,
+    cartItems: state.cart.items,
 })
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = dispatch => ({
     setShowQuickView: (id) => dispatch({ 
         type: "SHOW_QUICKVIEW", 
         id: id
-    })
+    }),
+    addToCart: (items, id, quantity) => dispatch (addToCart(items, id, quantity))
 })
 
 export default connect(
     mapStateToProps,
-    mapDispatchToProps,
+    mapDispatchToProps
 ) (ProductsListItem)

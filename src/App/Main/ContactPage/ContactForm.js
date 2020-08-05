@@ -64,7 +64,7 @@ const ContactForm = () => {
                     onChange={(e) => setComment(e.target.value)}
                 />
                 <div className="wrap center">
-                    <button type='submit' className='input-btn' >Submit Contact</button>
+                    <button type='submit' className='input-btn' >Send a message</button>
                 </div>
             </form>
             :   <div className='feedback-confirm wrap'>
