@@ -1,11 +1,20 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
+
+import {keys} from "lodash"
 
 import './cartheader.css'
-import {Link} from 'react-router-dom'
+
+import productsData, {getProductsMap} from './../../Main/Products/productsData'
+import CartTotal from './CartTotal'
+
 
 const CartHeader = ({
     topCartComponent = true,
     headerCartMargin = {marginTop: 50},
+    productsArray = getProductsMap(productsData),
+    cartItems
 }) => {
     return (
         <div className="wrap right">
@@ -16,12 +25,27 @@ const CartHeader = ({
                         </span>
                         {topCartComponent ? (
                             <em>
-                                <span className='product-quantity'>0</span>
+                                <span className='product-quantity'>
+                                {
+                                    keys(cartItems).reduce((total,productId)=>(
+                                        total + cartItems[productId]
+                                    ),0)
+                                }
+                                </span>
                                 <span className='text'> item(s) - </span>
-                                <span className='price'>₴ 0</span>
+                                <CartTotal
+                                    cartItems = {cartItems}
+                                    productsArray = {productsArray}
+                                />
                             </em>
                         ) : (
-                            <span className='product-quantity-fix'>0</span>
+                            <span className='product-quantity-fix'>
+                                {
+                                    keys(cartItems).reduce((total,productId)=>(
+                                        total + cartItems[productId]
+                                    ),0)
+                                }
+                            </span>
                         )}
                     </Link>
                 </p>
@@ -37,4 +61,9 @@ const CartHeader = ({
     )
 }
 
-export default CartHeader
+const mapStateToProps = state => ({
+    cartItems: state.cart.items,
+})
+
+export default connect ( mapStateToProps ) (CartHeader)
+
