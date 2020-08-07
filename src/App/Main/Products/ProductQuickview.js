@@ -39,6 +39,8 @@ const ProductQuickview = ({
         setProductCount(productCount - 1)
     }
 
+    const savedCartItems = JSON.parse(localStorage.getItem('cartItems'))
+
     return (
         <div className={showQuickView === false ? 'product-quickview hidden' : 'product-quickview'}>
             <div className="overlay"></div>
@@ -103,7 +105,7 @@ const ProductQuickview = ({
                     <div className="action-buttons">
                         <button
                             title='Add to Cart'
-                            onClick={() => addToCart(cartItems,product.id,productCount)}
+                            onClick={() => addToCart(savedCartItems === null ? cartItems : savedCartItems,product.id,productCount)}
                         >
                             Add to Cart
                         </button>

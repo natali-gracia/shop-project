@@ -1,6 +1,6 @@
-import React from 'react'
-import {connect} from 'react-redux'
+import React, { useEffect} from 'react'
 import {Link} from 'react-router-dom'
+import {connect} from 'react-redux'
 
 import {keys} from "lodash"
 
@@ -8,6 +8,7 @@ import './cartheader.css'
 
 import productsData, {getProductsMap} from './../../Main/Products/productsData'
 import CartTotal from './CartTotal'
+import DropdownCart from './DropdownCart'
 
 
 const CartHeader = ({
@@ -16,6 +17,15 @@ const CartHeader = ({
     productsArray = getProductsMap(productsData),
     cartItems
 }) => {
+
+    let savedCartItems = JSON.parse(localStorage.getItem('cartItems'))
+
+    console.log(savedCartItems)
+
+    useEffect(() => {
+        savedCartItems = JSON.parse(localStorage.getItem('cartItems'))
+    }, [cartItems]);
+
     return (
         <div className="wrap right">
             <div className='header-cart' style={headerCartMargin}>                
@@ -27,22 +37,22 @@ const CartHeader = ({
                             <em>
                                 <span className='product-quantity'>
                                 {
-                                    keys(cartItems).reduce((total,productId)=>(
-                                        total + cartItems[productId]
+                                    keys(savedCartItems).reduce((total,productId)=>(
+                                        total + savedCartItems[productId]
                                     ),0)
                                 }
                                 </span>
                                 <span className='text'> item(s) - </span>
                                 <CartTotal
-                                    cartItems = {cartItems}
+                                    cartItems = {savedCartItems}
                                     productsArray = {productsArray}
                                 />
                             </em>
                         ) : (
                             <span className='product-quantity-fix'>
                                 {
-                                    keys(cartItems).reduce((total,productId)=>(
-                                        total + cartItems[productId]
+                                    keys(savedCartItems).reduce((total,productId)=>(
+                                        total + savedCartItems[productId]
                                     ),0)
                                 }
                             </span>
@@ -50,20 +60,24 @@ const CartHeader = ({
                     </Link>
                 </p>
                 <div className="dropdown-cart">
-                    <div className="cart-empty">
-                        <p>You have no items in your shopping cart.</p>
-                    </div>
-                    <div className="cart-mini-header" style={{display: 'none'}}>
-                    </div>
+                    {savedCartItems === null ?
+                        <div className="cart-empty">
+                            <p>You have no items in your shopping cart.</p>
+                        </div>
+                    :   <DropdownCart/>
+                    } 
                 </div>
             </div>
         </div>
     )
 }
 
+
 const mapStateToProps = state => ({
     cartItems: state.cart.items,
 })
 
-export default connect ( mapStateToProps ) (CartHeader)
+export default connect(
+    mapStateToProps
+) (CartHeader)
 

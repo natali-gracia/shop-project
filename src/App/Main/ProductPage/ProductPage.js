@@ -50,6 +50,8 @@ const ProductPage = ({
         setProductCount(1)
     }, [match]);
 
+    const savedCartItems = JSON.parse(localStorage.getItem('cartItems'))
+
     return (
         <div className='product-page'>
             <section className="product-description wrap">
@@ -118,7 +120,7 @@ const ProductPage = ({
                         <div className="action-buttons">
                             <button
                                 title='Add to Cart'
-                                onClick={() => addToCart(cartItems,productsArray[id].id,Number(productCount))}
+                                onClick={() => addToCart(savedCartItems === null ? cartItems : savedCartItems,productsArray[id].id,Number(productCount))}
                             >
                                 Add to Cart
                             </button>

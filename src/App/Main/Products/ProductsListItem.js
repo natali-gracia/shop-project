@@ -13,9 +13,14 @@ import { addToCart } from './../../../store/actions/cartActions'
 const ProductsListItem = ({
     product,
     setShowQuickView,
-    cartItems,
-    addToCart
+    addToCart,
+    cartItems
 }) => {
+
+    const savedCartItems = JSON.parse(localStorage.getItem('cartItems'))
+
+
+    console.log(savedCartItems)
 
     const ratingSum = Math.round((product.rewievs.reduce(
         (total, currentValue) => total + currentValue.rating,
@@ -64,7 +69,7 @@ const ProductsListItem = ({
                         </Link> 
                         : <button
                             title='Add to Cart'
-                            onClick={() => addToCart(cartItems,product.id,1)}
+                            onClick={() => addToCart(savedCartItems === null ? cartItems : savedCartItems,product.id,1)}
                         >
                             Add to Cart
                         </button>

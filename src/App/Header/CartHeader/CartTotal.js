@@ -51,7 +51,7 @@ const CartTotal = ({
 }
 
 const mapStateToProps = (state) => ({
-    selectedCurrency:  state.selectedCurrency.value
+    selectedCurrency:  state.selectedCurrency.value,
 })
 
 export default connect(
