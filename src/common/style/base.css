@@ -24,12 +24,6 @@ body {
 .right {
 	justify-content: flex-end;
 }
-.center {
-	justify-content: center;
-}
-.left {
-	justify-content: flex-start;
-}
 .space-between {
 	justify-content: space-between;
 }

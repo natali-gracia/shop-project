@@ -19,9 +19,6 @@ const ProductsListItem = ({
 
     const savedCartItems = JSON.parse(localStorage.getItem('cartItems'))
 
-
-    console.log(savedCartItems)
-
     const ratingSum = Math.round((product.rewievs.reduce(
         (total, currentValue) => total + currentValue.rating,
         0

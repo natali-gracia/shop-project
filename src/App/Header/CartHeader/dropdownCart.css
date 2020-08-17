@@ -1,0 +1,62 @@
+.cart-list li, .cart-mini-header .cart-total {
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.cart-mini-header .product-img img {
+    margin-right: 15px;
+    max-width: 80px;
+    width: 100%;
+}
+.cart-mini-header .product-name a {
+    font-size: 12px;
+    line-height: initial;
+    vertical-align: top;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+}
+.cart-mini-header .product-name a:hover {
+    color: #000;
+}
+.cart-mini-header .product-price {
+    text-align: left;
+    font-size: 16px;
+}
+.cart-mini-header .product-price .product-count {
+    color: #999;
+    font-weight: normal;
+}
+.cart-mini-header .cart-total {
+    color: #000;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+}
+.cart-mini-header .cart-total .cart-total-value {
+    font-size: 16px;
+}
+.btn-remove {
+    position: absolute;
+    right: 0;
+    border: none;
+    padding: 0 0 5px 5px;
+    line-height: 14px;
+}
+.btn-remove:hover {
+	background-color: initial;
+    border: none;
+    color: initial;
+}
+.cart-mini-header .action-buttons .space-right {
+    margin-right: 15px;
+    background-color: #666;
+    border: 1px solid #666;
+    color: #fff;
+}
+.action-buttons .space-right:hover {
+    background-color: #000;
+    border: 1px solid #000;
+    color: #fff;
+}

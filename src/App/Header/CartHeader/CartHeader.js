@@ -20,8 +20,6 @@ const CartHeader = ({
 
     let savedCartItems = JSON.parse(localStorage.getItem('cartItems'))
 
-    console.log(savedCartItems)
-
     useEffect(() => {
         savedCartItems = JSON.parse(localStorage.getItem('cartItems'))
     }, [cartItems]);
@@ -60,7 +58,7 @@ const CartHeader = ({
                     </Link>
                 </p>
                 <div className="dropdown-cart">
-                    {savedCartItems === null ?
+                    {savedCartItems === null || keys(savedCartItems).length < 1 ?
                         <div className="cart-empty">
                             <p>You have no items in your shopping cart.</p>
                         </div>
