@@ -28,7 +28,7 @@ const CartHeader = ({
         <div className="wrap right">
             <div className='header-cart' style={headerCartMargin}>                
                 <p className='top-cart'>
-                    <Link to="/">
+                    <Link to="/cart">
                         <span className='shopping-bag-icon'>
                         </span>
                         {topCartComponent ? (

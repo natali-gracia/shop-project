@@ -13,11 +13,9 @@ import {removeFromCart} from './../../../store/actions/cartActions'
 const productsArray = getProductsMap(productsData)
 
 const DropdownCart = ({
-    removeFromCart
+    removeFromCart,
+    savedCartItems = JSON.parse(localStorage.getItem('cartItems'))
 }) => {
-
-    const savedCartItems = JSON.parse(localStorage.getItem('cartItems'))
-
 
     return (
         <div className="cart-mini-header">
@@ -60,7 +58,7 @@ const DropdownCart = ({
                 </span>
             </div>
             <div className="action-buttons wrap">
-                <Link to="/" className="btn-link space-right">
+                <Link to="/cart" className="btn-link space-right">
                     <span>View Cart</span>
                 </Link>
                 <Link to="/" className="btn-link">

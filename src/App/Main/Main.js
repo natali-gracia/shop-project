@@ -10,6 +10,7 @@ import ShopPage from './ShopPage/ShopPage'
 import ProductPage from './ProductPage/ProductPage'
 import BlogPage from './BlogPage/BlogPage'
 import AccountPage from './AccountPage/AccountPage'
+import CartPage from './CartPage/CartPage'
 
 const Main = () => {
     return (
@@ -24,6 +25,7 @@ const Main = () => {
                 <Route path={['/blog', '/blog/:postId']} component={BlogPage}/>
                 <Route path='/about' component={AboutPage}/>
                 <Route path='/contact' component={ContactPage}/>
+                <Route path='/cart' component={CartPage}/>
                 <Route path='/account/:authOption' component={AccountPage}/>
             </div>
         </main>

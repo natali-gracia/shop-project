@@ -30,7 +30,7 @@ const CartTotal = ({
     return (
         <React.Fragment>
             <span className='price'>
-                {selectedCurrency.value === 'hryvnia' ? '₴' : '€'}&nbsp;
+                {selectedCurrency.value === 'hryvnia' ? '₴' : '€'}
                 {
                     keys(cartItems).reduce((total,productId)=>(
                         total + (cartItems[productId] * 

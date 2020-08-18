@@ -23,6 +23,10 @@ const BreadcrumbRouteConfig = [
       path: "/contact",
       component: () => "Our contact",
     },
+    {
+      path: "/cart",
+      component: () => "Shopping Cart",
+    },
   ]
   
   export default BreadcrumbRouteConfig

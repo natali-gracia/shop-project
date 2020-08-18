@@ -1,0 +1,82 @@
+.cart-table {
+    padding: 45px 0 50px 0;
+}
+.cart-table table {
+    border: 1px solid #d5d5d5;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.cart-table table tr th, .cart-table table tr td {
+    border: 1px solid #d5d5d5;
+    padding: 20px;
+    width: 16.7%;
+    text-align: left;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+.cart-table thead th:nth-child(2) {
+    width: 33.4% !important;
+}
+.cart-table table img {
+    max-width: 120px;
+    width: 100%;
+    height: auto;
+}
+.cart-table table a {
+    display: inline-block;
+    width: 100%;
+    line-height: 0;
+    vertical-align: middle;
+}
+.cart-table table .btn-remove {
+    position: initial;
+    font-weight: 600;
+    color: #cc0000;
+
+}
+.cart-table table .compare-price {
+    text-decoration: line-through;
+    padding-right: 4px;
+    font-style: italic;
+}
+.cart-table table .product-quantity-value .plus::before, .product-quantity-value .minus::before {
+    width: 8px;
+    height: 8px;
+    content: '';
+    display: block;
+	margin: 0 auto;	
+    background-size: 100%;
+}
+.cart-table table .product-quantity-value {
+    text-align: initial;
+}
+.cart-table table .product-quantity-value .plus::before {
+    background-image: url(/images/plus-red.png);
+    width: 12px;
+    height: 12px;
+}
+.cart-table table .product-quantity-value .minus::before {
+    background-image: url(/images/minus-red.png);
+}
+.cart-table table .product-quantity-value input {
+    width: 42px;
+    border: 1px solid #ccc;
+    color: #999;
+}
+.cart-table table .product-quantity-value .btn-square, .cart-table table .product-quantity-value .btn-square:disabled {
+    border: none;
+    background-color: initial;
+}
+.cart-table table .product-quantity-value .minus:disabled::before {
+    background-image: url(/images/minus-grey.png);
+}
+.cart-table table .product-quantity-value .plus:disabled::before {
+    background-image: url(/images/plus-grey.png);
+}
+.cart-table tfoot .bold {
+    color: #000;
+}
+.cart-table .action-buttons {
+    margin-top: 25px;
+}
