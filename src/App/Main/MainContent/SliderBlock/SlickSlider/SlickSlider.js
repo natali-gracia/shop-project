@@ -31,7 +31,7 @@ const SlickSlider = ({
                         <div className="slide-item-text">
                             Hipster style is a fashion trending for Gentleman and Lady with tattoos. You’ll become so cool and attractive.
                         </div>
-                        <Link to="/" className="btn-link">
+                        <Link to="/blog/1" className="btn-link">
                             <span>View Now</span>
                         </Link>
                     </div>
