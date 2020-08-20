@@ -12,7 +12,8 @@ const SubscrForm = () => {
     const sendAddress = (e) => {
         e.preventDefault();
         Axios.post('https://shop-project-skillup.firebaseio.com/subscr.json', {
-            address
+            address,
+            date: new Date()
             })
             .then(res => res.data)
             .then(() => {
@@ -34,7 +35,7 @@ const SubscrForm = () => {
                     />
                     <button type='submit' className='input-btn' >Subscribe</button>
                 </form>
-            :   <div className='subscr-confirm'>Please, check your inbox to confirm your subscription...</div>  
+            :   <div className='subscr-confirm'>Thank you for your subscription!</div>  
             }
         </div>
     )
