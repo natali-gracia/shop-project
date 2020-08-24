@@ -1,10 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { connect } from 'react-redux'
+import { fetchAddresses } from './../../../../store/actions/subscrAction'
 
 import Axios from 'axios'
 
 import './subscrform.css'
+import { SubscrList } from './SubscrList'
 
-const SubscrForm = () => {
+const SubscrForm = ({
+    subscrAddresses,
+    fetchAddresses
+}) => {
+
+    useEffect(() => {
+        fetchAddresses()
+        // eslint-disable-next-line
+    }, [])
 
     const [address, setAddress] = useState('')
     const [isAddressSave, setIsAddressSave] = useState(false)
@@ -37,8 +48,26 @@ const SubscrForm = () => {
                 </form>
             :   <div className='subscr-confirm'>Thank you for your subscription!</div>  
             }
+            {subscrAddresses.map(i => (
+                <li key={i.id}>
+                    <div>
+                        <strong>{i.address}</strong>
+                        <small>
+                            {new Date().toLocaleDateString()}
+                        </small>
+                    </div>
+                    <SubscrList subscrAddresses = {i.address}/>
+                </li>
+            ))}
         </div>
     )
 }
 
-export default SubscrForm
+const mapStateToProps = (state) => ({
+    subscrAddresses:  state.subscrAddresses.fetchAddresses,
+})
+
+export default connect(
+    mapStateToProps, {fetchAddresses}
+) (SubscrForm)
+
