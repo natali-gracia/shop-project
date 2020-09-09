@@ -32,7 +32,9 @@ const SubscrForm = () => {
                         value={address}
                         onChange={(e) => setAddress(e.target.value)}
                     />
-                    <button type='submit' className='input-btn' >Subscribe</button>
+                    <div className="wrap">
+                        <button type='submit' className='input-btn' >Subscribe</button>
+                    </div> 
                 </form>
             :   <div className='subscr-confirm'>Please, check your inbox to confirm your subscription...</div>  
             }

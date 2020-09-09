@@ -9,6 +9,7 @@ import FixedNav from './Navbar/FixedNav/FixedNav'
 import Main from './Main/Main'
 import ProductQuickview from './Main/Products/ProductQuickview'
 import Footer from './Footer/Footer'
+import NewsPopUp from './Popup/Popup-newsletter/NewspopUp'
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
 			<Main/>
       <ProductQuickview/>
       <Footer/>
+      <NewsPopUp/>
     </div>
   );
 }
