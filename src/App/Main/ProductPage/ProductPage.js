@@ -48,6 +48,7 @@ const ProductPage = ({
     useEffect(() => {
         setProductViewImg(productsArray[match.params.productId].mainimage)
         setProductCount(1)
+        setSelectedDescTab('Product Description')
     }, [match]);
 
     const savedCartItems = JSON.parse(localStorage.getItem('cartItems'))

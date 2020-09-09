@@ -778,5 +778,8 @@ export const getProductsMap = (array) => {
     }),{})
 }
 
+// export const productArrayObj = {}
+// productsData.forEach(i => productArrayObj[i.id] = i)
+
 
 export default productsData
