@@ -1,18 +1,17 @@
 import React, { useEffect } from 'react'
 import {connect} from 'react-redux'
 
-import { getExchangeRates } from './../../store/actions/exchangeRatesActions'
-import './productprice.css'
+import { getExchangeRates } from './../../../store/actions/exchangeRatesActions'
+import './../../../Components/productprice/productprice.css'
  
 
-
-const ProductPrice = ({
+const PriceInCart = ({
     discount_price,
     price,
-    price_value='',
     selectedCurrency={value: 'hryvnia', label: 'UAH'},
     getExchangeRates,
-    exchangeRates
+    exchangeRates,
+    productCount
 }) => {
 
     useEffect(() => {
@@ -21,22 +20,23 @@ const ProductPrice = ({
 
     const price_euro = () => (((price/exchangeRates)*1.05).toFixed())
     const discount_price_euro = () => (((discount_price/exchangeRates)*1.05).toFixed())
+    const priceSum = (price) => price*productCount
 
     return (
         <div>
             {selectedCurrency.value === 'hryvnia' ? 
-                (discount_price === 0 ? <span className={price_value}>₴{price}</span>
+                (discount_price === 0 ? <span>₴{priceSum(price)}</span>
             :
                 <span>
-                    <span className='compare-price'><em>₴{price}</em></span>
-                    <span className={price_value}>₴{discount_price}</span>
+                    <span className='compare-price'><em>₴{priceSum(price)}</em></span>
+                    <span>₴{priceSum(discount_price)}</span>
                 </span>)
             : 
-                (discount_price === 0 ? <span className={price_value}>€{price_euro()}</span>
+                (discount_price === 0 ? <span>€{priceSum(price_euro())}</span>
             :
                 <span>
-                    <span className='compare-price'><em>€{price_euro()}</em></span>
-                    <span className={price_value}>€{discount_price_euro()}</span>
+                    <span className='compare-price'><em>€{priceSum(price_euro())}</em></span>
+                    <span>€{priceSum(discount_price_euro())}</span>
                 </span>)
             }   
         </div>
@@ -51,4 +51,4 @@ const mapStateToProps = (state) => ({
 export default connect(
     mapStateToProps,
     { getExchangeRates }
-) (ProductPrice)
+) (PriceInCart)

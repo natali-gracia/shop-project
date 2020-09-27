@@ -1,27 +1,20 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import {connect} from 'react-redux'
-
-import axios from 'axios' 
+ 
 import {keys} from "lodash"
+
+import { getExchangeRates } from './../../../store/actions/exchangeRatesActions'
 
 const CartTotal = ({
     cartItems,
     productsArray,
     selectedCurrency={value: 'hryvnia', label: 'UAH'},
+    getExchangeRates,
+    exchangeRates
 }) => {
 
-    const [exchangeRates, setЕxchangeRates] = useState();
-    
     useEffect(() => {
-        let isCurrent = true
-        axios.get('https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json')
-            .then(res => {
-                if (isCurrent) {setЕxchangeRates(res.data.filter(rate => rate.r030 === 978)[0].rate)
-            }})
-            .catch(err => {
-                console.log("Opps", err.message)
-            })
-            return () => isCurrent = false            
+        getExchangeRates()
     }, [])
 
     const price_euro = (price) => (((price/exchangeRates)*1.05).toFixed())
@@ -52,8 +45,10 @@ const CartTotal = ({
 
 const mapStateToProps = (state) => ({
     selectedCurrency:  state.selectedCurrency.value,
+    exchangeRates: state.exchangeRates.exchangeRates,
 })
 
 export default connect(
-    mapStateToProps
+    mapStateToProps,
+    { getExchangeRates }
 ) (CartTotal)

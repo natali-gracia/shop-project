@@ -6,7 +6,7 @@ import {keys} from "lodash"
 import './cartPage.css'
 
 import productsData, {getProductsMap} from './../Products/productsData'
-import ProductPrice from './../../../Components/productprice/ProductPrice'
+import PriceInCart from './../CartPage/PriceInCart'
 import Quantity from './../../../Components/quantity/Quantity'
 import CartTotal from './../../Header/CartHeader/CartTotal'
 import {changeProductQuantity, removeFromCart} from './../../../store/actions/cartActions'
@@ -67,9 +67,10 @@ const CartPage = ({
                                 />
                             </td>
                             <td>
-                                <ProductPrice
+                                <PriceInCart
                                     discount_price = {productsArray[productId].discount_price}
                                     price = {productsArray[productId].price}
+                                    productCount={savedCartItems[productId]}
                                 />
                             </td>
                             <td>
@@ -85,7 +86,7 @@ const CartPage = ({
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colSpan="3">Total price:</td>
+                        <td className="total" colSpan="3">Total price:</td>
                         <td className="bold">
                             <CartTotal
                                 cartItems = {savedCartItems}
