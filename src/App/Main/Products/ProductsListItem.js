@@ -8,16 +8,21 @@ import './productslistitem.css'
 import RewievRatingStars from '../ProductPage/RewievRatingStars'
 import ProductPrice from './../../../Components/productprice/ProductPrice'
 import { addToCart } from './../../../store/actions/cartActions'
+import { addToWishList } from './../../../store/actions/wishListAction'
 
 
 const ProductsListItem = ({
     product,
     setShowQuickView,
     addToCart,
-    cartItems
+    cartItems,
+    addToWishList
 }) => {
 
     const savedCartItems = JSON.parse(localStorage.getItem('cartItems'))
+
+    const wishListData = JSON.parse(localStorage.getItem('wishListItems'))
+    const savedWishListItems = wishListData === null ? {} : wishListData
 
     const ratingSum = Math.round((product.rewievs.reduce(
         (total, currentValue) => total + currentValue.rating,
@@ -59,7 +64,11 @@ const ProductsListItem = ({
                     ratingSum = {ratingSum}
                 />
                 </div>
-                <div className="action-buttons wrap center">
+                <div 
+                    className={ savedWishListItems[product.id] === true 
+                    ? "action-buttons wrap center liked-status" 
+                    : "action-buttons wrap center"}
+                >
                     {product.options.map(option => option.value).some(item => item.length > 1) === true ?
                         <Link to={`/shop/${product.category}/${product.type}/${product.id}`}>
                              <button title='Select options'>Select options</button>
@@ -71,7 +80,18 @@ const ProductsListItem = ({
                             Add to Cart
                         </button>
                     }
-                    <button className="btn-square" title='Add to Wishlist'></button>
+                    {savedWishListItems[product.id] === true 
+                        ?   <Link 
+                                to="#" 
+                                title='View Favorite Items'
+                                className="btn-square btn-link">
+                            </Link>
+                        :   <button 
+                                className="btn-square" 
+                                title='Add to Wishlist'
+                                onClick={() => addToWishList(wishListData, product.id)}
+                            ></button>
+                    }
                 </div>
             </div>
         </div>
@@ -81,6 +101,7 @@ const ProductsListItem = ({
 const mapStateToProps = state => ({
     showQuickView:  state.quickView.showQuickView,
     cartItems: state.cart.items,
+    wishListItems: state.wishList.items,
 })
 
 const mapDispatchToProps = dispatch => ({
@@ -88,7 +109,8 @@ const mapDispatchToProps = dispatch => ({
         type: "SHOW_QUICKVIEW", 
         id: id
     }),
-    addToCart: (items, id, quantity) => dispatch (addToCart(items, id, quantity))
+    addToCart: (items, id, quantity) => dispatch (addToCart(items, id, quantity)),
+    addToWishList: (items, id) => dispatch (addToWishList(items, id))
 })
 
 export default connect(

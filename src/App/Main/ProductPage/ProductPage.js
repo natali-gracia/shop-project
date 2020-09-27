@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
 
 import './productpage.css'
 
@@ -14,14 +15,18 @@ import ProductsSlider from './../../../Components/ProductsSlider'
 import RewievForm from './RewievForm/RewievForm'
 import RewievsList from './RewievsList/RewievsList'
 import { addToCart } from './../../../store/actions/cartActions'
+import { addToWishList, removeFromWishList } from './../../../store/actions/wishListAction'
 
 import productsData, {getProductsMap} from './../Products/productsData'
+
 
 const productsArray = getProductsMap(productsData)
 
 const ProductPage = ({
     match,
     cartItems,
+    addToWishList,
+    removeFromWishList,
     addToCart
 }) => {
 
@@ -45,13 +50,17 @@ const ProductPage = ({
         0
     ))/productsArray[id].rewievs.length)
 
+    const savedCartItems = JSON.parse(localStorage.getItem('cartItems'))
+    
+    const wishListData = JSON.parse(localStorage.getItem('wishListItems'))
+    const savedWishListItems = wishListData === null ? {} : wishListData
+
+
     useEffect(() => {
         setProductViewImg(productsArray[match.params.productId].mainimage)
         setProductCount(1)
         setSelectedDescTab('Product Description')
-    }, [match]);
-
-    const savedCartItems = JSON.parse(localStorage.getItem('cartItems'))
+    }, [match])
 
     return (
         <div className='product-page'>
@@ -118,14 +127,33 @@ const ProductPage = ({
                         <div className="product-quantity-value">
                             <input type="text" value={productCount} onChange={onCountChange}/>
                         </div>
-                        <div className="action-buttons">
+                        <div 
+                            className={ savedWishListItems[productsArray[id].id] === true 
+                                ? "action-buttons liked-status" 
+                                : "action-buttons"}>
                             <button
                                 title='Add to Cart'
                                 onClick={() => addToCart(savedCartItems === null ? cartItems : savedCartItems,productsArray[id].id,Number(productCount))}
                             >
                                 Add to Cart
                             </button>
-                            <button className="btn-square" title='Add to Wishlist'></button>
+                            {savedWishListItems[productsArray[id].id] === true 
+                                ?   <Link 
+                                        to="#" 
+                                        title='View Favorite Items'
+                                        className="btn-square btn-link">
+                                    </Link>
+                                // <button 
+                                //     className="btn-square" 
+                                //     title='Remove from Wishlist'
+                                //     onClick={() => removeFromWishList(wishListData, productsArray[id].id)}
+                                // ></button>
+                                :   <button 
+                                        className="btn-square" 
+                                        title='Add to Wishlist'
+                                        onClick={() => addToWishList(wishListData, productsArray[id].id)}
+                                    ></button>
+                            }
                         </div>                       
                     </div>    
                 </div>               
@@ -183,8 +211,9 @@ const ProductPage = ({
 
 const mapStateToProps = state => ({
     cartItems: state.cart.items,
+    wishListItems: state.wishList.items,
 })
 
 export default connect(
-    mapStateToProps, { addToCart }
+    mapStateToProps, { addToCart, addToWishList, removeFromWishList }
 ) (ProductPage)

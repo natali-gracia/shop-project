@@ -22,7 +22,7 @@
     background: #fafafa;
     letter-spacing: 0.05em;
     line-height: 1;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .cart-table table img {
@@ -84,7 +84,7 @@
 
 .cart-table tfoot .total {
     color: #666;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .cart-table tfoot .bold {

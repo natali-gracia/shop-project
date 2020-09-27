@@ -27,7 +27,7 @@ const CartPage = ({
                         <th></th>
                         <th className="double">Product</th>
                         <th>QTY</th>
-                        <th>Item Price</th>
+                        <th>Price</th>
                         <th>Remove</th>
                     </tr>
                 </thead>
