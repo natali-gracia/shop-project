@@ -21,9 +21,10 @@ const Header = () => {
                     <div className="col-md-6">
                         <ul className="customer-links wrap center">
                             <li><Link to="/wishlist">My Wishlist</Link></li>
+                            <li><Link to="/cart">View Cart</Link></li>
                             <li><Link to="/">Checkout</Link></li>
-                            <li><Link to="/account/login">Log In</Link></li>
-                            <li><Link to="/account/register">Create an account</Link></li>
+                            {/* <li><Link to="/account/login">Log In</Link></li>
+                            <li><Link to="/account/register">Create an account</Link></li> */}
                         </ul>
                     </div>
                     <div className="col-md-3">
