@@ -15,7 +15,7 @@ import ProductsSlider from './../../../Components/ProductsSlider'
 import RewievForm from './RewievForm/RewievForm'
 import RewievsList from './RewievsList/RewievsList'
 import { addToCart } from './../../../store/actions/cartActions'
-import { addToWishList, removeFromWishList } from './../../../store/actions/wishListAction'
+import { addToWishList } from './../../../store/actions/wishListAction'
 
 import productsData, {getProductsMap} from './../Products/productsData'
 
@@ -26,7 +26,6 @@ const ProductPage = ({
     match,
     cartItems,
     addToWishList,
-    removeFromWishList,
     addToCart
 }) => {
 
@@ -93,10 +92,10 @@ const ProductPage = ({
                         />
                         <span className='reviews-count'>
                             {productsArray[id].rewievs.length > 0 ? 
-                                <React.Fragment>
+                                <>
                                     {productsArray[id].rewievs.length} 
                                     {productsArray[id].rewievs.length === 1 ? ' review' : ' reviews'}
-                                </React.Fragment>
+                                </>
                                 : ' No reviews'
                             }
                         </span>
@@ -139,15 +138,10 @@ const ProductPage = ({
                             </button>
                             {savedWishListItems[productsArray[id].id] === true 
                                 ?   <Link 
-                                        to="#" 
-                                        title='View Favorite Items'
+                                        to="/wishlist" 
+                                        title='View Favorites'
                                         className="btn-square btn-link">
                                     </Link>
-                                // <button 
-                                //     className="btn-square" 
-                                //     title='Remove from Wishlist'
-                                //     onClick={() => removeFromWishList(wishListData, productsArray[id].id)}
-                                // ></button>
                                 :   <button 
                                         className="btn-square" 
                                         title='Add to Wishlist'
@@ -215,5 +209,5 @@ const mapStateToProps = state => ({
 })
 
 export default connect(
-    mapStateToProps, { addToCart, addToWishList, removeFromWishList }
+    mapStateToProps, { addToCart, addToWishList }
 ) (ProductPage)

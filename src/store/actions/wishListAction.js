@@ -1,14 +1,8 @@
 import { 
-    GET_WISHLIST_ITEMS,
     ADD_TO_WISHLIST, 
     REMOVE_FROM_WISHLIST
 } from "./types"
-
-export const getWishListItems = () => dispatch => {
-    const wishListData = JSON.parse(localStorage.getItem('wishListItems'))
-    const wishListItems = (wishListData === null ? {} : wishListData)
-    dispatch({ type: GET_WISHLIST_ITEMS, payload: { wishListItems } })
-}
+import {omit} from "lodash"
 
 export const addToWishList = (items, id) => (dispatch) => {
     const wishListItems = (items === null ? { [id]: true }
@@ -21,10 +15,7 @@ export const addToWishList = (items, id) => (dispatch) => {
 }
 
 export const removeFromWishList = (items, id) => (dispatch) => {
-    const wishListItems = { 
-            ...items, 
-            [id]: false
-    }
-  localStorage.setItem("wishListItems", JSON.stringify(wishListItems))
-  dispatch({ type: REMOVE_FROM_WISHLIST, payload: { wishListItems } })
+    const wishListItems = omit(items, id)
+    localStorage.setItem("wishListItems", JSON.stringify(wishListItems))
+    dispatch({ type: REMOVE_FROM_WISHLIST, payload: { wishListItems } })
 }

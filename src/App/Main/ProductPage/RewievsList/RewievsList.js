@@ -8,7 +8,7 @@ const RewievsList = ({
     rewievsArray
 }) => {
     return (
-        <React.Fragment>
+        <>
         {rewievsArray.map((rewiev)=>(
             <div className="product-rewiev" key={rewiev.id}>
                 <RewievRatingStars
@@ -20,7 +20,7 @@ const RewievsList = ({
                 <div>{rewiev.text}</div>
             </div>
         ))}
-        </React.Fragment>
+        </>
     )
 }
 

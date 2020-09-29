@@ -11,6 +11,7 @@ import ProductPage from './ProductPage/ProductPage'
 import BlogPage from './BlogPage/BlogPage'
 import AccountPage from './AccountPage/AccountPage'
 import CartPage from './CartPage/CartPage'
+import WishListPage from './WishListPage/WishListPage'
 
 const Main = () => {
     return (
@@ -26,6 +27,7 @@ const Main = () => {
                 <Route path='/about' component={AboutPage}/>
                 <Route path='/contact' component={ContactPage}/>
                 <Route path='/cart' component={CartPage}/>
+                <Route path='/wishlist' component={WishListPage}/>
                 <Route path='/account/:authOption' component={AccountPage}/>
             </div>
         </main>

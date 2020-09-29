@@ -4,8 +4,7 @@ import './aboutpage.css'
 
 const AboutPage = () => {
     return (
-         
-        <React.Fragment>
+        <>
             <div className="page-text-content">
                 <h2 className='section-title'>Welcome to the Honcharova Workshop</h2>
                 <span>
@@ -21,7 +20,7 @@ const AboutPage = () => {
                 <div className="col-md-4"><img src="/images/about/HW_02.jpg" alt="Honcharova Workshop 02"/></div>
                 <div className="col-md-4"><img src="/images/about/HW_03.jpg" alt="Honcharova Workshop 03"/></div>
             </div>   
-        </React.Fragment>
+        </>
     )
 }
 

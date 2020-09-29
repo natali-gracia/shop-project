@@ -19,7 +19,7 @@ const Sidebar = ({
     return (
         <aside className="col-md-3 sidebar">
             <Route exact path='/shop' render={() =>
-                <React.Fragment>
+                <>
                     <div className="block-title"><h2>Categories</h2></div>
                     <div className="widget-content">
                         <ul>
@@ -29,10 +29,10 @@ const Sidebar = ({
                             <li><Link to="/bespoke">Exclusive Order</Link></li> 
                         </ul>
                     </div>
-                </React.Fragment> 
+                </> 
             }/>
             <Route exact path='/shop' render={() =>
-                <React.Fragment>
+                <>
                     <div className="block-title"><h2>Types</h2></div>
                     <div className="widget-content">
                         <ul>
@@ -42,11 +42,11 @@ const Sidebar = ({
                             <li><Link to="/shop/all-categories/accessories">Accessories</Link></li>
                         </ul>
                     </div>
-                </React.Fragment> 
+                </> 
             }/>
             <Route exact path="/shop/all-categories" render={() => (<Redirect to="/shop"/>)}/>
             <Route exact path='/shop/all-categories/:type' render={({match}) =>
-                <React.Fragment>
+                <>
                     <div className="block-title first-title"><h2>Categories</h2></div>
                     <div className="widget-content">
                         <ul>
@@ -64,10 +64,10 @@ const Sidebar = ({
                                 </li> : null}
                         </ul>
                     </div>
-                </React.Fragment> 
+                </> 
             }/>
             <Route exact path='/shop/:category' render={({match}) =>
-                <React.Fragment>
+                <>
                     <div className="block-title"><h2>Types</h2></div>
                     <div className="widget-content">
                         <ul>
@@ -89,7 +89,7 @@ const Sidebar = ({
                             </li> : null}
                         </ul>
                     </div>
-                </React.Fragment> 
+                </> 
             }/>
             <div className="block-title"><h2>Filter Selection</h2></div>
             <SidebarFilterBlock

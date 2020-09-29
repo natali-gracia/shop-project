@@ -11,9 +11,9 @@ const BreadcrumbRow = ({match}) => {
         <div className='breadcrumb-wrap'>
                 <div className="breadcrumbs">
                     <Switch>
-                        <React.Fragment>
+                        <>
                             <h1>{BreadcrumbRouteConfig.map((route) => (<Route key={route.path} {...route} />))}</h1>
-                        </React.Fragment>
+                        </>
                     </Switch>
                     <div className="breadcrumbs-row">
                         <Breadcrumbs

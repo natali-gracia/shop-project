@@ -1,3 +1,9 @@
+.empty-cart h2 {
+    text-align: left;
+}
+.empty-cart .section-title {
+    padding-bottom: 90px;
+}
 .cart-table {
     padding: 45px 0 50px 0;
 }
@@ -6,7 +12,7 @@
     border-collapse: collapse;
     border-spacing: 0;
 }
-.cart-table table tr th, .cart-table table tr td {
+.cart-table tr th, .cart-table tr td {
     border-bottom: 1px solid #d5d5d5;
     padding: 20px;
     width: 16.7%;

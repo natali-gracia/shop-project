@@ -27,6 +27,10 @@ const BreadcrumbRouteConfig = [
       path: "/cart",
       component: () => "Shopping Cart",
     },
+    {
+      path: "/wishlist",
+      component: () => "Wishlist",
+    },
   ]
   
   export default BreadcrumbRouteConfig

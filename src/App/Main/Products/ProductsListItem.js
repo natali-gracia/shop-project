@@ -82,8 +82,8 @@ const ProductsListItem = ({
                     }
                     {savedWishListItems[product.id] === true 
                         ?   <Link 
-                                to="#" 
-                                title='View Favorite Items'
+                                to="/wishlist" 
+                                title='View Favorites'
                                 className="btn-square btn-link">
                             </Link>
                         :   <button 

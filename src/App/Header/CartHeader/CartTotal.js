@@ -21,7 +21,7 @@ const CartTotal = ({
     const discount_price_euro = (discount_price) => (((discount_price/exchangeRates)*1.05).toFixed())
 
     return (
-        <React.Fragment>
+        <>
             <span className='price'>
                 {selectedCurrency.value === 'hryvnia' ? '₴' : '€'}
                 {
@@ -39,7 +39,7 @@ const CartTotal = ({
                         ),0)
                 } 
             </span>
-        </React.Fragment>
+        </>
     )
 }
 

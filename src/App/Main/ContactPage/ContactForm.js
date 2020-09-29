@@ -31,7 +31,7 @@ const ContactForm = () => {
     }
 
     return (
-        <React.Fragment>
+        <>
             {isFeedBackSave !== true ?   
             <form onSubmit={sendFeedBack} className="form contact-form">
                 <h2 className='section-title'>IF YOU GOT ANY QUESTIONS<br/>PLEASE DO NOT HESITATE TO SEND US A MESSAGE</h2>
@@ -72,7 +72,7 @@ const ContactForm = () => {
                     <p>Thanks for contacting us! We'll get back to you as soon as possible.</p>
                 </div>  
             }
-        </React.Fragment>
+        </>
     )
 }
 
