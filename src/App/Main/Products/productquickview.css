@@ -98,7 +98,6 @@
 }
 .product-options .checked, .product-options-item:hover {
     background-color: #000;
-	border: 1px solid #000;
     color: #fff;
     cursor: pointer;
 }
@@ -109,16 +108,23 @@
     margin: 0 10px 15px 0;
     letter-spacing: 0;
 }
+.product-options-item em, .product-options-color em {
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin: auto;
+    margin-top: 2px;
+    border: none;
+}
 .product-options-item {
     background-color: transparent;
-	border: transparent;
+    border: 0.5px solid #999;
     color: #000;
     text-align: center;
     line-height: 32px;
 }
 .product-options .checked-color, .product-options-color:hover {
-    border: none;
-    border: 0.5px solid #333;
+    border: 1px solid #333;
     cursor: pointer;
 }
 .quickview-shop .product-price, .quickview-shop .product-quantity {

@@ -5,6 +5,7 @@ import productQuickViewReducer from './productQuickViewReducer'
 import cartReducer from './cartReducer'
 import exchangeRatesReducer from './exchangeRatesReducer'
 import wishListReducer from './wishListReducer'
+import productOptionsReducer from './productOptionsReducer'
 
 const rootReducer = combineReducers ({
     selectedCurrency: currencySelectReducer,
@@ -12,7 +13,8 @@ const rootReducer = combineReducers ({
     quickView: productQuickViewReducer,
     cart: cartReducer,
     wishList: wishListReducer,
-    exchangeRates: exchangeRatesReducer
+    exchangeRates: exchangeRatesReducer,
+    selectedOption: productOptionsReducer,
 })
 
 export default rootReducer
