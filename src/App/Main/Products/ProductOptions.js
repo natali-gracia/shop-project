@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {connect} from 'react-redux'
 
 import productsData, {getProductsMap} from './../Products/productsData'
@@ -14,8 +14,6 @@ const ProductOptions = ({
     selectProductColor,
     selectProductSize
 }) => {
-
-    console.log(selectedSize);
 
     return (
         <div className="product-options">

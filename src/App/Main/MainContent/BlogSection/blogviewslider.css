@@ -50,7 +50,7 @@
 }
 .post-title-wrap .post-date::before {
     content: '';    
-    background: url(/images/calendar.png) no-repeat 0 0;
+    background: url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/calendar.png?alt=media&token=c77bc595-cfea-4e98-87d2-08fc023cb6c5') no-repeat 0 0;
     display: block;
     position: absolute;
     left: -20px;

@@ -88,20 +88,20 @@
     height: 16px;
 }
 .action-buttons .btn-square::before {
-    background-image: url('/images/heart.png');
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/heart.png?alt=media&token=b26f8cab-0941-4515-88c2-fbe1a89d8757');
 }
 .liked-status .btn-square::before {
     background-image: none;
 }
 .liked-status .btn-link::before {
-    background-image: url('/images/check-mark-white.png') !important;
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/check-mark-white.png?alt=media&token=22539655-3b66-4290-ae0b-9560d327f2a8') !important;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 .product-img .btn-square::before {
-    background-image: url('/images/plus-white.png');
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/plus-white.png?alt=media&token=18363d32-b02e-41a3-81c1-11c8e7e8aa41');
 }
 .product-content .compare-price {
     color: #999;

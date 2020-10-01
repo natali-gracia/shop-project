@@ -25,7 +25,7 @@ const SlickSlider = ({
         <div className="slider-row">
             <Slider {...settings}>
                 <div className="slick-slide-item">
-                    <div className="slick-image"><img src="/images/slider/slideshow_1.jpg" alt="SALE"/></div>
+                    <div className="slick-image"><img src="https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/slider%2Fslideshow_1.jpg?alt=media&token=52208a09-8a80-4e93-a21e-d68423e9836a" alt="SALE"/></div>
                     <div className="slider-content">
                         <div className="slide-item-title">hipster<br/>trending<br/>in 2020</div>
                         <div className="slide-item-text">
@@ -37,7 +37,7 @@ const SlickSlider = ({
                     </div>
                 </div>
                 <div className="slick-slide-item">
-                    <div className="slick-image"><img src="/images/slider/slideshow_2.jpg" alt=""/></div>
+                    <div className="slick-image"><img src="https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/slider%2Fslideshow_2.jpg?alt=media&token=071bbfc5-8581-45b6-8815-b4e4cb8c559f" alt=""/></div>
                     <div className="slider-content">
                         <div className="slide-item-title">leather<br/>belts</div>
                         <div className="slide-item-text">
@@ -50,7 +50,7 @@ const SlickSlider = ({
                     </div>
                 </div>
                 <div className="slick-slide-item">
-                    <div className="slick-image"><img src="/images/slider/slideshow_3.jpg" alt=""/></div>
+                    <div className="slick-image"><img src="https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/slider%2Fslideshow_3.jpg?alt=media&token=f21d2bb7-a9b9-49c4-af1f-6c25f7f0288d" alt=""/></div>
                     <div className="slider-content">
                         <div className="slide-item-title">SALE UP TO <br/>30% IN THE SHOP</div>
                         <div className="slide-item-text">

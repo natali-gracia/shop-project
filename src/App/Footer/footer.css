@@ -59,20 +59,20 @@
     left: 0;
 }
 .ft-content .address::before {
-    background-image: url('/images/address-icon.png');
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/address-icon.png?alt=media&token=30f9728f-42ac-4c0a-b18d-c94dee559657');
     width: 20px;
     height: 20px;
     top: 8px;
 }
 .ft-content .phone::before {
-    background-image: url('/images/phone-icon.png');
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/phone-icon.png?alt=media&token=68ef0442-c661-4680-8225-5327cc36b584');
     width: 20px;
     height: 20px;
     top: 3px;
 }
 
 .ft-content .email::before {
-    background-image: url('/images/email-icon.png');
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/email-icon.png?alt=media&token=19fd408a-0c12-4ad9-a89b-9bd726f633ab');
     width: 16px;
     height: 16px;
     top: 6px;

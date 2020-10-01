@@ -44,7 +44,7 @@
     margin-top: 15px;
 }
 .btn-close .btn-square::before {
-    background-image: url(/images/plus-white.png);
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/plus-white.png?alt=media&token=18363d32-b02e-41a3-81c1-11c8e7e8aa41');
     transform: rotate(45deg);
     width: 16px;
     height: 16px;

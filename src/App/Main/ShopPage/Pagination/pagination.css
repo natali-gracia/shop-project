@@ -30,7 +30,7 @@
 .arrow-last::before,
 .arrow-last::after {
     content: '';
-    background: url(/images/slider/arrow-down-black.png) no-repeat;
+    background: url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/slider%2Farrow-down-black.png?alt=media&token=6d018ff8-0093-4a89-afcb-fd927a465799') no-repeat;
     background-size: cover;
     height: 7px;
     width: 12px;
@@ -59,7 +59,7 @@
 .arrow-last:hover::before,
 .arrow-last:hover::after {
     content: '';
-    background: url(/images/slider/arrow-down.png) no-repeat;
+    background: url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/slider%2Farrow-down.png?alt=media&token=851d0e85-5b5f-44c3-a49d-bd0ad86f4bf3') no-repeat;
     background-size: cover;
     height: 7px;
     width: 12px;

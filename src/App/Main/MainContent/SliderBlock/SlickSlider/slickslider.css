@@ -96,7 +96,7 @@
 }
 .slick-prev:before, .slick-next:before {
     content: '';
-    background: url('/images/slider/arrow-down.png') no-repeat;
+    background: url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/slider%2Farrow-down.png?alt=media&token=851d0e85-5b5f-44c3-a49d-bd0ad86f4bf3') no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
     height: 9px;

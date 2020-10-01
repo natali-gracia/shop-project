@@ -53,7 +53,7 @@
     border: 1px solid #000;
 }
 .products-slider .slick-prev:before, .products-slider .slick-next:before {
-    background: url('/images/slider/arrow-down-grey.png') no-repeat;
+    background: url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/slider%2Farrow-down-grey.png?alt=media&token=6b2d13f0-c470-4cd3-8b24-b3eb4357da11') no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
     height: 9px;
@@ -62,14 +62,14 @@
     margin: 0 auto;
 }
 .related-products-slider .products-slider .slick-prev:before, .related-products-slider .products-slider .slick-next:before {
-    background: url('/images/slider/arrow-down-black.png') no-repeat;
+    background: url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/slider%2Farrow-down-black.png?alt=media&token=6d018ff8-0093-4a89-afcb-fd927a465799') no-repeat;
     -webkit-background-size: cover;
     background-size: cover;   
     height: 8px;
     width: 14px;
 }
 .products-slider .slick-prev:hover:before, .products-slider .slick-next:hover:before {
-    background: url('/images/slider/arrow-down.png');
+    background: url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/slider%2Farrow-down.png?alt=media&token=851d0e85-5b5f-44c3-a49d-bd0ad86f4bf3');
     -webkit-background-size: cover;
     background-size: cover;
     height: 9px;

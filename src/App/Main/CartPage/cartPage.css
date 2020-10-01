@@ -65,12 +65,12 @@
     text-align: initial;
 }
 .cart-table table .product-quantity-value .plus::before {
-    background-image: url(/images/plus-red.png);
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/plus-red.png?alt=media&token=c0244539-c62f-4a8e-81c1-21b9442a9fa4');
     width: 12px;
     height: 12px;
 }
 .cart-table table .product-quantity-value .minus::before {
-    background-image: url(/images/minus-red.png);
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/minus-red.png?alt=media&token=cb397179-1335-4d42-8176-7c3159adcdc8');
 }
 .cart-table table .product-quantity-value input {
     width: 42px;
@@ -82,10 +82,10 @@
     background-color: initial;
 }
 .cart-table table .product-quantity-value .minus:disabled::before {
-    background-image: url(/images/minus-grey.png);
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/minus-grey.png?alt=media&token=0e8ff42b-fee4-4a6b-9064-452e43556dc9');
 }
 .cart-table table .product-quantity-value .plus:disabled::before {
-    background-image: url(/images/plus-grey.png);
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/plus-grey.png?alt=media&token=d484600e-b5a1-42bb-95fc-671c5a5f07ff');
 }
 
 .cart-table tfoot .total {

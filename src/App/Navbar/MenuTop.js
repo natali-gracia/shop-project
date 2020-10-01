@@ -21,7 +21,7 @@ const MenuTop = ({
                                 <div className="col-md-4 menu-column">
                                     <div className="dropdown-menu-img">
                                         <Link to="/shop/women">
-                                            <img src="/images/nav/woman.jpg" alt="women"/>
+                                            <img src="https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/nav%2Fwoman.jpg?alt=media&token=afe921fe-86db-49a5-9aaf-c0b34f72108a" alt="women"/>
                                         </Link>
                                     </div>
                                     <div className="dropdown-menu-content">
@@ -41,7 +41,7 @@ const MenuTop = ({
                                 <div className="col-md-4 menu-column">
                                     <div className="dropdown-menu-img">
                                         <Link to="/shop/men">
-                                            <img src="/images/nav/man.png" alt="Men"/>
+                                            <img src="https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/nav%2Fman.png?alt=media&token=666141a7-96cb-4c93-9bbf-44f4420d874a" alt="Men"/>
                                         </Link>
                                     </div>
                                     <div className="dropdown-menu-content">
@@ -62,7 +62,7 @@ const MenuTop = ({
                                 <div className="col-md-4 menu-column">
                                     <div className="dropdown-menu-img">
                                         <Link to="/shop/special-designs">
-                                            <img src="/images/nav/special.jpg" alt="Special Designs"/>
+                                            <img src="https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/nav%2Fspecial.jpg?alt=media&token=4710cdb8-e6fa-47d2-86dd-ef2919f79a0d" alt="Special Designs"/>
                                         </Link>
                                     </div>
                                     <div className="dropdown-menu-content">
@@ -82,7 +82,7 @@ const MenuTop = ({
                             <div className="col-md-3 menu-column">
                                 <div className="widget-dropdown-menu">
                                     <div className="dropdown-menu-img">
-                                        <img src="/images/nav/widget-menu.jpg" alt=""/>
+                                        <img src="https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/nav%2Fwidget-menu.jpg?alt=media&token=cec8515d-2588-43c6-9b53-96f5ca007ba3" alt=""/>
                                     </div>
                                     <div className="widget-menu-text block-center">
                                         <div className="widget-text-small">Exclusive Design</div>

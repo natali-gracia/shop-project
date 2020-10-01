@@ -34,7 +34,7 @@
     z-index: 10;
 }
 .search-input-btn::after {
-    background-image: url('/images/magnifying-glass.png');
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/magnifying-glass.png?alt=media&token=50232351-6e58-4acf-bb41-83704adaa3a6');
     background-size: 100%;
     width: 18px;
     height: 18px;

@@ -11,17 +11,17 @@
     height: 14px;
 }
 .fb-icon .btn-square::before {
-    background-image: url('/images/social-icons/fb-icon.png');
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/social-icons%2Ffb-icon.png?alt=media&token=de361127-9aae-4736-a762-f4cdbd12d0c4');
 }
 .twitter-icon .btn-square::before {
-    background-image: url('/images/social-icons/twitter-icon.png');
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/social-icons%2Ftwitter-icon.png?alt=media&token=b59b350d-9129-4d07-a582-5bdfc185031a');
 }
 .insta-icon .btn-square::before {
-    background-image: url('/images/social-icons/insta-icon.png');
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/social-icons%2Finsta-icon.png?alt=media&token=a5ae98b0-1029-4043-8399-888688f57a4b');
 }
 .youtube-icon .btn-square::before {
-    background-image: url('/images/social-icons/youtube-icon.png');
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/social-icons%2Fyoutube-icon.png?alt=media&token=534fbf95-0852-4b3d-87ae-3ef85f45eac7');
 }
 .pinterest-icon .btn-square::before {
-    background-image: url('/images/social-icons/pinterest-icon.png');
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/social-icons%2Fpinterest-icon.png?alt=media&token=543e4be8-4635-4461-a2ac-8a5c0f378b64');
 }

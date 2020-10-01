@@ -25,8 +25,10 @@ const RewievRatingStars = ({
                                 onClick={()=>setRating(ratingValue)}
                             />
                             <img 
-                                src={ratingValue <= (hover || rating) ?
-                                "/images/star-black.png" : "/images/star-grey.png"}
+                                src={ratingValue <= (hover || rating) 
+                                    ? "https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/star-black.png?alt=media&token=b96a8e23-9b43-4d0b-b46a-3b7769ba3703" 
+                                    : "https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/star-grey.png?alt=media&token=b12c3078-dfd6-4a17-86f8-e0d4e8d7dda6"
+                                }
                                 alt="star" 
                                 onMouseEnter={()=>setHover(ratingValue)}
                                 onMouseLeave={()=>setHover(null)}
@@ -39,8 +41,10 @@ const RewievRatingStars = ({
                     return (
                         <label className='star disable-star' key={ratingValue}>
                             <img 
-                                src={ratingValue <= ratingSum ?
-                                "/images/star-black.png" : "/images/star-grey.png"}
+                                src={ratingValue <= ratingSum 
+                                    ? "https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/star-black.png?alt=media&token=b96a8e23-9b43-4d0b-b46a-3b7769ba3703" 
+                                    : "https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/star-grey.png?alt=media&token=b12c3078-dfd6-4a17-86f8-e0d4e8d7dda6"
+                                }
                                 alt="star" 
                             /> 
                         </label> 

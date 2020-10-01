@@ -26,7 +26,7 @@
     margin: 0 auto;
     top: 50%;
     transform: translateY(-50%);
-    background:  url('/images/popup/bg_newsletter.jpg') scroll center center no-repeat;
+    background:  url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/popup%2Fbg_newsletter.jpg?alt=media&token=1b4eb135-b788-4d1b-af18-b19543702af6') scroll center center no-repeat;
     background-size: cover;
 }
 .popup-row::before {

@@ -10,10 +10,10 @@
     background-size: 100%;
 }
 .product-quantity-value .plus::before {
-    background-image: url(/images/plus-white.png);
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/plus-white.png?alt=media&token=18363d32-b02e-41a3-81c1-11c8e7e8aa41');
 }
 .product-quantity-value .minus::before {
-    background-image: url(/images/minus-white.png);
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/minus-white.png?alt=media&token=788da617-a541-444c-85c2-d846962f1359');
 }
 .product-quantity-value input {
     height: 32px;

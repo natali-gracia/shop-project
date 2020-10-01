@@ -17,7 +17,7 @@
     margin-left: 10px;
 }
 .shopping-bag-icon::before {
-    background: url('/images/shopping-bag.png') no-repeat 0 0;
+    background: url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/shopping-bag.png?alt=media&token=8bc87b87-c478-422c-b812-90d0e55a5cf6') no-repeat 0 0;
     background-size: 100%;
     content: '';
     position: absolute;

@@ -1,5 +1,5 @@
 .breadcrumb-wrap {
-    background: url('/images/bg-breadcrumb.jpg') scroll center center no-repeat;
+    background: url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/bg-breadcrumb.jpg?alt=media&token=7d749cac-0c4b-4419-aa37-6fa4d9afc5d6') scroll center center no-repeat;
     height: 390px;
     position: relative;
 }

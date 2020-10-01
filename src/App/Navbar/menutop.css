@@ -18,7 +18,7 @@
     padding-right: 38px;
 }
 .menu-top > .dropdown-menu > a::before {
-    background: url('/images/arrow-down.png') no-repeat 0 0;
+    background: url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/arrow-down-black-grey.png?alt=media&token=15581ba7-7f90-4356-a566-d2705fb5ac29') no-repeat 0 0;
     background-size: 100%;
     content: '';
     width: 12px;

@@ -14,7 +14,7 @@ const ContactForm = () => {
 
     const sendFeedBack = (e) => {
         e.preventDefault();
-        Axios.post('https://shop-project-skillup.firebaseio.com/feedBack.json', {
+        Axios.post('https://workshop-project-react.firebaseio.com/contactForm.json', {
             name,
             phone,
             email,
@@ -68,7 +68,7 @@ const ContactForm = () => {
                 </div>
             </form>
             :   <div className='feedback-confirm wrap'>
-                    <img src="/images/check-mark-green.png" alt="check-mark-green"/>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/check-mark-green.png?alt=media&token=273bb88b-dce8-4d1c-bba7-24ca87f204f4" alt="check-mark-green"/>
                     <p>Thanks for contacting us! We'll get back to you as soon as possible.</p>
                 </div>  
             }

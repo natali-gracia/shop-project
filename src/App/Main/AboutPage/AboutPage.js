@@ -16,9 +16,9 @@ const AboutPage = () => {
                 </span>
             </div>
             <div className="about-page-images wrap space-between">
-                <div className="col-md-4"><img src="/images/about/HW_01.jpg" alt="Honcharova Workshop 01"/></div>
-                <div className="col-md-4"><img src="/images/about/HW_02.jpg" alt="Honcharova Workshop 02"/></div>
-                <div className="col-md-4"><img src="/images/about/HW_03.jpg" alt="Honcharova Workshop 03"/></div>
+                <div className="col-md-4"><img src="https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/about%2Fabout_1.jpg?alt=media&token=a9d030e8-2bc4-4003-b117-2c6004bb84fb" alt="Honcharova Workshop 01"/></div>
+                <div className="col-md-4"><img src="https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/about%2Fabout_2.jpg?alt=media&token=e176de08-b1e8-4976-ab82-98871ad82600" alt="Honcharova Workshop 02"/></div>
+                <div className="col-md-4"><img src="https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/about%2Fabout_3.jpg?alt=media&token=de27333b-ae87-48eb-a877-0b4ccf9848c8" alt="Honcharova Workshop 03"/></div>
             </div>   
         </>
     )

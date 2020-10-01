@@ -34,7 +34,7 @@
     border: 1px solid #ccc;
 }
 .view-slider .slick-prev:before, .view-slider .slick-next:before {
-    background: url('/images/slider/arrow-down-grey.png') no-repeat;
+    background: url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/slider%2Farrow-down-grey.png?alt=media&token=6b2d13f0-c470-4cd3-8b24-b3eb4357da11') no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
     height: 9px;
@@ -43,7 +43,7 @@
     margin: 0 auto;
 }
 .view-slider .slick-prev:hover:before, .view-slider .slick-next:hover:before {
-    background: url('/images/slider/arrow-down.png');
+    background: url('https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/slider%2Farrow-down.png?alt=media&token=851d0e85-5b5f-44c3-a49d-bd0ad86f4bf3');
     -webkit-background-size: cover;
     background-size: cover;
     height: 9px;

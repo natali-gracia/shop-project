@@ -6,7 +6,7 @@ const MainWidgets = () => {
     return (
         <div className="slider-widget wrap">
             <div className="widget-img-block">
-                <img src="/images/slider/widget-slider.jpg" alt="Jeans style"/>
+                <img src="https://firebasestorage.googleapis.com/v0/b/workshop-project-react.appspot.com/o/slider%2Fwidget-slider.jpg?alt=media&token=b79a1d5a-db35-467c-a763-53f0b2811ef8" alt="Jeans style"/>
                 <div className="widget-img-content">
                     <div className="title">
                         <span>Jeans -<br/>new<br/>trend</span>
